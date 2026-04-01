@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Volt Trust Mitarbeiterbenefit — Günstige Energietarife für Ihre Mitarbeiter. Exklusiv für Volt Trust Firmenkunden.">
+<title>Mitarbeiterbenefit – Volt Trust</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.benefit-hero{background:var(--ink);padding:148px 0 80px;position:relative;overflow:hidden}
+.benefit-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,150,58,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,150,58,.05) 1px,transparent 1px);background-size:68px 68px;mask-image:radial-gradient(ellipse 70% 80% at 50% 50%,black 20%,transparent 70%)}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--stone);margin-top:52px}
+.col-card{background:var(--mist);padding:44px;text-align:center}
+.col-icon{width:64px;height:64px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.col-icon svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round}
+.col-val{font-family:'Playfair Display',serif;font-size:44px;font-weight:700;color:var(--green);line-height:1;margin-bottom:8px}
+.col-title{font-size:16px;font-weight:500;color:var(--green);margin-bottom:12px}
+.col-text{font-size:15px;color:var(--subtle);line-height:1.72}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:52px}
+.step-list{display:flex;flex-direction:column;gap:0}
+.step-row{display:flex;gap:0;position:relative}
+.step-row:not(:last-child)::after{content:'';position:absolute;left:20px;top:44px;bottom:0;width:1px;background:var(--stone)}
+.step-icon-wrap{width:40px;height:40px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-right:20px;margin-top:4px;position:relative;z-index:1}
+.step-icon-wrap span{font-family:'DM Mono',monospace;font-size:13px;color:var(--gold)}
+.step-content{padding-bottom:36px}
+.step-title{font-size:17px;font-weight:500;color:var(--green);margin-bottom:6px}
+.step-text{font-size:15px;color:var(--subtle);line-height:1.7}
+@media(max-width:960px){.three-col,.how-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="40" height="40" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#2E7D55" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg>
+      <span class="nav-logo-text">Volt<span>Trust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="fallbeispiele.html">Fallbeispiele</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="mitarbeiterbenefit.html">Mitarbeiter-Benefit</a></li>
+      <li><a href="energiewissen.html">Energiewissen</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="ueber-uns.html">Über uns</a>
+  <a href="leistungen.html">Leistungen</a>
+  <a href="fallbeispiele.html">Fallbeispiele</a>
+  <a href="faq.html">FAQ</a>
+  <a href="mitarbeiterbenefit.html">Mitarbeiter-Benefit</a>
+  <a href="energiewissen.html">Energiewissen</a>
+  <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+</div>
+
+
+
+<!-- DREI SÄULEN -->
+<section style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Das Konzept</div>
+    <h2 class="section-title">Drei gewinnen. Alle ohne Risiko.</h2>
+    <div class="three-col">
+      <div class="col-card reveal">
+        <div class="col-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="col-val">Mitarbeiter</div>
+        <div class="col-title">Sparen bis zu 400 €/Jahr</div>
+        <p class="col-text">Zugang zu Großabnehmer-Konditionen die einzelne Haushalte normalerweise nicht bekommen. Einfacher Wechsel, kein Aufwand, volle Transparenz.</p>
+      </div>
+      <div class="col-card reveal">
+        <div class="col-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/><path d="M12 12v3M12 12l-2-2M12 12l2-2"/></svg></div>
+        <div class="col-val">Arbeitgeber</div>
+        <div class="col-title">Neuer Benefit + Provision</div>
+        <p class="col-text">Kostenloser neuer Mitarbeiterbenefit den Sie kommunizieren können. Plus: Provision pro aktiviertem Mitarbeitervertrag — passives Einkommen ohne eigenen Aufwand.</p>
+      </div>
+      <div class="col-card reveal">
+        <div class="col-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="col-val">Volt Trust</div>
+        <div class="col-title">Stärkere Kundenbindung</div>
+        <p class="col-text">Der Mitarbeiterbenefit vertieft die Partnerschaft und schafft einen langfristigen Mehrwert der über das einzelne Projekt hinausgeht.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WIE ES FUNKTIONIERT -->
+<section id="wie" style="background:var(--mist)">
+  <div class="container">
+    <div class="section-label">Ablauf</div>
+    <h2 class="section-title">So einfach funktioniert es.</h2>
+    <div class="how-grid">
+      <div class="step-list">
+        <div class="step-row reveal"><div class="step-icon-wrap"><span>01</span></div><div class="step-content"><div class="step-title">Sie aktivieren den Benefit</div><p class="step-text">Ein kurzes Gespräch mit Ihrem Volt Trust Ansprechpartner genügt. Wir bereiten alles vor — inklusive fertiger Kommunikationsvorlage für Ihre Mitarbeiter.</p></div></div>
+        <div class="step-row reveal"><div class="step-icon-wrap"><span>02</span></div><div class="step-content"><div class="step-title">Ihre Mitarbeiter werden informiert</div><p class="step-text">Sie versenden unsere fertige E-Mail-Vorlage oder hängen einen Aushang aus. Kein weiterer Aufwand für HR oder Management.</p></div></div>
+        <div class="step-row reveal"><div class="step-icon-wrap"><span>03</span></div><div class="step-content"><div class="step-title">Mitarbeiter melden sich freiwillig an</div><p class="step-text">Über eine eigene Landingpage können Mitarbeiter freiwillig teilnehmen. DSGVO-konforme Einwilligung, kein Datenaustausch ohne aktive Zustimmung.</p></div></div>
+        <div class="step-row reveal"><div class="step-icon-wrap"><span>04</span></div><div class="step-content"><div class="step-title">Volt Trust übernimmt alles</div><p class="step-text">Wir vergleichen, beraten und schließen den optimalen Tarif für jeden Mitarbeiter ab. Sie müssen nichts tun.</p></div></div>
+        <div class="step-row reveal"><div class="step-icon-wrap"><span>05</span></div><div class="step-content"><div class="step-title">Abrechnung &amp; Provision</div><p class="step-text">Sie erhalten eine quartalsweise Abrechnung und Ihre Provision pro aktiviertem Vertrag. Transparent, automatisch, ohne Aufwand.</p></div></div>
+      </div>
+      <div>
+        <div style="background:var(--green);padding:48px;position:relative">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
+          <div style="font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:20px">Beispielrechnung</div>
+          <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:28px;line-height:1.4">Unternehmen mit 150 Mitarbeitern</div>
+          <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:24px">
+            <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.07);padding:13px 16px"><span style="font-size:14.5px;color:rgba(249,246,239,.65)">Mitarbeiter gesamt</span><span style="font-size:15px;font-weight:500;color:var(--cream)">150</span></div>
+            <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.07);padding:13px 16px"><span style="font-size:14.5px;color:rgba(249,246,239,.65)">Aktivierungsrate (40 %)</span><span style="font-size:15px;font-weight:500;color:var(--cream)">60 Verträge</span></div>
+            <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.07);padding:13px 16px"><span style="font-size:14.5px;color:rgba(249,246,239,.65)">Ersparnis pro Mitarbeiter</span><span style="font-size:15px;font-weight:500;color:var(--gold-lt)">Ø 280 €/Jahr</span></div>
+            <div style="display:flex;justify-content:space-between;background:rgba(201,150,58,.15);padding:13px 16px;border:1px solid rgba(201,150,58,.3)"><span style="font-size:14.5px;color:var(--gold)"><strong>Gesamtersparnis Mitarbeiter</strong></span><span style="font-size:15px;font-weight:700;color:var(--gold-lt)">16.800 €/Jahr</span></div>
+          </div>
+          <div style="background:rgba(255,255,255,.08);padding:20px;margin-bottom:20px">
+            <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Ihre Provision als Arbeitgeber</div>
+            <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold-lt)">1.800 – 3.000 €</div>
+            <div style="font-size:13px;color:rgba(249,246,239,.5);margin-top:4px">pro Jahr · passiv · ohne Aufwand</div>
+          </div>
+          <p style="font-size:13.5px;color:rgba(249,246,239,.5);line-height:1.6">Beispielrechnung auf Basis typischer Aktivierungsraten. Genaue Provision je nach Vertragsvolumen und -laufzeit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ BENEFIT -->
+<section style="background:var(--cream)">
+  <div class="container">
+    <div class="section-label">Häufige Fragen</div>
+    <h2 class="section-title">Was Arbeitgeber wissen wollen.</h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Entstehen für uns als Arbeitgeber Kosten?</span><div class="faq-icon"></div></div><div class="faq-answer"><div class="faq-answer-inner">Nein. Der Benefit ist für Sie vollständig kostenlos. Im Gegenteil: Sie erhalten eine Provision für jeden abgeschlossenen Mitarbeitervertrag. Es entstehen keinerlei Haftung, Gebühren oder laufende Verpflichtungen.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Müssen wir Mitarbeiterdaten herausgeben?</span><div class="faq-icon"></div></div><div class="faq-answer"><div class="faq-answer-inner">Nein. Kein einziges Datum wird ohne aktive Einwilligung des Mitarbeiters übermittelt. Sie kommunizieren lediglich die Möglichkeit — der Mitarbeiter entscheidet selbst ob er teilnimmt und erteilt dabei seine DSGVO-konforme Einwilligung.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Was passiert wenn ein Mitarbeiter das Unternehmen verlässt?</span><div class="faq-icon"></div></div><div class="faq-answer"><div class="faq-answer-inner">Der Vertrag des Mitarbeiters läuft als persönlicher Privatvertrag weiter — unabhängig vom Arbeitsverhältnis. Der Arbeitgeber hat damit keinerlei Verpflichtungen nach Austritt des Mitarbeiters.</div></div></div>
+      <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Ist das ausschließlich für Volt Trust Kunden?</span><div class="faq-icon"></div></div><div class="faq-answer"><div class="faq-answer-inner">Ja — der Mitarbeiterbenefit ist ein exklusives Zusatzangebot für bestehende Volt Trust Firmenkunden. Er ist Teil der langfristigen Partnerschaft und steht nicht öffentlich zur Verfügung.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--green);padding:100px 0">
+  <div class="container">
+    <div style="text-align:center;max-width:620px;margin:0 auto">
+      <div class="section-label" style="justify-content:center">Interesse?</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(30px,3.8vw,48px);font-weight:700;color:var(--cream);line-height:1.15;margin-bottom:18px">Jetzt als Pilot-<br>kunde starten.</h2>
+      <p style="font-size:17px;line-height:1.76;color:rgba(249,246,239,.65);margin-bottom:36px">Das Programm startet mit einer begrenzten Anzahl von Pilot-Unternehmen. Sprechen Sie Daniel Arndt direkt an.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="tel:+491711245256" class="btn-primary">+49 171 1245256</a>
+        <a href="kontakt.html" class="btn-outline">Kontaktformular</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3D8C6A" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg>
+        <div class="footer-brand">Volt<span>Trust</span></div>
+      </div>
+      <p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p>
+    </div>
+    <div><div class="footer-col-title">Seiten</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="faq.html">FAQ</a></li><li><a href="mitarbeiterbenefit.html">Mitarbeiter-Benefit</a></li><li><a href="energiewissen.html">Energiewissen</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><div class="footer-col-title">Leistungen</div><ul class="footer-links"><li><a href="leistungen.html">Energiebeschaffung</a></li><li><a href="leistungen.html">Lastspitzenkappung</a></li><li><a href="leistungen.html">Batteriespeicher (BESS)</a></li><li><a href="leistungen.html">Zielkunden</a></li></ul></div>
+    <div><div class="footer-col-title">Kontakt</div><ul class="footer-links"><li><a href="tel:+491711245256">+49 171 1245256</a></li><li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li><li><a href="kontakt.html">Termin vereinbaren</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Volt Trust · Alle Rechte vorbehalten</span>
+    <span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+
+</body>
+</html>
