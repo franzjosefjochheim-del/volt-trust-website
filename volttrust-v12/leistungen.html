@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Volt Trust Leistungen: Energiebeschaffung, Lastspitzenkappung, BESS, Analyse. Für Produktion, kritische Infrastruktur, Großgebäude, Mehrstandorte und Prozessbetriebe.">
+<title>Leistungen – Volt Trust</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ANALYSE FEATURES */
+.analyse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; margin-top: 52px; }
+.analyse-features { display: flex; flex-direction: column; gap: 24px; }
+.analyse-feature { display: flex; gap: 18px; align-items: flex-start; }
+.analyse-feature-icon { width: 52px; height: 52px; border-radius: 50%; background: transparent; border: 1.5px solid var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.analyse-feature-icon svg { display: block; }
+.analyse-feature-title { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 5px; }
+.analyse-feature-text { font-size: 13.5px; line-height: 1.7; color: var(--subtle); }
+.analyse-basis { background: var(--green); padding: 18px 20px; margin-top: 28px; }
+.analyse-basis-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.analyse-basis-text { font-size: 13px; color: rgba(245,240,232,.7); line-height: 1.6; }
+/* MOCKUP */
+.mockup-wrap { background: var(--green); border: 1px solid var(--line); position: relative; overflow: hidden; }
+.mockup-wrap::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--gold), var(--mid)); }
+.mockup-titlebar { display: flex; align-items: center; gap: 6px; padding: 10px 14px; background: rgba(0,0,0,.25); border-bottom: 1px solid rgba(255,255,255,.07); }
+.mockup-dot { width: 9px; height: 9px; border-radius: 50%; }
+.mockup-title-text { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(245,240,232,.4); letter-spacing: .08em; margin-left: 8px; }
+.mockup-body { padding: 20px; }
+.mockup-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.mockup-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+.mockup-table th { text-align: left; padding: 7px 9px; background: rgba(201,150,58,.15); color: var(--gold); font-family: 'DM Mono', monospace; font-size: 9.5px; font-weight: 500; border-bottom: 1px solid var(--line); }
+.mockup-table td { padding: 7px 9px; border-bottom: 1px solid rgba(255,255,255,.05); color: rgba(245,240,232,.75); }
+.mockup-table tr:hover td { background: rgba(255,255,255,.03); }
+.val-good { color: #52B788; font-weight: 500; }
+.val-best { color: var(--gold-lt); font-weight: 600; }
+.mbadge { display: inline-block; padding: 2px 7px; border-radius: 2px; font-size: 10px; font-weight: 500; }
+.mbadge.green { background: rgba(82,183,136,.2); color: #52B788; }
+.mbadge.gold { background: rgba(201,150,58,.2); color: var(--gold-lt); }
+.mbadge.base { background: rgba(255,255,255,.08); color: rgba(245,240,232,.5); }
+/* SEGMENTE TABS */
+.segment-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--stone); overflow-x: auto; }
+.segment-tab { padding: 13px 22px; font-size: 12.5px; font-weight: 400; letter-spacing: .04em; color: var(--subtle); cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color .2s, border-color .2s; white-space: nowrap; font-family: 'DM Sans', sans-serif; }
+.segment-tab.active { color: var(--green); font-weight: 500; border-bottom-color: var(--gold); }
+.segment-tab:hover:not(.active) { color: var(--green); }
+.segment-panels { margin-top: 0; }
+.segment-panel { display: none; }
+.segment-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.seg-info { background: var(--cream); padding: 48px; }
+.seg-tag { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+.seg-tag::before { content: ''; display: block; width: 18px; height: 1px; background: var(--gold); }
+.seg-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--ink); margin-bottom: 14px; line-height: 1.2; }
+.seg-branchen { font-size: 12.5px; color: var(--subtle); margin-bottom: 22px; line-height: 1.6; }
+.seg-profil-row { display: flex; gap: 20px; margin-bottom: 24px; }
+.seg-profil-item { flex: 1; }
+.seg-profil-label { font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--subtle); margin-bottom: 3px; }
+.seg-profil-val { font-size: 13.5px; font-weight: 500; color: var(--green); }
+.seg-text { font-size: 14.5px; line-height: 1.76; color: var(--subtle); margin-bottom: 24px; }
+.seg-quote { font-size: 13.5px; line-height: 1.72; color: var(--green); border-left: 2px solid var(--gold); padding-left: 14px; font-style: italic; }
+.seg-case { background: var(--green); padding: 48px; color: var(--cream); }
+.seg-case-label { font-family: 'DM Mono', monospace; font-size: 9.5px; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px; display: block; }
+.seg-case-title { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--cream); margin-bottom: 26px; line-height: 1.4; }
+.seg-metrics { display: flex; flex-direction: column; gap: 2px; margin-bottom: 28px; }
+.seg-metric { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,.06); padding: 12px 15px; }
+.seg-metric-label { font-size: 12px; color: rgba(245,240,232,.55); }
+.seg-metric-val { font-size: 14px; font-weight: 500; color: var(--gold-lt); }
+.seg-saving { background: rgba(201,150,58,.14); border: 1px solid rgba(201,150,58,.28); padding: 22px; margin-bottom: 22px; }
+.seg-saving-label { font-size: 10.5px; color: var(--gold); letter-spacing: .07em; margin-bottom: 7px; }
+.seg-saving-val { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; color: var(--gold-lt); line-height: 1; }
+.seg-saving-sub { font-size: 11.5px; color: rgba(245,240,232,.45); margin-top: 4px; }
+.seg-roi-row { display: flex; gap: 14px; }
+.seg-roi-item { flex: 1; text-align: center; }
+.seg-roi-val { font-family: 'Playfair Display', serif; font-size: 21px; color: var(--gold); display: block; }
+.seg-roi-label { font-size: 10.5px; color: rgba(245,240,232,.45); }
+/* TECH */
+.tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 52px; background: var(--mid); }
+.tech-card { background: var(--green); padding: 44px; position: relative; overflow: hidden; }
+.tech-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width .4s; }
+.tech-card:hover::after { width: 100%; }
+.tech-icon { width: 56px; height: 56px; margin-bottom: 22px; }
+.tech-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--cream); margin-bottom: 14px; }
+.tech-text { font-size: 14.5px; line-height: 1.76; color: rgba(245,240,232,.62); }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+.tech-tag { font-size: 11px; padding: 4px 10px; background: rgba(255,255,255,.07); color: rgba(245,240,232,.55); border: 1px solid rgba(255,255,255,.09); }
+@media (max-width: 960px) {
+  .analyse-grid, .segment-panel.active, .tech-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== v10 FIXES ===== */
+.section-label,.page-hero-eyebrow,.footer-col-title,.trust-item{font-size:13px!important;letter-spacing:.18em!important}
+/* Icons Leistungsseite: verkleinern auf Mobile */
+@media(max-width:768px){
+  .card-icon svg{width:28px!important;height:28px!important}
+  .card-icon{width:48px!important;height:48px!important}
+  .tech-icon{width:36px!important;height:36px!important}
+}
+/* Technisch: Kontrast verbessern */
+.tech-text{color:rgba(249,246,239,.82)!important}
+.tech-title{color:#fff!important}
+.tech-tag{color:rgba(249,246,239,.75)!important;border-color:rgba(249,246,239,.2)!important}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width="0.75" opacity=".5"/></svg>
+      <span class="nav-logo-text">Volt<span>Trust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="fuer-entscheider.html">Für Entscheider</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="ueber-uns.html">Über uns</a><a href="fallbeispiele.html">Fallbeispiele</a><a href="fuer-entscheider.html">Für Entscheider</a><a href="faq.html">FAQ</a><a href="kontakt.html">Kontakt</a>
+  <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div class="page-hero-eyebrow">Leistungen</div>
+    <h1>Zwei Schritte.<br><em>Messbarer</em> Nutzen.</h1>
+    <p class="page-hero-lead">Energiebeschaffung, Lastoptimierung und Batteriespeicher — strukturiert, nachweisbar, auf Ihre Branche zugeschnitten. Wir zeigen Ihnen konkret, was in Ihrem Betrieb möglich ist.</p>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>Vergütung nur im Erfolgsfall</div>
+    <div class="trust-item"><span class="trust-dot"></span>Ohne Abschlussverpflichtung</div>
+    <div class="trust-item"><span class="trust-dot"></span>Alle Branchen ab 100.000 kWh/a</div>
+    <div class="trust-item"><span class="trust-dot"></span>BESS ab 100 kWh</div>
+  </div>
+</div>
+
+<!-- Partner-Bar: ans Ende verschoben -->
+</div>
+
+<!-- LEISTUNGEN OVERVIEW -->
+<section style="background:var(--mist)" id="beschaffung">
+  <div class="container">
+    <div class="section-label">Unser Ansatz</div>
+    <h2 class="section-title">Was wir tun</h2>
+    <p class="section-intro">Volt Trust optimiert Energiekosten in zwei aufeinander aufbauenden Schritten — kaufmännisch wirksam und strukturell nachhaltig.</p>
+    <div class="card-grid-2">
+      <div class="card reveal">
+        <div class="card-num">01</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="card-title">Kurzfristige Kostenoptimierung</div>
+        <p class="card-text">Strom- und Gasbeschaffung, Tarifstruktur und Einkaufsgemeinschaften — unmittelbar spürbar, ohne Investition, ohne Risiko. Erste Einsparungen oft bereits im ersten Vertragsjahr.</p>
+        <div class="tags"><span class="tag">Strombeschaffung</span><span class="tag">Gastarife</span><span class="tag">Einkaufsgemeinschaft</span><span class="tag">Tranchenbeschaffung</span></div>
+      </div>
+      <div class="card reveal" id="lastoptimierung">
+        <div class="card-num">02</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/></svg></div>
+        <div class="card-title">Strukturelle Lastoptimierung</div>
+        <p class="card-text">Auf Basis Ihrer Lastgangdaten analysieren wir Spitzen, Verbrauchsmuster und Versorgungssicherheit. Batteriespeicher kappen Leistungspreise dauerhaft und schützen kritische Prozesse.</p>
+        <div class="tags"><span class="tag">Lastspitzenkappung</span><span class="tag">BESS</span><span class="tag">Leistungspreise</span><span class="tag">Versorgungssicherheit</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">03</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div class="card-title">Planbarkeit &amp; Transparenz</div>
+        <p class="card-text">Wir schaffen Transparenz über Ihre realen Energiekosten — alle drei Kostenblöcke (Energie, Netzentgelte, Steuern) — und ermöglichen echte kaufmännische Planungssicherheit.</p>
+        <div class="tags"><span class="tag">Kostencontrolling</span><span class="tag">Reporting</span><span class="tag">Marktmonitoring</span></div>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">04</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <div class="card-title">Langfristige Partnerschaft</div>
+        <p class="card-text">Volt Trust begleitet über den Abschluss hinaus: Jahresgespräche, Marktmonitoring, technische Begleitung. Wir reagieren auf Marktveränderungen und identifizieren neue Potenziale.</p>
+        <div class="tags"><span class="tag">Jahresgespräch</span><span class="tag">Marktmonitoring</span><span class="tag">Technische Begleitung</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYSE -->
+<section style="background:var(--cream)" id="analyse">
+  <div class="container">
+    <div class="section-label">Analyse-Methodik</div>
+    <h2 class="section-title">Kosten und Lastspitzen mittels modernster Software</h2>
+    <p class="section-intro">Die detaillierte Prüfung der Energiekosten umfasst alle relevanten Kostenbestandteile. Besonderes Augenmerk liegt auf Lastspitzen — oft ein erheblicher und vermeidbarer Kostentreiber.</p>
+    <div class="analyse-grid">
+      <div>
+        <div class="analyse-features">
+          <div class="analyse-feature reveal">
+            <div class="analyse-feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" stroke="#C9963A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><div class="analyse-feature-title">Direkte Kostenbewertung</div><div class="analyse-feature-text">Analyse der Preise pro verbrauchter Kilowattstunde im Vergleich zu aktuellen Marktkonditionen und alternativen Tarifen.</div></div>
+          </div>
+          <div class="analyse-feature reveal">
+            <div class="analyse-feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M3 18 C5 18 6 10 8 10 C10 10 11 14 13 14 C15 14 16 8 18 8 C20 8 21 12 22 12" stroke="#C9963A" stroke-width="1.4" stroke-linecap="round" fill="none"/><line x1="3" y1="20" x2="22" y2="20" stroke="#C9963A" stroke-width="1" opacity=".4" stroke-linecap="round"/></svg></div>
+            <div><div class="analyse-feature-title">Lastprofile</div><div class="analyse-feature-text">Untersuchung des Lastverhaltens über verschiedene Zeiträume zur Bewertung von Netzgebühren und Optimierungspotenzialen.</div></div>
+          </div>
+          <div class="analyse-feature reveal">
+            <div class="analyse-feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><rect x="3" y="14" width="3.5" height="7" rx=".8" stroke="#C9963A" stroke-width="1.3"/><rect x="8.5" y="10" width="3.5" height="11" rx=".8" stroke="#C9963A" stroke-width="1.3"/><rect x="14" y="6" width="3.5" height="15" rx=".8" stroke="#C9963A" stroke-width="1.3"/><rect x="19.5" y="9" width="3.5" height="12" rx=".8" stroke="#C9963A" stroke-width="1.3"/></svg></div>
+            <div><div class="analyse-feature-title">Verbrauchsverläufe</div><div class="analyse-feature-text">Detaillierte Analyse der zeitlichen Verbrauchsmuster zur Identifikation von Optimierungspotenzialen im Tages- und Jahresverlauf.</div></div>
+          </div>
+          <div class="analyse-feature reveal">
+            <div class="analyse-feature-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M3 15 L7 15 L9 11 L11 5 L13 11 L15 15 L17 15 L19 12 L21 15" stroke="#C9963A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="3" y1="18" x2="21" y2="18" stroke="#C9963A" stroke-width="1" opacity=".4" stroke-linecap="round"/><circle cx="12" cy="6" r="2" fill="none" stroke="#C9963A" stroke-width="1" stroke-dasharray="1.5 1.5"/></svg></div>
+            <div><div class="analyse-feature-title">Lastspitzen</div><div class="analyse-feature-text">Identifikation von Verbrauchsspitzen als wesentlicher Kostenfaktor — oft mit erheblichem Reduktionspotenzial.</div></div>
+          </div>
+        </div>
+        <div class="analyse-basis"><div class="analyse-basis-label">Datenbasis</div><div class="analyse-basis-text">RLM-Profile · 12 Monate Strom- &amp; Gasabrechnungen · Laufzeiten aktueller Verträge</div></div>
+      </div>
+      <div class="mockup-wrap reveal">
+        <div class="mockup-titlebar">
+          <div class="mockup-dot" style="background:#FF5F57"></div><div class="mockup-dot" style="background:#FEBC2E"></div><div class="mockup-dot" style="background:#28C840"></div>
+          <span class="mockup-title-text">ENERGIE-FINGERABDRUCK · Szenariovergleich</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-label">Handlungsoptionen im Vergleich</div>
+          <table class="mockup-table">
+            <thead><tr><th>Szenario</th><th>Netzentgelt</th><th>Einsparung/a</th><th>Amort.</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td>Ausgangslage</td><td>706,8 kW</td><td>—</td><td>—</td><td><span class="mbadge base">Ist</span></td></tr>
+              <tr><td>Neuer FT-Tarif</td><td>706,8 kW</td><td class="val-good">119.237 €</td><td>—</td><td><span class="mbadge green">Aktiv</span></td></tr>
+              <tr><td>Neuer DYN-Tarif</td><td>706,8 kW</td><td class="val-good">219.329 €</td><td>—</td><td><span class="mbadge green">Aktiv</span></td></tr>
+              <tr><td><strong>LSK+BESS 3.423 kWh</strong></td><td style="color:#52B788;font-weight:500">223,4 kW</td><td class="val-best">355.507 €</td><td style="color:var(--gold-lt);font-weight:600">2,5 a</td><td><span class="mbadge gold">Empfohlen</span></td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top:14px;background:rgba(201,150,58,.1);border:1px solid rgba(201,150,58,.2);padding:12px 14px">
+            <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--gold);margin-bottom:5px">MITTLERE RENDITE p.a. bei LSK+BESS</div>
+            <div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--gold-lt);line-height:1">39 %</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNISCH -->
+<section style="background:var(--green)" id="bess">
+  <div class="container">
+    <div class="section-label">Technische Optimierung</div>
+    <h2 class="section-title light">Eigenverbrauch im Fokus</h2>
+    <p class="section-intro light">Über Vertragsoptimierung hinaus gibt es zusätzliche Ansätze zur langfristigen Stabilisierung der Energiekosten.</p>
+    <div class="tech-grid">
+      <div class="tech-card reveal">
+        <svg class="tech-icon" viewBox="0 0 56 56" fill="none"><rect x="4" y="16" width="48" height="28" rx="4" stroke="#C9963A" stroke-width="1.5"/><rect x="52" y="23" width="4" height="10" rx="1" fill="#C9963A" opacity=".5"/><rect x="10" y="22" width="7" height="16" rx="1.5" fill="rgba(201,150,58,.25)" stroke="#C9963A" stroke-width="1"/><rect x="21" y="22" width="7" height="16" rx="1.5" fill="rgba(201,150,58,.25)" stroke="#C9963A" stroke-width="1"/><rect x="32" y="22" width="7" height="16" rx="1.5" fill="rgba(201,150,58,.5)" stroke="#C9963A" stroke-width="1"/><rect x="43" y="22" width="7" height="16" rx="1.5" fill="rgba(201,150,58,.7)" stroke="#C9963A" stroke-width="1"/></svg>
+        <div class="tech-title">Batteriespeicher (BESS)</div>
+        <p class="tech-text">Speicherung und zeitversetzte Nutzung von Energie. Lastspitzenkappung zur Reduktion von Leistungspreisen. Mögliche Zusatzerlöse durch Arbitrage und Regelenergie. USV-Integration möglich.</p>
+        <div class="tech-tags"><span class="tech-tag">Peak Shaving</span><span class="tech-tag">Regelenergie</span><span class="tech-tag">USV-Integration</span><span class="tech-tag">Arbitrage</span></div>
+      </div>
+      <div class="tech-card reveal">
+        <svg class="tech-icon" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="12" r="8" stroke="#C9963A" stroke-width="1.5"/><line x1="28" y1="2" x2="28" y2="4" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round"/><line x1="28" y1="20" x2="28" y2="22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round"/><line x1="18" y1="12" x2="20" y2="12" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round"/><line x1="36" y1="12" x2="38" y2="12" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round"/><rect x="6" y="28" width="44" height="20" rx="3" stroke="rgba(201,150,58,.5)" stroke-width="1.5"/><path d="M6 35 H50 M6 42 H50 M17 28 V48 M28 28 V48 M39 28 V48" stroke="rgba(201,150,58,.3)" stroke-width="1"/></svg>
+        <div class="tech-title">Kombination Speicher &amp; PV</div>
+        <p class="tech-text">Synergie aus Eigenerzeugung und Speicherung: PV-Strom zu 6–11 ct/kWh gegenüber Netzbezug zu 18–25 ct/kWh. Eigenverbrauchsquote von 50 % auf über 80 % steigerbar. In Kooperation mit STRICKER Dienstleistungs-GmbH.</p>
+        <div class="tech-tags"><span class="tech-tag">Eigenverbrauch</span><span class="tech-tag">PV 100–500 kWp</span><span class="tech-tag">Multi-Use</span><span class="tech-tag">STRICKER GmbH</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEGMENTE -->
+<section style="background:var(--cream)" id="segmente">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;gap:32px;flex-wrap:wrap">
+      <div><div class="section-label">Zielkundensegmente</div><h2 class="section-title" style="margin-bottom:0">Ihr Betrieb. Unser Ansatz.</h2></div>
+      <p class="section-intro" style="max-width:320px;font-size:14.5px">5 Branchen. Ein Muster: hoher Verbrauch, unterschätzte Potenziale, strukturell lösbar.</p>
+    </div>
+    <div class="segment-tabs">
+      <button class="segment-tab active" onclick="showSeg(0)">Produktion</button>
+      <button class="segment-tab" onclick="showSeg(1)">Krit. Infrastruktur</button>
+      <button class="segment-tab" onclick="showSeg(2)">Großgebäude</button>
+      <button class="segment-tab" onclick="showSeg(3)">Mehrstandorte</button>
+      <button class="segment-tab" onclick="showSeg(4)">Prozessbetriebe</button>
+    </div>
+    <div style="height:2px;background:var(--stone);margin-bottom:2px"></div>
+    <div class="segment-panels">
+      <div class="segment-panel active">
+        <div class="seg-info"><div class="seg-tag">Segment 01</div><div class="seg-title">Energieintensive Produktionsbetriebe</div><div class="seg-branchen">Kunststoffverarbeitung · Metallverarbeitung · Stanztechnik · Lebensmittelproduktion · Brauereien · Chemie</div><div class="seg-profil-row"><div class="seg-profil-item"><div class="seg-profil-label">Verbrauch ab</div><div class="seg-profil-val">500.000 kWh/a</div></div><div class="seg-profil-item"><div class="seg-profil-label">Typisch</div><div class="seg-profil-val">&gt;1 Mio. kWh/a</div></div><div class="seg-profil-item"><div class="seg-profil-label">ROI</div><div class="seg-profil-val">4–7 Jahre</div></div></div><p class="seg-text">Maschinenbetrieb und Schichtbetrieb erzeugen ausgeprägte Lastspitzen. Im ersten Schritt prüfen wir die Beschaffung, danach Lastoptimierung und Batteriespeicher.</p><div class="seg-quote">„Im ersten Schritt prüfen wir die Strom- und Gaskosten im Einkauf. Danach schauen wir auf Lastspitzen, für die Sie heute das ganze Jahr zahlen."</div></div>
+        <div class="seg-case"><span class="seg-case-label">Fallbeispiel · CNC-Metallverarbeitung NRW</span><div class="seg-case-title">Mittelständischer Zerspanungsbetrieb, 2-Schicht</div><div class="seg-metrics"><div class="seg-metric"><span class="seg-metric-label">Jahresstromverbrauch</span><span class="seg-metric-val">1.500.000 kWh/a</span></div><div class="seg-metric"><span class="seg-metric-label">Lastspitze</span><span class="seg-metric-val">400–500 kW</span></div><div class="seg-metric"><span class="seg-metric-label">Stromkosten vorher</span><span class="seg-metric-val">~240.000 €/a</span></div></div><div class="seg-saving"><div class="seg-saving-label">Gesamteinsparung p.a.</div><div class="seg-saving-val">bis 45.000 €</div><div class="seg-saving-sub">Beschaffung 12.000 € + Lastspitzenkappung 33.000 €</div></div><div class="seg-roi-row"><div class="seg-roi-item"><span class="seg-roi-val">250 kWh</span><span class="seg-roi-label">BESS-Größe</span></div><div class="seg-roi-item"><span class="seg-roi-val">130.000 €</span><span class="seg-roi-label">Investition</span></div><div class="seg-roi-item"><span class="seg-roi-val">4–6 J.</span><span class="seg-roi-label">Amortisation</span></div></div></div>
+      </div>
+      <div class="segment-panel">
+        <div class="seg-info"><div class="seg-tag">Segment 02</div><div class="seg-title">24/7-Kritische Infrastruktur</div><div class="seg-branchen">Rechenzentren · Krankenhäuser · Pflegeeinrichtungen · Wasserwerke · Telekommunikation</div><div class="seg-profil-row"><div class="seg-profil-item"><div class="seg-profil-label">Grundlast</div><div class="seg-profil-val">&gt;200 kW</div></div><div class="seg-profil-item"><div class="seg-profil-label">Betrieb</div><div class="seg-profil-val">24/7 / 365</div></div><div class="seg-profil-item"><div class="seg-profil-label">ROI</div><div class="seg-profil-val">5–8 Jahre</div></div></div><p class="seg-text">Nicht nur Energiepreis — auch sichere Verfügbarkeit. BESS kann hier USV-Funktionen übernehmen und zusätzliche Erlösquellen öffnen.</p><div class="seg-quote">„Bei Ihnen geht es nicht nur um den Preis, sondern auch um sichere Verfügbarkeit. Wir prüfen zuerst die Beschaffung, danach die technische Optimierung."</div></div>
+        <div class="seg-case"><span class="seg-case-label">Fallbeispiel · Krankenhaus 300–400 Betten</span><div class="seg-case-title">Akutkrankenhaus, Mittelspannungsanschluss</div><div class="seg-metrics"><div class="seg-metric"><span class="seg-metric-label">Jahresstromverbrauch</span><span class="seg-metric-val">3.000.000 kWh/a</span></div><div class="seg-metric"><span class="seg-metric-label">Grundlast / Lastspitze</span><span class="seg-metric-val">300 / 550 kW</span></div><div class="seg-metric"><span class="seg-metric-label">Jahresstromkosten</span><span class="seg-metric-val">~510.000 €/a</span></div></div><div class="seg-saving"><div class="seg-saving-label">Gesamteinsparung p.a.</div><div class="seg-saving-val">bis 80.000 €</div><div class="seg-saving-sub">Beschaffung 50.000 € + Lastoptimierung 30.000 €</div></div><div class="seg-roi-row"><div class="seg-roi-item"><span class="seg-roi-val">300 kWh</span><span class="seg-roi-label">BESS (inkl. USV)</span></div><div class="seg-roi-item"><span class="seg-roi-val">225.000 €</span><span class="seg-roi-label">Investition</span></div><div class="seg-roi-item"><span class="seg-roi-val">5–8 J.</span><span class="seg-roi-label">Amortisation</span></div></div></div>
+      </div>
+      <div class="segment-panel">
+        <div class="seg-info"><div class="seg-tag">Segment 03</div><div class="seg-title">Technisch anspruchsvolle Großgebäude</div><div class="seg-branchen">Thermen · Freizeitbäder · Hotels · Eventlocations · Einkaufszentren · Verwaltungsgebäude</div><div class="seg-profil-row"><div class="seg-profil-item"><div class="seg-profil-label">Verbrauch ab</div><div class="seg-profil-val">400.000 kWh/a</div></div><div class="seg-profil-item"><div class="seg-profil-label">PV-Potenzial</div><div class="seg-profil-val">Hoch</div></div><div class="seg-profil-item"><div class="seg-profil-label">ROI</div><div class="seg-profil-val">5–8 Jahre</div></div></div><p class="seg-text">Lüftung, Klima und Gebäudetechnik erzeugen starke Lastspitzen beim morgendlichen Einschalten. Hohe Synergien mit PV.</p><div class="seg-quote">„Erst Strom- und Gaskosten — dann prüfen wir, ob sich Gleichzeitigkeitsspitzen wirtschaftlich reduzieren lassen."</div></div>
+        <div class="seg-case"><span class="seg-case-label">Fallbeispiel · Freizeitbad 800 m²</span><div class="seg-case-title">Kommunales Freizeitbad mit Saunabereich</div><div class="seg-metrics"><div class="seg-metric"><span class="seg-metric-label">Jahresstromverbrauch</span><span class="seg-metric-val">1.500.000 kWh/a</span></div><div class="seg-metric"><span class="seg-metric-label">Lastspitzen</span><span class="seg-metric-val">400–600 kW</span></div><div class="seg-metric"><span class="seg-metric-label">Jahresstromkosten</span><span class="seg-metric-val">~400.000 €/a</span></div></div><div class="seg-saving"><div class="seg-saving-label">Gesamteinsparung p.a.</div><div class="seg-saving-val">bis 90.000 €</div><div class="seg-saving-sub">Beschaffung 35.000 € + Lastoptimierung 20.000 € + PV+BESS 35.000 €</div></div><div class="seg-roi-row"><div class="seg-roi-item"><span class="seg-roi-val">200 kWh</span><span class="seg-roi-label">BESS-Größe</span></div><div class="seg-roi-item"><span class="seg-roi-val">95.000 €</span><span class="seg-roi-label">Investition</span></div><div class="seg-roi-item"><span class="seg-roi-val">4–6 J.</span><span class="seg-roi-label">Amortisation</span></div></div></div>
+      </div>
+      <div class="segment-panel">
+        <div class="seg-info"><div class="seg-tag">Segment 04</div><div class="seg-title">Mehrstandort- und Filialstrukturen</div><div class="seg-branchen">Baumärkte · Autohausgruppen · Bäckereiketten · Handelsketten · Textildienstleister</div><div class="seg-profil-row"><div class="seg-profil-item"><div class="seg-profil-label">Standorte</div><div class="seg-profil-val">ab 5</div></div><div class="seg-profil-item"><div class="seg-profil-label">Skaleneffekt</div><div class="seg-profil-val">Sehr hoch</div></div><div class="seg-profil-item"><div class="seg-profil-label">ROI</div><div class="seg-profil-val">4–6 Jahre</div></div></div><p class="seg-text">Gebündelte Beschaffung als erster großer Hebel. Skaleneffekte beim Rollout senken Hardware- und Planungskosten um 15–25 %.</p><div class="seg-quote">„Zuerst gebündelte Beschaffung. Dann öffnet ein Pilotstandort den Weg für ein skalierbares Optimierungsprogramm."</div></div>
+        <div class="seg-case"><span class="seg-case-label">Fallbeispiel · Baumarktkette 15 Filialen</span><div class="seg-case-title">Regionale Baumarktkette, Westdeutschland</div><div class="seg-metrics"><div class="seg-metric"><span class="seg-metric-label">Gesamtverbrauch</span><span class="seg-metric-val">6,75 GWh/a</span></div><div class="seg-metric"><span class="seg-metric-label">Gesamtstromkosten</span><span class="seg-metric-val">~1,7 Mio. €/a</span></div></div><div class="seg-saving"><div class="seg-saving-label">Gesamteinsparpotenzial p.a.</div><div class="seg-saving-val">bis 285.000 €</div><div class="seg-saving-sub">Bündelung 135.000 € + Peak Shaving 105.000 € + PV 45.000 €</div></div><div class="seg-roi-row"><div class="seg-roi-item"><span class="seg-roi-val">15 Std.</span><span class="seg-roi-label">BESS je Standort</span></div><div class="seg-roi-item"><span class="seg-roi-val">700.000 €</span><span class="seg-roi-label">Rollout-Invest</span></div><div class="seg-roi-item"><span class="seg-roi-val">4–6 J.</span><span class="seg-roi-label">Amortisation</span></div></div></div>
+      </div>
+      <div class="segment-panel">
+        <div class="seg-info"><div class="seg-tag">Segment 05</div><div class="seg-title">Prozessintensive Betriebe</div><div class="seg-branchen">Wäschereien · Kühl- und Lagerlogistik · Verzinkereien · Oberflächenveredelung · Thermische Prozesse</div><div class="seg-profil-row"><div class="seg-profil-item"><div class="seg-profil-label">Verbrauch ab</div><div class="seg-profil-val">600.000 kWh/a</div></div><div class="seg-profil-item"><div class="seg-profil-label">Lastmuster</div><div class="seg-profil-val">Wiederkehrend</div></div><div class="seg-profil-item"><div class="seg-profil-label">ROI</div><div class="seg-profil-val">3–6 Jahre</div></div></div><p class="seg-text">Wiederkehrende Lastmuster machen diese Betriebe zu besonders berechenbaren Kandidaten. Besonders kurze Amortisationszeiten — gerade bei Kühlanlagen.</p><div class="seg-quote">„Erst Einkauf optimieren. Dann Lastmuster im Prozess — hier liegen häufig die größten zusätzlichen Potenziale."</div></div>
+        <div class="seg-case"><span class="seg-case-label">Fallbeispiel · Tiefkühllager 30.000 m³</span><div class="seg-case-title">Kühllogistik-Betrieb, 24/7-Betrieb</div><div class="seg-metrics"><div class="seg-metric"><span class="seg-metric-label">Jahresstromverbrauch</span><span class="seg-metric-val">2.200.000 kWh/a</span></div><div class="seg-metric"><span class="seg-metric-label">Grundlast / Lastspitze</span><span class="seg-metric-val">270 / 500 kW</span></div><div class="seg-metric"><span class="seg-metric-label">Jahresstromkosten</span><span class="seg-metric-val">~400.000 €/a</span></div></div><div class="seg-saving"><div class="seg-saving-label">Gesamteinsparung p.a.</div><div class="seg-saving-val">bis 80.000 €</div><div class="seg-saving-sub">Beschaffung 45.000 € + Lastspitzenkappung 25.000 € + Power-to-Cool 10.000 €</div></div><div class="seg-roi-row"><div class="seg-roi-item"><span class="seg-roi-val">200 kWh</span><span class="seg-roi-label">BESS-Größe</span></div><div class="seg-roi-item"><span class="seg-roi-val">100.000 €</span><span class="seg-roi-label">Investition</span></div><div class="seg-roi-item"><span class="seg-roi-val">3–5 J.</span><span class="seg-roi-label">Amortisation</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Use Cases: verschoben zu fallbeispiele.html -->
+
+
+<!-- TECHNOLOGIEPARTNER (am Ende) -->
+<section style="background:var(--mist);padding:72px 0">
+  <div class="container">
+    <div class="section-label">Technologiepartner &amp; Kooperationen</div>
+    <h2 class="section-title">Unsere Partner für die Umsetzung.</h2>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;margin-top:44px;justify-content:center;align-items:center">
+      <div style="background:var(--cream);padding:32px 40px;display:flex;flex-direction:column;align-items:center;gap:12px;min-width:200px">
+        <svg width="160" height="50" viewBox="0 0 160 50" fill="none"><rect x="0" y="8" width="40" height="34" rx="3" fill="#C9963A"/><text x="20" y="30" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="800" fill="white">STR</text><text x="52" y="22" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#1C2E25">STRICKER</text><text x="52" y="38" font-family="Arial,sans-serif" font-size="10" fill="#527060">Dienstleistungs-GmbH</text></svg>
+        <span style="font-size:12px;color:var(--subtle);text-align:center">Technische Projektierung PV &amp; BESS</span>
+      </div>
+      <div style="background:var(--cream);padding:32px 40px;display:flex;flex-direction:column;align-items:center;gap:12px;min-width:180px">
+        <svg width="140" height="50" viewBox="0 0 140 50" fill="none"><circle cx="24" cy="25" r="20" fill="#013895"/><text x="24" y="31" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="800" fill="white">G</text><text x="52" y="22" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#1C2E25">GOTION</text><text x="52" y="38" font-family="Arial,sans-serif" font-size="10" fill="#527060">High-Tech</text></svg>
+        <span style="font-size:12px;color:var(--subtle);text-align:center">Batteriezellen &amp; BESS-Systeme</span>
+      </div>
+      <div style="background:var(--cream);padding:32px 40px;display:flex;flex-direction:column;align-items:center;gap:12px;min-width:160px">
+        <svg width="130" height="50" viewBox="0 0 130 50" fill="none"><rect x="0" y="6" width="40" height="38" rx="4" fill="#E30613"/><text x="20" y="30" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="800" fill="white">MIDEA</text><text x="52" y="27" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#1C2E25">Midea</text><text x="52" y="42" font-family="Arial,sans-serif" font-size="10" fill="#527060">Energy Solutions</text></svg>
+        <span style="font-size:12px;color:var(--subtle);text-align:center">Energiemanagement &amp; Klimatechnik</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--green);padding:88px 0">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="section-label" style="justify-content:center">Jetzt starten</div>
+      <h2 class="section-title light">Wie viel können Sie sparen?</h2>
+      <p class="section-intro light" style="margin:0 auto 36px">30 Minuten Erstgespräch — konkret, auf Basis Ihrer Verbrauchsdaten, unverbindlich.</p>
+      <a href="kontakt.html" class="btn-primary">Termin vereinbaren →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><div style="display:flex;align-items:center;gap:9px;margin-bottom:14px"><svg width="32" height="32" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width="0.75" opacity=".5"/></svg><div class="footer-brand">Volt<span>Trust</span></div></div><p class="footer-tagline">Industrieenergie mit Planungssicherheit.</p></div>
+    <div><div class="footer-col-title">Seiten</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    
+    <div><div class="footer-col-title">Rechtliches</div><ul class="footer-links"><li><a href="kontakt.html">kontakt@volt-trust.de</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Volt Trust</span><span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div>
+</footer>
+<script src="js/main.js"></script>
+<script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));</script>
+</body>
+</html>
