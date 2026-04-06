@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Volt Trust FAQ — Häufige Fragen zu Kosten, Vergütung, Analyse und Batteriespeichern. Transparent beantwortet für Entscheider.">
+<title>FAQ – Volt Trust</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ===== FAQ v10 ===== */
+.section-label,.page-hero-eyebrow,.footer-col-title,.trust-item{font-size:13px!important;letter-spacing:.18em!important}
+
+.faq-block{margin-bottom:56px}
+.faq-block-header{display:flex;align-items:center;gap:16px;margin-bottom:4px;padding:22px 28px;background:var(--green);position:relative}
+.faq-block-header::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--gold)}
+.faq-block-num{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--gold);background:rgba(201,150,58,.15);padding:4px 10px;flex-shrink:0}
+.faq-block-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);font-weight:700}
+.faq-block-body{border:1px solid var(--stone);border-top:none}
+
+/* FAQ Items */
+.faq-item{border-bottom:1px solid var(--stone)}
+.faq-item:last-child{border-bottom:none}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;cursor:pointer;gap:16px;transition:background .2s;background:var(--mist)}
+.faq-question:hover{background:var(--cream)}
+.faq-question.open{background:var(--cream)}
+.faq-question span{font-size:16px;font-weight:500;color:var(--ink);line-height:1.45;flex:1}
+.faq-icon{width:28px;height:28px;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .3s}
+.faq-question.open .faq-icon{background:var(--gold);transform:rotate(45deg)}
+.faq-icon::before,.faq-icon::after{content:'';display:block;background:var(--gold);position:absolute;border-radius:1px;transition:background .2s}
+.faq-icon::before{width:12px;height:1.5px}
+.faq-icon::after{width:1.5px;height:12px}
+.faq-question.open .faq-icon::before,.faq-question.open .faq-icon::after{background:#0A1A0F}
+.faq-icon{position:relative}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-answer.open{max-height:400px}
+.faq-answer-inner{padding:0 28px 26px;font-size:15.5px;line-height:1.8;color:var(--subtle);background:var(--cream);border-top:1px solid var(--stone)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="40" height="40" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg>
+      <span class="nav-logo-text">Volt<span>Trust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="fuer-entscheider.html">Für Entscheider</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="ueber-uns.html">Über uns</a><a href="fallbeispiele.html">Fallbeispiele</a><a href="fuer-entscheider.html">Für Entscheider</a><a href="faq.html">FAQ</a><a href="kontakt.html">Kontakt</a>
+  <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div class="page-hero-eyebrow">FAQ</div>
+    <h1>Transparent<br>von <em>Anfang an.</em></h1>
+    <p class="page-hero-lead">Die wichtigsten Fragen vor dem ersten Gespräch — klar beantwortet für CEOs, CFOs und technische Leiter.</p>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>Erstgespräch kostenlos</div>
+    <div class="trust-item"><span class="trust-dot"></span>Vergütung nur im Erfolgsfall</div>
+    <div class="trust-item"><span class="trust-dot"></span>Keine Abschlussverpflichtung</div>
+    <div class="trust-item"><span class="trust-dot"></span>Volle Datensicherheit</div>
+  </div>
+</div>
+
+<section style="background:var(--cream)">
+  <div class="container" style="max-width:860px">
+    <div class="section-label">Häufige Fragen</div>
+    <h2 class="section-title">Was Entscheider uns fragen.</h2>
+    <p class="section-intro">Neun Fragen in drei Themenblöcken — strukturiert nach Kosten &amp; Vergütung, Analyse &amp; Prozess sowie Technik &amp; Speicher.</p>
+
+    <!-- BLOCK 1: Kosten & Vergütung -->
+    <div class="faq-block">
+      <div class="faq-block-header">
+        <span class="faq-block-num">01</span>
+        <div class="faq-block-title">Kosten &amp; Vergütung</div>
+      </div>
+      <div class="faq-block-body">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Was kostet das Erstgespräch und die erste Analyse?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Das Erstgespräch ist vollständig kostenlos und unverbindlich. Auch die erste Potenzialschätzung auf Basis Ihrer Verbrauchsdaten entstehen für Sie ohne Kosten. Erst wenn wir eine Optimierung umsetzen die nachweisbar Einsparungen bringt, erfolgt eine Vergütung — ausschließlich erfolgsbasiert.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Wie funktioniert die erfolgsbasierte Vergütung genau?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Wir vereinbaren im Voraus eine transparente Erfolgsbeteiligung an den erzielten Einsparungen — für einen definierten Zeitraum. Es gibt keine versteckten Kosten, keine Grundgebühren, keine Mindestvergütung. Wenn keine Einsparung erzielt wird, erhalten wir keine Vergütung. So einfach ist das Modell.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Ab welchem Verbrauch lohnt sich eine Zusammenarbeit?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Unsere Erfahrung zeigt: Ab einem Jahresstromverbrauch von ca. 100.000 kWh sind in fast allen Fällen relevante Einsparpotenziale vorhanden. Bei Verbrauchsmengen unter 100.000 kWh ist das Verhältnis von Aufwand und Ertrag meist nicht optimal — hier würden wir das offen kommunizieren.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCK 2: Analyse & Prozess -->
+    <div class="faq-block">
+      <div class="faq-block-header">
+        <span class="faq-block-num">02</span>
+        <div class="faq-block-title">Analyse &amp; Prozess</div>
+      </div>
+      <div class="faq-block-body">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Was brauchen Sie für eine erste Analyse?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Für eine belastbare erste Einschätzung benötigen wir: aktuelle Strom- und ggf. Gasrechnungen der letzten 12 Monate, Ihren RLM-Lastgang falls vorhanden (sonst können wir ihn anfordern), sowie Angaben zu Laufzeiten und Typ Ihres aktuellen Vertrags. Das dauert in der Vorbereitung ca. 15 Minuten — den Rest übernehmen wir.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Wie lange dauert eine vollständige Analyse?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Nach Erhalt aller relevanten Unterlagen liefern wir in der Regel innerhalb von 5–10 Werktagen eine vollständige Ergebnispräsentation mit konkreten Handlungsoptionen und transparenten Wirtschaftlichkeitsberechnungen.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Wir haben noch lange Restlaufzeiten — lohnt es sich trotzdem?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Ja — und oft besonders dann. Denn Stufe 2 (Lastoptimierung und BESS) wirkt unabhängig vom laufenden Energievertrag. Und für Stufe 1 bereiten wir die optimale Beschaffungsstrategie für das Ende Ihrer Laufzeit vor, sodass Sie beim nächsten Wechsel sofort die besten Konditionen nutzen können.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCK 3: Technik & Datenschutz -->
+    <div class="faq-block">
+      <div class="faq-block-header">
+        <span class="faq-block-num">03</span>
+        <div class="faq-block-title">Technik, Speicher &amp; Datenschutz</div>
+      </div>
+      <div class="faq-block-body">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Was passiert mit unseren Daten?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Alle Daten werden ausschließlich zweckgebunden für die Analyse genutzt. Wir unterzeichnen standardmäßig eine Datenschutzvereinbarung und eine Vertraulichkeitserklärung vor Übermittlung der ersten Unterlagen. Daten werden nicht an Dritte weitergegeben — auch nicht an Energieversorger oder Speicherhersteller.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Wie lange amortisiert sich ein Batteriespeicher typischerweise?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">In unseren Projekten liegt die Amortisation zwischen 1,9 und 6,5 Jahren — je nach Lastprofil, Verbrauchsvolumen und eingesetztem Szenario. Das Klinikprojekt amortisierte sich in 2,5 Jahren bei 39 % Jahresrendite. Die Spanne ist groß, deshalb rechnen wir immer individuell — nie mit pauschalen Versprechen.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Sind Sie wirklich unabhängig von Herstellern und Lieferanten?</span>
+            <div class="faq-icon"></div>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Ja, vollständig. Wir erhalten keine Provisionen von Energielieferanten für Vertragsabschlüsse. Unsere BESS-Empfehlungen basieren auf technischer und wirtschaftlicher Eignung — nicht auf Hersteller-Abkommen. Unsere Technologiepartner (STRICKER, Gotion, Midea) sind Kooperationspartner für die Umsetzung, nicht Auftraggeber für unsere Beratung.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--green);padding:44px;margin-top:8px;position:relative">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Noch Fragen offen?</div>
+      <p style="font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:22px;line-height:1.45">Sprechen Sie direkt mit uns — 30 Minuten, kostenlos, auf Basis Ihrer Daten.</p>
+      <a href="kontakt.html" class="btn-primary">Termin vereinbaren →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div><div style="display:flex;align-items:center;gap:11px;margin-bottom:14px"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg><div class="footer-brand">Volt<span>Trust</span></div></div><p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p></div>
+    <div><div class="footer-col-title">Seiten</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="fuer-entscheider.html">Für Entscheider</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><div class="footer-col-title">Kontakt</div><ul class="footer-links"><li><a href="tel:+491711245256">+49 171 1245256</a></li><li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li><li><a href="kontakt.html">Termin vereinbaren</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Volt Trust · Alle Rechte vorbehalten</span><span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
+function toggleFaq(el){
+  const ans=el.nextElementSibling;
+  const wasOpen=el.classList.contains('open');
+  document.querySelectorAll('.faq-question.open').forEach(q=>{q.classList.remove('open');q.nextElementSibling.classList.remove('open')});
+  if(!wasOpen){el.classList.add('open');ans.classList.add('open')}
+}
+</script>
+</body>
+</html>
