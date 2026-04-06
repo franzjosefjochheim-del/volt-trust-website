@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kontakt zu Volt Trust — Kostenloses Erstgespräch vereinbaren. Termin buchen oder direkt schreiben.">
+<title>Kontakt – Volt Trust</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.kontakt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 52px; background: var(--stone); }
+.kontakt-form-wrap { background: var(--cream); padding: 52px; }
+.kontakt-info-wrap { background: var(--green); padding: 52px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-label { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--subtle); }
+.form-input { background: var(--mist); border: 1px solid var(--stone); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14.5px; padding: 13px 15px; width: 100%; transition: border-color .2s; outline: none; }
+.form-input:focus { border-color: var(--gold); }
+.form-input::placeholder { color: rgba(26,40,32,.3); }
+textarea.form-input { resize: vertical; min-height: 110px; }
+.form-select { appearance: none; background: var(--mist) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235A6B60' stroke-width='1.5'/%3E%3C/svg%3E") right 14px center no-repeat; cursor: pointer; }
+.btn-submit { background: var(--gold); color: var(--ink); font-size: 13.5px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; padding: 16px 40px; border: none; cursor: pointer; width: 100%; margin-top: 8px; transition: background .2s, transform .15s; font-family: 'DM Sans', sans-serif; }
+.btn-submit:hover { background: var(--gold-lt); transform: translateY(-1px); }
+.form-note { font-size: 11.5px; color: var(--subtle); margin-top: 12px; text-align: center; line-height: 1.6; }
+.kontakt-info-item { display: flex; gap: 16px; margin-bottom: 28px; align-items: flex-start; }
+.kontakt-info-icon { width: 40px; height: 40px; background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.kontakt-info-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.kontakt-info-label { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.kontakt-info-val { font-size: 14.5px; color: var(--cream); }
+.kontakt-info-val a { color: var(--cream); text-decoration: none; }
+.kontakt-info-val a:hover { color: var(--gold-lt); }
+.calendly-section { background: var(--mist); }
+.calendly-wrap { background: var(--cream); border: 1px solid var(--stone); overflow: hidden; margin-top: 48px; }
+.calendly-header { background: var(--green); padding: 24px 32px; display: flex; align-items: center; gap: 14px; }
+.calendly-header-text { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--cream); }
+.calendly-header-sub { font-size: 13px; color: rgba(245,240,232,.55); margin-top: 3px; }
+.calendly-embed { background: white; }
+.success-msg { display: none; background: rgba(82,183,136,.12); border: 1px solid rgba(82,183,136,.3); padding: 20px 24px; text-align: center; margin-top: 16px; }
+.success-msg.show { display: block; }
+.success-msg p { color: var(--green); font-size: 15px; }
+@media (max-width: 960px) {
+  .kontakt-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width="0.75" opacity=".5"/></svg>
+      <span class="nav-logo-text">Volt<span>Trust</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+    <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="ueber-uns.html">Über uns</a><a href="kontakt.html">Kontakt</a>
+  <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="container" style="position:relative;z-index:2">
+    <div class="page-hero-eyebrow">Kontakt</div>
+    <h1>Sprechen wir über<br><em>Ihre</em> Energiekosten.</h1>
+    <p class="page-hero-lead">In 30 Minuten zeigen wir Ihnen konkret, welche Einsparpotenziale in Ihrem Betrieb realistisch erreichbar sind — auf Basis Ihrer echten Verbrauchsdaten.</p>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>Kostenlos &amp; unverbindlich</div>
+    <div class="trust-item"><span class="trust-dot"></span>Vergütung nur im Erfolgsfall</div>
+    <div class="trust-item"><span class="trust-dot"></span>Persönlicher Ansprechpartner</div>
+    <div class="trust-item"><span class="trust-dot"></span>Antwort innerhalb von 24 Stunden</div>
+  </div>
+</div>
+
+<!-- CALENDLY -->
+<section class="calendly-section">
+  <div class="container">
+    <div class="section-label">Direkten Termin buchen</div>
+    <h2 class="section-title">Erstgespräch vereinbaren</h2>
+    <p class="section-intro">Wählen Sie direkt einen passenden Termin — 30 Minuten, per Telefon oder Video, kostenlos und unverbindlich.</p>
+    <div class="calendly-wrap reveal">
+      <div class="calendly-header">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <div>
+          <div class="calendly-header-text">Termin buchen — Erstgespräch Volt Trust</div>
+          <div class="calendly-header-sub">30 Minuten · Telefon oder Video · Kostenlos</div>
+        </div>
+      </div>
+      <!-- CALENDLY INLINE WIDGET -->
+      <!-- ANLEITUNG: Ersetze die URL unten mit Eurer eigenen Calendly-URL -->
+      <!-- Kostenloser Account auf calendly.com erstellen, Link kopieren und hier einfügen -->
+      <div class="calendly-embed">
+        <div style="padding:48px;text-align:center;background:var(--mist)">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C9963A" stroke-width="1.2" style="margin:0 auto 20px;display:block"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+          <p style="font-family:'Playfair Display',serif;font-size:20px;color:var(--green);margin-bottom:10px">Calendly-Kalender wird hier eingebettet</p>
+          <p style="font-size:14px;color:var(--subtle);margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto">Nach Eurer Calendly-Registrierung einfach die URL unten im Code ersetzen. Euer Buchungskalender erscheint dann direkt hier.</p>
+          <a href="https://calendly.com" target="_blank" rel="noopener" class="btn-primary">Calendly kostenlos einrichten →</a>
+          <p style="font-size:12px;color:var(--subtle);margin-top:16px">Kostenloser Account reicht für Erstgespräch-Buchungen aus</p>
+        </div>
+      </div>
+      <!-- WENN IHR EURE CALENDLY-URL HABT: Entfernt den Block oben und aktiviert diese Zeile: -->
+      <!-- <div class="calendly-inline-widget" data-url="https://calendly.com/EUER-LINK/30min" style="min-width:320px;height:630px;"></div> -->
+      <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKTFORMULAR -->
+<section style="background:var(--cream);padding:88px 0">
+  <div class="container">
+    <div class="section-label">Oder schreiben Sie uns</div>
+    <h2 class="section-title">Kontaktformular</h2>
+    <p class="section-intro">Nachricht hinterlassen — wir melden uns innerhalb von 24 Stunden.</p>
+    <div class="kontakt-grid">
+      <div class="kontakt-form-wrap reveal">
+        <!-- FORMSPREE FORMULAR -->
+        <!-- ANLEITUNG: Konto auf formspree.io erstellen, neue Form anlegen, -->
+        <!-- die Form-ID kopieren und unten bei action="..." eintragen -->
+        <form action="https://formspree.io/f/EURE-FORM-ID" method="POST" id="kontaktForm">
+          <input type="hidden" name="_subject" value="Neue Anfrage über Volt Trust Website">
+          <input type="hidden" name="_language" value="de">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="vorname">Vorname *</label>
+              <input type="text" id="vorname" name="vorname" class="form-input" placeholder="Max" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="nachname">Nachname *</label>
+              <input type="text" id="nachname" name="nachname" class="form-input" placeholder="Mustermann" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="unternehmen">Unternehmen *</label>
+              <input type="text" id="unternehmen" name="unternehmen" class="form-input" placeholder="Mustermann GmbH" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="funktion">Funktion</label>
+              <input type="text" id="funktion" name="funktion" class="form-input" placeholder="Geschäftsführer">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="max@mustermann.de" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="+49 ...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="verbrauch">Jahresstromverbrauch</label>
+            <select id="verbrauch" name="verbrauch" class="form-input form-select">
+              <option value="">Bitte wählen</option>
+              <option>100.000 – 500.000 kWh/a</option>
+              <option>500.000 – 1.000.000 kWh/a</option>
+              <option>1 – 5 Mio. kWh/a</option>
+              <option>über 5 Mio. kWh/a</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" class="form-input" placeholder="Kurze Beschreibung Ihres Betriebs und Ihres Anliegens..."></textarea>
+          </div>
+          <div class="form-group">
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:13px;color:var(--subtle)">
+              <input type="checkbox" name="datenschutz" required style="margin-top:3px;flex-shrink:0">
+              <span>Ich habe die <a href="datenschutz.html" style="color:var(--green)">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *</span>
+            </label>
+          </div>
+          <button type="submit" class="btn-submit">Anfrage absenden →</button>
+          <p class="form-note">* Pflichtfelder · Keine Weitergabe Ihrer Daten · Antwort innerhalb von 24 Stunden</p>
+        </form>
+        <div class="success-msg" id="successMsg">
+          <p>✓ Ihre Anfrage wurde gesendet. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+        </div>
+      </div>
+      <div class="kontakt-info-wrap reveal">
+        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:32px">Direktkontakt</div>
+        <div class="kontakt-info-item">
+          <div class="kontakt-info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
+          <div><div class="kontakt-info-label">Telefon</div><div class="kontakt-info-val"><a href="tel:+49">+49 (0) — bitte eintragen</a></div></div>
+        </div>
+        <div class="kontakt-info-item">
+          <div class="kontakt-info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="kontakt-info-label">E-Mail</div><div class="kontakt-info-val"><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></div>
+          <div style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)">
+            <div style="display:flex;gap:16px;align-items:center">
+              <img src="img/daniel-arndt.png" alt="Daniel Arndt" style="width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--gold);flex-shrink:0">
+              <div><div style="font-family:Playfair Display,serif;font-size:17px;color:var(--cream)">Daniel Arndt</div><div style="font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:rgba(247,243,236,.55)">CTO · Technische Leitung</div><a href="tel:+491711245256" style="font-size:14px;color:var(--gold-lt);text-decoration:none;display:block;margin-top:6px">+49 171 1245256</a></div>
+            </div>
+          </div></div>
+        </div>
+        <div class="kontakt-info-item">
+          <div class="kontakt-info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="kontakt-info-label">Standort</div><div class="kontakt-info-val">Arnsberg, Nordrhein-Westfalen<br><span style="font-size:13px;color:rgba(245,240,232,.5)">Tätig bundesweit</span></div></div>
+        </div>
+        <div style="margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1)">
+          <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Datenbasis für Erstgespräch</div>
+          <p style="font-size:13.5px;line-height:1.72;color:rgba(245,240,232,.6)">Für eine erste Einschätzung benötigen wir: aktuelle Strom- und ggf. Gasrechnung, RLM-Profil falls vorhanden, Angabe zum Jahresverbrauch.</p>
+        </div>
+        <div style="margin-top:24px;background:rgba(201,150,58,.12);border:1px solid rgba(201,150,58,.25);padding:20px">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Wichtiger Hinweis</div>
+          <p style="font-size:13px;line-height:1.7;color:rgba(245,240,232,.65)">Vergütung nur im Erfolgsfall. Alle Ergebnisse dienen ausschließlich als Entscheidungsgrundlage — ohne Abschlussverpflichtung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:14px">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width="0.75" opacity=".5"/></svg>
+        <div class="footer-brand">Volt<span>Trust</span></div>
+      </div>
+      <p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p>
+    </div>
+    <div><div class="footer-col-title">Seiten</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+    <div><div class="footer-col-title">Leistungen</div><ul class="footer-links"><li><a href="leistungen.html">Energiebeschaffung</a></li><li><a href="leistungen.html">Lastspitzenkappung</a></li><li><a href="leistungen.html">Batteriespeicher</a></li><li><a href="leistungen.html">Zielkunden</a></li></ul></div>
+    <div><div class="footer-col-title">Rechtliches</div><ul class="footer-links"><li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Volt Trust · Alle Rechte vorbehalten</span>
+    <span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+  // Formspree AJAX submit
+  const form = document.getElementById('kontaktForm');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit');
+      btn.textContent = 'Wird gesendet…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('successMsg').classList.add('show');
+        } else {
+          btn.textContent = 'Fehler — bitte erneut versuchen';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Fehler — bitte erneut versuchen';
+        btn.disabled = false;
+      }
+    });
+  }
+</script>
+</body>
+</html>
