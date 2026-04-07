@@ -20,23 +20,9 @@
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .55s .3s ease both}
 .hero-card{background:rgba(30,61,48,.45);border:1px solid rgba(201,150,58,.25);padding:40px;position:relative;animation:fadeUp .65s .15s ease both}
 .hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
-.hero-ref-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.hero-ref-title{font-family:'Playfair Display',serif;font-size:19px;color:var(--cream);margin-bottom:24px;line-height:1.4}
-.hero-stat-row{display:flex;margin-bottom:28px}
-.hero-stat{flex:1;text-align:center;padding:18px 0;border-right:1px solid rgba(201,150,58,.2)}
-.hero-stat:last-child{border-right:none}
-.hero-stat-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);display:block;line-height:1}
-.hero-stat-label{font-size:12px;color:rgba(249,246,239,.55);display:block;margin-top:5px}
-.hero-ref-note{font-size:14px;line-height:1.65;color:rgba(249,246,239,.55);padding-top:16px;border-top:1px solid rgba(201,150,58,.15)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
-/* ===== TRUST BAR ===== */
-.trust-bar{background:rgba(30,61,48,.95);border-bottom:1px solid rgba(201,150,58,.15)}
-.trust-inner{max-width:1200px;margin:0 auto;padding:14px 40px;display:flex;gap:0;flex-wrap:wrap;justify-content:space-between;align-items:center}
-.trust-item{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:rgba(249,246,239,.75);display:flex;align-items:center;gap:9px;padding:6px 0}
-.trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
-
-/* ===== WER WIR SIND (gestrafft) ===== */
+/* ===== WER WIR SIND ===== */
 .wer-wir{background:var(--cream)}
 .wer-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:start;margin-top:56px}
 .wer-text p{font-size:18px;line-height:1.85;color:rgba(30,61,48,.85);margin-bottom:0}
@@ -49,7 +35,7 @@
 .wer-check-item{display:flex;gap:13px;align-items:flex-start}
 .wer-check-badge{width:24px;height:24px;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
 .wer-check-badge svg{width:12px;height:12px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.wer-check-text{font-size:16px;color:rgba(249,246,239,.82);line-height:1.65}
+.wer-check-text{font-size:16px;color:rgba(249,246,239,.88);line-height:1.65}
 
 /* ===== ZWEI STUFEN ===== */
 .zwei-stufen{background:var(--mist)}
@@ -66,12 +52,31 @@
 .stufe-detail-item{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:rgba(30,61,48,.75)}
 .stufe-detail-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:8px}
 
-/* ===== ZAHLEN ===== */
-.zahlen{background:var(--green)}
-.zahlen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.06);margin-top:56px}
-.zahl-card{background:var(--green);padding:48px 34px;text-align:center}
-.zahl-val{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--gold);line-height:1;display:block}
-.zahl-label{font-size:16px;color:rgba(249,246,239,.72);margin-top:10px;display:block;line-height:1.55}
+/* ===== CASES ===== */
+.cases{background:var(--cream)}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-top:52px}
+.case-card{background:var(--cream);padding:48px;position:relative}
+.case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.case-card-tag{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.case-card-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--green);margin-bottom:28px;line-height:1.3}
+.case-metrics{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--stone)}
+.case-metric{display:flex;justify-content:space-between;align-items:baseline}
+.case-metric-label{font-size:15px;color:rgba(30,61,48,.6)}
+.case-metric-val{font-size:16px;font-weight:500;color:rgba(30,61,48,.88)}
+.case-saving{margin-bottom:22px}
+.case-saving-label{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(30,61,48,.6);margin-bottom:6px}
+.case-saving-val{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--green);line-height:1}
+.case-saving-sub{font-size:15px;color:var(--gold);margin-top:5px;font-weight:500}
+.case-roi-row{display:flex;gap:2px;background:var(--stone)}
+.case-roi-item{flex:1;background:var(--mist);padding:18px 12px;text-align:center}
+.case-roi-val{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--green);display:block;line-height:1}
+.case-roi-label{font-size:13px;color:rgba(30,61,48,.55);display:block;margin-top:5px}
+
+/* ===== TRUST BAR (unten) ===== */
+.trust-bar-bottom{background:var(--forest);border-top:1px solid rgba(201,150,58,.15);padding:18px 0}
+.trust-bar-bottom .trust-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;gap:0;flex-wrap:wrap;justify-content:center;align-items:center;gap:32px}
+.trust-bar-bottom .trust-item{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(249,246,239,.75);display:flex;align-items:center;gap:9px}
+.trust-bar-bottom .trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
 /* ===== RECHNER ===== */
 .rechner-wrap{width:100%;overflow:hidden}
@@ -80,74 +85,35 @@
 .rechner-select{width:100%;box-sizing:border-box;font-size:16px;padding:13px 15px;border:1px solid rgba(30,61,48,.2);background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;appearance:none;cursor:pointer}
 .rechner-result{margin-top:28px;background:var(--green);padding:32px;display:none}
 .rechner-result.show{display:block}
-.rechner-result-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.rechner-result-label{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .rechner-result-range{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--cream);line-height:1;margin-bottom:14px}
-.rechner-result-text{font-size:15px;color:rgba(249,246,239,.72);line-height:1.65;margin-bottom:20px}
-.rechner-disclaimer{font-size:13px;color:rgba(249,246,239,.45);line-height:1.65;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
+.rechner-result-text{font-size:16px;color:rgba(249,246,239,.82);line-height:1.65;margin-bottom:20px}
+.rechner-disclaimer{font-size:13px;color:rgba(249,246,239,.5);line-height:1.65;margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
 
-/* ===== CASES ===== */
-.cases{background:var(--cream)}
-.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-top:52px}
-.case-card{background:var(--cream);padding:48px;position:relative}
-.case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
-.case-card-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.case-card-tag::before{content:'';display:block;width:20px;height:1px;background:var(--gold)}
-.case-card-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--green);margin-bottom:28px;line-height:1.3}
-/* Vorher/Nachher */
-.case-comparison{display:grid;grid-template-columns:1fr auto 1fr;margin-bottom:24px;background:var(--mist);border:1px solid var(--stone)}
-.case-comp-col{padding:18px 20px}
-.case-comp-col.after{background:var(--green)}
-.case-comp-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(30,61,48,.5);margin-bottom:6px}
-.case-comp-col.after .case-comp-label{color:rgba(249,246,239,.65)}
-.case-comp-val{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--green);line-height:1}
-.case-comp-col.after .case-comp-val{color:var(--cream)}
-.case-comp-sub{font-size:12px;color:rgba(30,61,48,.45);margin-top:3px}
-.case-comp-col.after .case-comp-sub{color:rgba(249,246,239,.6)}
-.case-comp-arrow{display:flex;align-items:center;justify-content:center;padding:0 12px;background:var(--stone)}
-.case-comp-arrow svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:2;stroke-linecap:round}
-/* Einsparung */
-.case-saving-block{background:var(--ink);padding:20px 24px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.case-saving-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.case-saving-val{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--cream);line-height:1}
-.case-saving-right{text-align:right;flex-shrink:0}
-.case-saving-pct{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1}
-.case-saving-pct-label{font-size:12px;color:rgba(249,246,239,.6);margin-top:3px}
-/* Detail-Zeilen */
-.case-details{display:flex;flex-direction:column}
-.case-detail-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--stone)}
-.case-detail-row:last-child{border-bottom:none}
-.case-detail-label{font-size:14px;color:rgba(30,61,48,.55)}
-.case-detail-val{font-size:14px;font-weight:500;color:rgba(30,61,48,.85);text-align:right}
-
-/* ===== ANSPRECHPARTNER ===== */
+/* ===== ANSP / CTA ===== */
 .ansp-section{background:var(--mist)}
 .ansp-inner{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-top:52px}
-
-/* ===== CTA ===== */
 .cta-section{background:var(--green)}
 .cta-inner{text-align:center;max-width:680px;margin:0 auto}
 .cta-eyebrow{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
 .cta-title{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--cream);line-height:1.12;margin-bottom:18px}
-.cta-text{font-size:18px;line-height:1.76;color:rgba(249,246,239,.72);margin-bottom:42px}
+.cta-text{font-size:18px;line-height:1.76;color:rgba(249,246,239,.78);margin-bottom:42px}
 .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-/* ===== SECTION GLOBALS OVERRIDE ===== */
+/* ===== SECTION GLOBALS ===== */
 .section-label{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.5vw,44px);font-weight:700;color:var(--green);line-height:1.12}
 .section-title.light{color:var(--cream)}
 .section-intro{font-size:18px;line-height:1.78;color:rgba(30,61,48,.78);max-width:660px;margin-top:16px}
-.section-intro.light{color:rgba(249,246,239,.72)}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:960px){
   .hero-content,.wer-grid,.stufen-grid,.case-grid,.ansp-inner{grid-template-columns:1fr}
   .hero-card{max-width:520px}
-  .zahlen-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:600px){
-  .zahlen-grid{grid-template-columns:1fr}
   .hero-content{padding:0 20px}
-  .trust-inner{padding:12px 20px;gap:8px}
+  .trust-bar-bottom .trust-inner{gap:16px}
 }
 </style>
 </head>
@@ -191,37 +157,29 @@
       </div>
     </div>
     <div class="hero-card reveal">
-      <div class="hero-ref-label">Referenzprojekt · Aluminium-Gießerei</div>
-      <div class="hero-ref-title">Energiekostenreduktion um 47 % in 18 Monaten</div>
-      <div class="hero-stat-row">
-        <div class="hero-stat">
-          <span class="hero-stat-num">1,9<span style="font-size:15px"> Mio.</span></span>
-          <span class="hero-stat-label">Vorher p.a.</span>
+      <div class="wer-box-label">Unser Ansatz</div>
+      <div class="wer-box-title" style="font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:26px;line-height:1.4">Volt Trust senkt Energiekosten in zwei klar strukturierten Schritten.</div>
+      <div class="wer-check">
+        <div class="wer-check-item">
+          <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
+          <div class="wer-check-text">Schritt 1: Attraktive Strom- und Gaslösungen — sofort wirksam, ohne Investition</div>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">1,0<span style="font-size:15px"> Mio.</span></span>
-          <span class="hero-stat-label">Nachher p.a.</span>
+        <div class="wer-check-item">
+          <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
+          <div class="wer-check-text">Schritt 2: Technische Optimierung von Lastspitzen und Versorgungssicherheit</div>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-num">900k</span>
-          <span class="hero-stat-label">Ersparnis €/a</span>
+        <div class="wer-check-item">
+          <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
+          <div class="wer-check-text">Vergütung ausschließlich im Erfolgsfall — kein Risiko für Sie</div>
+        </div>
+        <div class="wer-check-item">
+          <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
+          <div class="wer-check-text">Direkter Kontakt mit Experten — kein Callcenter, kein Zwischenhändler</div>
         </div>
       </div>
-      <div class="hero-ref-note">Alle Kennzahlen aus einem realen Projekt — anonymisiert, unverändert.</div>
     </div>
   </div>
 </section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span class="trust-dot"></span>Unabhängige Beratung</div>
-    <div class="trust-item"><span class="trust-dot"></span>Vergütung nur im Erfolgsfall</div>
-    <div class="trust-item"><span class="trust-dot"></span>BESS ab 100 kWh</div>
-    <div class="trust-item"><span class="trust-dot"></span>Ab 100.000 kWh/a</div>
-    <div class="trust-item"><span class="trust-dot"></span>Bundesweit</div>
-  </div>
-</div>
 
 <!-- 2 · WER WIR SIND -->
 <section class="wer-wir">
@@ -234,20 +192,24 @@
       </div>
       <div>
         <div class="wer-box reveal">
-          <div class="wer-box-label">Warum Volt Trust</div>
-          <div class="wer-box-title">Drei Merkmale, die uns von anderen unterscheiden.</div>
+          <div class="wer-box-label">Unser Ansatz</div>
+          <div class="wer-box-title">Volt Trust senkt Energiekosten in zwei klar strukturierten Schritten.</div>
           <div class="wer-check">
             <div class="wer-check-item">
               <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
-              <div class="wer-check-text"><strong style="color:var(--cream)">Echte Unabhängigkeit</strong> — Wir sind an keinen Lieferanten gebunden. Unsere Empfehlung folgt ausschließlich Ihren Interessen.</div>
+              <div class="wer-check-text">Schritt 1: Attraktive Strom- und Gaslösungen — sofort wirksam, ohne Investition</div>
             </div>
             <div class="wer-check-item">
               <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
-              <div class="wer-check-text"><strong style="color:var(--cream)">Vergütung nur im Erfolgsfall</strong> — Kein Honorar, keine Vorabkosten. Wir verdienen nur, wenn Sie sparen.</div>
+              <div class="wer-check-text">Schritt 2: Technische Optimierung von Lastspitzen und Versorgungssicherheit</div>
             </div>
             <div class="wer-check-item">
               <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
-              <div class="wer-check-text"><strong style="color:var(--cream)">Nachweisbare Ergebnisse</strong> — Unsere Referenzen zeigen reale Einsparungen von 47–60 % — dokumentiert, nicht versprochen.</div>
+              <div class="wer-check-text">Vergütung ausschließlich im Erfolgsfall — kein Risiko für Sie</div>
+            </div>
+            <div class="wer-check-item">
+              <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
+              <div class="wer-check-text">Direkter Kontakt mit Experten — kein Callcenter, kein Zwischenhändler</div>
             </div>
           </div>
         </div>
@@ -294,29 +256,7 @@
   </div>
 </section>
 
-<!-- 4 · ZAHLEN -->
-<section class="zahlen">
-  <div class="container">
-    <div class="section-label" style="color:var(--gold)">Nachweisbare Wirkung</div>
-    <h2 class="section-title light">Was unsere Projekte zeigen.</h2>
-    <div class="zahlen-grid">
-      <div class="zahl-card reveal">
-        <span class="zahl-val">47 %</span>
-        <span class="zahl-label">Max. Kostenreduktion<br>in einem Projekt</span>
-      </div>
-      <div class="zahl-card reveal">
-        <span class="zahl-val">2,1 J.</span>
-        <span class="zahl-label">Kürzeste<br>Amortisation</span>
-      </div>
-      <div class="zahl-card reveal">
-        <span class="zahl-val">39 %</span>
-        <span class="zahl-label">Jahresrendite<br>Klinikprojekt</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5 · POTENZIALRECHNER -->
+<!-- 4 · POTENZIALRECHNER -->
 <section id="rechner" style="background:var(--cream)">
   <div class="container">
     <div class="section-label">Potenzialrechner</div>
@@ -354,105 +294,69 @@
           <div class="rechner-result-range" id="rRange">–</div>
           <div class="rechner-result-text" id="rText">–</div>
           <a href="kontakt.html" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:20px">Jetzt genaue Berechnung anfragen →</a>
-          <div class="rechner-disclaimer">⚠ Diese Schätzung basiert auf vergleichbaren realen Projekten und dient ausschließlich zur ersten Orientierung. Tatsächliche Einsparungen hängen von Ihren spezifischen Verbrauchsprofilen, aktuellen Tarifen und technischen Gegebenheiten ab. Für eine belastbare Berechnung benötigen wir Ihre RLM-Daten und aktuellen Energierechnungen.</div>
+          <div class="rechner-disclaimer">⚠ Diese Schätzung basiert auf vergleichbaren realen Projekten und dient ausschließlich zur ersten Orientierung. Tatsächliche Einsparungen hängen von Ihren spezifischen Verbrauchsprofilen, aktuellen Tarifen und technischen Gegebenheiten ab.</div>
         </div>
       </div>
       <div>
         <div style="background:var(--green);padding:44px;position:relative;height:100%;box-sizing:border-box">
           <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
-          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:rgba(249,246,239,.95);margin-bottom:18px;border-bottom:1px solid rgba(201,150,58,.3);padding-bottom:14px">Warum nur eine Schätzung?</div>
+          <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:18px">Warum nur eine Schätzung?</div>
           <p style="font-size:18px;font-family:'Playfair Display',serif;color:var(--cream);margin-bottom:24px;line-height:1.45">Energiekosten bestehen aus drei Blöcken — und nur einer davon ist wirklich vergleichbar.</p>
           <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px">
             <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.88)"><strong style="color:var(--cream)">Energiekosten (40–50 %)</strong><br>Beschaffungsoptimierung wirkt hier — je nach Marktlage 5–20 %</div></div>
             <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.88)"><strong style="color:var(--cream)">Netzentgelte (35–45 %)</strong><br>Lastspitzenkappung und BESS senken diesen Block dauerhaft</div></div>
-            <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.88)"><strong style="color:var(--cream)">Steuern &amp; Abgaben (15–20 %)</strong><br>Staatlich festgelegt — kein Spielraum</div></div>
+            <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:rgba(201,150,58,.4);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.65)"><strong style="color:rgba(249,246,239,.8)">Steuern &amp; Abgaben (15–20 %)</strong><br>Staatlich festgelegt — kein Spielraum</div></div>
           </div>
-          <p style="font-size:15px;color:rgba(249,246,239,.75);line-height:1.7">Erst mit Ihren realen Verbrauchsdaten können wir konkrete Zahlen nennen — transparent und belegbar.</p>
+          <p style="font-size:15px;color:rgba(249,246,239,.72);line-height:1.7">Erst mit Ihren realen Verbrauchsdaten können wir konkrete Zahlen nennen — transparent und belegbar.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6 · FALLBEISPIELE (2 starke) -->
+<!-- 5 · FALLBEISPIELE -->
 <section class="cases">
   <div class="container">
     <div class="section-label">Reale Projekte</div>
     <h2 class="section-title">Ergebnisse aus der Praxis.</h2>
     <p class="section-intro">Alle Kennzahlen aus realen Projekten — anonymisiert, aber unverändert.</p>
-    <div class="case-grid" style="margin-top:52px">
+    <div class="case-grid">
       <div class="case-card reveal">
         <div class="case-card-tag">Gesundheitswesen / Klinik</div>
         <div class="case-card-title">Klinikbetrieb mit 24/7-Lastprofil</div>
-        <!-- Vorher / Nachher -->
-        <div class="case-comparison">
-          <div class="case-comp-col">
-            <div class="case-comp-label">Kosten vorher</div>
-            <div class="case-comp-val">647.007 €</div>
-            <div class="case-comp-sub">pro Jahr</div>
-          </div>
-          <div class="case-comp-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <div class="case-comp-col after">
-            <div class="case-comp-label">Kosten nachher</div>
-            <div class="case-comp-val">291.500 €</div>
-            <div class="case-comp-sub">pro Jahr</div>
-          </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-label">Jahresverbrauch</span><span class="case-metric-val">2.469 MWh/a</span></div>
+          <div class="case-metric"><span class="case-metric-label">Energiekosten vorher</span><span class="case-metric-val">647.007 €/a</span></div>
+          <div class="case-metric"><span class="case-metric-label">Maßnahme</span><span class="case-metric-val">BESS 3.423 kWh + PV 621 kWp</span></div>
         </div>
-        <!-- Einsparung -->
-        <div class="case-saving-block">
-          <div>
-            <div class="case-saving-label">Einsparung p.a.</div>
-            <div class="case-saving-val">355.507 €</div>
-          </div>
-          <div class="case-saving-right">
-            <div class="case-saving-pct">−55 %</div>
-            <div class="case-saving-pct-label">Kostenreduktion</div>
-          </div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a.</div>
+          <div class="case-saving-val">355.507 €</div>
+          <div class="case-saving-sub">Kostenreduktion −55 % · Autarkie 24 %</div>
         </div>
-        <!-- Details -->
-        <div class="case-details">
-          <div class="case-detail-row"><span class="case-detail-label">Jahresverbrauch</span><span class="case-detail-val">2.469 MWh/a</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Maßnahme</span><span class="case-detail-val">BESS 3.423 kWh + PV 621 kWp</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Amortisation</span><span class="case-detail-val">3,0 Jahre</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Rendite p.a.</span><span class="case-detail-val">39 %</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Investition</span><span class="case-detail-val">1,24 Mio. €</span></div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">3,0 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">39 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">1,24 Mio.</span><span class="case-roi-label">Investition</span></div>
         </div>
       </div>
       <div class="case-card reveal">
         <div class="case-card-tag">Großindustrie &gt; 10 GWh</div>
         <div class="case-card-title">Großindustriebetrieb, gestufter Ausbaupfad</div>
-        <!-- Vorher / Nachher -->
-        <div class="case-comparison">
-          <div class="case-comp-col">
-            <div class="case-comp-label">Kosten vorher</div>
-            <div class="case-comp-val">3.013.773 €</div>
-            <div class="case-comp-sub">pro Jahr</div>
-          </div>
-          <div class="case-comp-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-          <div class="case-comp-col after">
-            <div class="case-comp-label">Kosten nachher</div>
-            <div class="case-comp-val">1.217.914 €</div>
-            <div class="case-comp-sub">pro Jahr (Vollausbau)</div>
-          </div>
+        <div class="case-metrics">
+          <div class="case-metric"><span class="case-metric-label">Jahresverbrauch</span><span class="case-metric-val">10.858 MWh/a</span></div>
+          <div class="case-metric"><span class="case-metric-label">Energiekosten vorher</span><span class="case-metric-val">3.013.773 €/a</span></div>
+          <div class="case-metric"><span class="case-metric-label">Ersparnis Stufe 1</span><span class="case-metric-val">760.049 €/a (sofort)</span></div>
         </div>
-        <!-- Einsparung -->
-        <div class="case-saving-block">
-          <div>
-            <div class="case-saving-label">Einsparung p.a.</div>
-            <div class="case-saving-val">1.795.859 €</div>
-          </div>
-          <div class="case-saving-right">
-            <div class="case-saving-pct">−60 %</div>
-            <div class="case-saving-pct-label">Kostenreduktion</div>
-          </div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a. (Vollausbau)</div>
+          <div class="case-saving-val">1.795.859 €</div>
+          <div class="case-saving-sub">Kostenreduktion −60 %</div>
         </div>
-        <!-- Details -->
-        <div class="case-details">
-          <div class="case-detail-row"><span class="case-detail-label">Jahresverbrauch</span><span class="case-detail-val">10.858 MWh/a</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Soforteinsparung (Stufe 1)</span><span class="case-detail-val">760.049 €/a</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Amortisation</span><span class="case-detail-val">1,9 Jahre</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Rendite p.a.</span><span class="case-detail-val">55 %</span></div>
-          <div class="case-detail-row"><span class="case-detail-label">Investition</span><span class="case-detail-val">3,4 Mio. €</span></div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">1,9 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">55 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">3,4 Mio.</span><span class="case-roi-label">Investition</span></div>
         </div>
       </div>
     </div>
@@ -462,7 +366,7 @@
   </div>
 </section>
 
-<!-- 7 · ANSPRECHPARTNER + CTA -->
+<!-- 6 · ANSPRECHPARTNER + CTA -->
 <section class="ansp-section">
   <div class="container">
     <div class="section-label">Ihr Ansprechpartner</div>
@@ -490,7 +394,7 @@
           <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
           <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">In 30 Minuten wissen Sie mehr</div>
           <p style="font-size:18px;line-height:1.75;color:var(--cream);margin-bottom:20px;font-family:'Playfair Display',serif">Auf Basis Ihrer Verbrauchsdaten zeigen wir Ihnen konkret, welche Einsparpotenziale realistisch erreichbar sind.</p>
-          <p style="font-size:16px;line-height:1.72;color:rgba(249,246,239,.72);margin-bottom:28px">Kostenlos, unverbindlich, ohne Abschlussverpflichtung. Vergütung nur im Erfolgsfall.</p>
+          <p style="font-size:16px;line-height:1.72;color:rgba(249,246,239,.78);margin-bottom:28px">Kostenlos, unverbindlich, ohne Abschlussverpflichtung. Vergütung nur im Erfolgsfall.</p>
           <a href="kontakt.html" class="btn-primary" style="width:100%;text-align:center;display:block">Termin vereinbaren →</a>
         </div>
       </div>
@@ -512,6 +416,16 @@
     </div>
   </div>
 </section>
+
+<!-- TRUST BAR (unten, vor Footer) -->
+<div class="trust-bar-bottom">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>Unabhängige Beratung</div>
+    <div class="trust-item"><span class="trust-dot"></span>Vergütung nur im Erfolgsfall</div>
+    <div class="trust-item"><span class="trust-dot"></span>BESS ab 100 kWh</div>
+    <div class="trust-item"><span class="trust-dot"></span>Ab 100.000 kWh/a · bundesweit</div>
+  </div>
+</div>
 
 <footer>
   <div class="footer-top">
@@ -555,16 +469,11 @@
 <script src="main.js"></script>
 <script>
 document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
-
-// Potenzialrechner
 function calcPotenzial(){
   const v=document.getElementById('rVerbrauch').value;
   const b=document.getElementById('rBranche').value;
   const pv=document.getElementById('rPV').value;
   if(!v||!b)return;
-  const res=document.getElementById('rechnerResult');
-  const range=document.getElementById('rRange');
-  const text=document.getElementById('rText');
   const base={
     klein:{prod:[12000,25000],food:[8000,20000],health:[15000,35000],logistik:[10000,22000],gebaeude:[12000,28000],filiale:[8000,18000],andere:[8000,20000]},
     mittel:{prod:[30000,90000],food:[25000,75000],health:[60000,150000],logistik:[35000,80000],gebaeude:[35000,90000],filiale:[25000,70000],andere:[20000,65000]},
@@ -575,18 +484,10 @@ function calcPotenzial(){
   if(pv==='ja'){min=Math.round(min*1.15);max=Math.round(max*1.2)}
   if(pv==='geplant'){min=Math.round(min*1.08);max=Math.round(max*1.12)}
   const fmt=n=>n>=1000000?(n/1000000).toFixed(1)+' Mio. €':(n>=1000?Math.round(n/1000)*1000:n).toLocaleString('de-DE')+' €';
-  range.textContent=fmt(min)+' – '+fmt(max);
-  const tips={
-    prod:'Maschinenbetrieb erzeugt ausgeprägte Lastspitzen. Typisch: Beschaffungsoptimierung + BESS für maximalen Hebel.',
-    food:'Kontinuierliche Prozesse und Kühllasten bieten gute Prognostizierbarkeit. Hohe PV-Synergie möglich.',
-    health:'24/7-Grundlast ist ideal für BESS. Zusätzlich USV-Funktion möglich — Versorgungssicherheit als Doppelnutzen.',
-    logistik:'Kühlaggregat-Hochlauf erzeugt extreme Spitzen. Peak Shaving oft mit sehr kurzer Amortisation.',
-    gebaeude:'Morgenlicher Gleichzeitigkeitsbetrieb als Hauptlasttreiber. Hohe PV-Synergie auf Dachflächen.',
-    filiale:'Gebündelte Beschaffung als erster großer Hebel. Rollout auf mehrere Standorte senkt Hardware-Kosten um 15–25 %.',
-    andere:'Detaillierte Analyse Ihres spezifischen Lastprofils erforderlich — erste Potenziale sind in fast allen Fällen vorhanden.'
-  };
-  text.textContent=tips[b]||tips.andere;
-  res.classList.add('show');
+  const tips={prod:'Maschinenbetrieb erzeugt ausgeprägte Lastspitzen. Typisch: Beschaffungsoptimierung + BESS für maximalen Hebel.',food:'Kontinuierliche Prozesse und Kühllasten bieten gute Prognostizierbarkeit. Hohe PV-Synergie möglich.',health:'24/7-Grundlast ist ideal für BESS. Zusätzlich USV-Funktion möglich — Versorgungssicherheit als Doppelnutzen.',logistik:'Kühlaggregat-Hochlauf erzeugt extreme Spitzen. Peak Shaving oft mit sehr kurzer Amortisation.',gebaeude:'Morgenlicher Gleichzeitigkeitsbetrieb als Hauptlasttreiber. Hohe PV-Synergie auf Dachflächen.',filiale:'Gebündelte Beschaffung als erster großer Hebel. Rollout auf mehrere Standorte senkt Hardware-Kosten um 15–25 %.',andere:'Detaillierte Analyse Ihres spezifischen Lastprofils erforderlich — erste Potenziale sind in fast allen Fällen vorhanden.'};
+  document.getElementById('rRange').textContent=fmt(min)+' – '+fmt(max);
+  document.getElementById('rText').textContent=tips[b]||tips.andere;
+  document.getElementById('rechnerResult').classList.add('show');
 }
 </script>
 </body>
