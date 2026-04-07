@@ -213,7 +213,7 @@ section{padding:100px 0}
 .ansp-inner{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-top:52px}
 .cta-section{background:var(--card-dark-bg)}
 .cta-inner{text-align:center;max-width:680px;margin:0 auto}
-.cta-eyebrow{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;opacity:.9}
+.cta-eyebrow{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
 .cta-title{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,52px);font-weight:700;color:#ffffff;line-height:1.12;margin-bottom:18px}
 .cta-text{font-size:18px;line-height:1.76;color:var(--card-dark-body);margin-bottom:42px}
 .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
