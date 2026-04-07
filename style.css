@@ -720,3 +720,16 @@ textarea.form-input { resize: vertical; min-height: 110px; }
 @media(max-width:600px){
   .trust-item{font-size:10px;letter-spacing:.08em}
 }
+
+/* ===== CARD GRID (leistungen.html) ===== */
+.card-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-top:52px}
+.card{background:var(--mist);padding:48px;position:relative;overflow:hidden;transition:background .2s}
+.card:hover{background:var(--cream)}
+.card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--gold);transition:width .5s}
+.card:hover::after{width:100%}
+.card-num{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:block}
+.card-icon{width:56px;height:56px;background:var(--green);display:flex;align-items:center;justify-content:center;margin-bottom:22px;flex-shrink:0}
+.card-icon svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;flex-shrink:0;max-width:28px;max-height:28px}
+.card-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--green);margin-bottom:14px;line-height:1.2}
+.card-text{font-size:16px;line-height:1.82;color:var(--subtle)}
+@media(max-width:960px){.card-grid-2{grid-template-columns:1fr}}
