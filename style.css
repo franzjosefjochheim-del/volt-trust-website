@@ -430,6 +430,8 @@ footer{background:var(--forest);border-top:1px solid var(--line);padding:60px 0 
 .tech-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width .4s; }
 .tech-card:hover::after { width: 100%; }
 .tech-icon { width: 56px; height: 56px; margin-bottom: 22px; }
+.card-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; }
+.card-icon svg { width: 28px !important; height: 28px !important; stroke: var(--gold); fill: none; max-width: 28px; max-height: 28px; flex-shrink: 0; }
 .tech-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--cream); margin-bottom: 14px; }
 .tech-text { font-size: 14.5px; line-height: 1.76; color: rgba(245,240,232,.62); }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
