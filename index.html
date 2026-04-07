@@ -49,7 +49,8 @@
 .stufe-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--green);margin-bottom:16px}
 .stufe-text{font-size:17px;line-height:1.82;color:rgba(30,61,48,.82);margin-bottom:26px}
 .stufe-detail{display:flex;flex-direction:column;gap:11px}
-.stufe-detail-item{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:rgba(30,61,48,.75)}
+.stufe-detail-item{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:rgba(30,61,48,.82)}
+.stufe-detail-item span:last-child{line-height:1.65}
 .stufe-detail-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:8px}
 
 /* ===== CASES ===== */
@@ -190,28 +191,22 @@
       <div class="wer-text">
         <p>Volt Trust ist ein unabhängiges B2B-Energieberatungsunternehmen für Industrie- und Gewerbebetriebe mit hohem Energiebedarf. Wir arbeiten ausschließlich für unsere Kunden — ohne Provisionen von Lieferanten, ohne versteckte Interessen. <strong>Wir werden nur vergütet, wenn wir nachweisbar Kosten senken.</strong> Das ist unser stärkstes Versprechen und unser täglicher Antrieb.</p>
       </div>
-      <div>
-        <div class="wer-box reveal">
-          <div class="wer-box-label">Unser Ansatz</div>
-          <div class="wer-box-title">Volt Trust senkt Energiekosten in zwei klar strukturierten Schritten.</div>
-          <div class="wer-check">
-            <div class="wer-check-item">
-              <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
-              <div class="wer-check-text">Schritt 1: Attraktive Strom- und Gaslösungen — sofort wirksam, ohne Investition</div>
-            </div>
-            <div class="wer-check-item">
-              <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
-              <div class="wer-check-text">Schritt 2: Technische Optimierung von Lastspitzen und Versorgungssicherheit</div>
-            </div>
-            <div class="wer-check-item">
-              <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
-              <div class="wer-check-text">Vergütung ausschließlich im Erfolgsfall — kein Risiko für Sie</div>
-            </div>
-            <div class="wer-check-item">
-              <div class="wer-check-badge"><svg viewBox="0 0 12 12"><path d="M2 6 L5 9 L10 3"/></svg></div>
-              <div class="wer-check-text">Direkter Kontakt mit Experten — kein Callcenter, kein Zwischenhändler</div>
-            </div>
-          </div>
+      <div class="wer-box reveal" style="display:flex;flex-direction:column;gap:2px;background:var(--stone)">
+        <div style="background:var(--green);padding:32px 36px;position:relative">
+          <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
+          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Unabhängigkeit</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);margin-bottom:8px;line-height:1.3">Keine Lieferantenbindung</div>
+          <div style="font-size:15px;color:rgba(249,246,239,.82);line-height:1.65">Wir arbeiten ohne Provisionen oder Exklusivverträge mit Lieferanten. Unsere Empfehlungen folgen ausschließlich Ihren Interessen.</div>
+        </div>
+        <div style="background:var(--green);padding:32px 36px;position:relative">
+          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Vergütungsmodell</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);margin-bottom:8px;line-height:1.3">Vergütung nur im Erfolgsfall</div>
+          <div style="font-size:15px;color:rgba(249,246,239,.82);line-height:1.65">Kein Honorar, keine Vorabkosten. Wir werden ausschließlich an nachweislich erzielten Einsparungen beteiligt.</div>
+        </div>
+        <div style="background:var(--green);padding:32px 36px;position:relative">
+          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Erfahrung</div>
+          <div style="font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);margin-bottom:8px;line-height:1.3">Nachweisbare Ergebnisse</div>
+          <div style="font-size:15px;color:rgba(249,246,239,.82);line-height:1.65">Reale Projekte mit dokumentierten Einsparungen — von Kliniken bis zur Großindustrie über 10 GWh/a.</div>
         </div>
       </div>
     </div>
@@ -231,10 +226,10 @@
         <div class="stufe-title">Kurzfristige Kostenoptimierung</div>
         <p class="stufe-text">Strom- und Gasverträge, Tarifstrukturen und Einkaufsgemeinschaften — unmittelbar spürbare Einsparungen ohne jede Investition, oft bereits im ersten Vertragsjahr.</p>
         <div class="stufe-detail">
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Strom- &amp; Gasbeschaffung optimieren</div>
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Tarifstruktur analysieren und wechseln</div>
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Einkaufsgemeinschaften nutzen</div>
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Typische Ersparnis: 8–25 % der Energiekosten</div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Strom- &amp; Gasbeschaffung optimieren</span></div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Tarifstruktur analysieren und wechseln</span></div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Einkaufsgemeinschaften nutzen</span></div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Typische Ersparnis: 8–25 % der Energiekosten</span></div>
         </div>
         <div class="tags" style="margin-top:26px"><span class="tag">Sofort wirksam</span><span class="tag">Keine Investition</span><span class="tag">Kein Risiko</span></div>
       </div>
@@ -244,10 +239,10 @@
         <div class="stufe-title">Strukturelle Lastoptimierung</div>
         <p class="stufe-text">Auf Basis realer Lastgangdaten analysieren wir Spitzen, Verbrauchsmuster und Versorgungssicherheit. Batteriespeicher kappen Leistungspreise dauerhaft.</p>
         <div class="stufe-detail">
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Lastspitzenanalyse und Kappung</div>
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Batteriespeicher (BESS) dimensionieren</div>
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Leistungspreise dauerhaft reduzieren</div>
-          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span>Amortisation typisch 2,5–6 Jahre</div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Lastspitzenanalyse und Kappung</span></div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Batteriespeicher (BESS) dimensionieren</span></div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Leistungspreise dauerhaft reduzieren</span></div>
+          <div class="stufe-detail-item"><span class="stufe-detail-dot"></span><span>Amortisation typisch 2,5–6 Jahre</span></div>
         </div>
         <div class="tags" style="margin-top:26px"><span class="tag">Dauerhaft wirksam</span><span class="tag">ROI messbar</span><span class="tag">BESS ab 100 kWh</span></div>
       </div>
@@ -301,11 +296,11 @@
         <div style="background:var(--green);padding:44px;position:relative;height:100%;box-sizing:border-box">
           <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
           <div style="font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:18px">Warum nur eine Schätzung?</div>
-          <p style="font-size:18px;font-family:'Playfair Display',serif;color:var(--cream);margin-bottom:24px;line-height:1.45">Energiekosten bestehen aus drei Blöcken — und nur einer davon ist wirklich vergleichbar.</p>
+          <p style="font-size:19px;font-family:'Playfair Display',serif;color:var(--cream);margin-bottom:24px;line-height:1.45;font-weight:600">Energiekosten bestehen aus drei Blöcken — und nur einer davon ist wirklich vergleichbar.</p>
           <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px">
             <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.88)"><strong style="color:var(--cream)">Energiekosten (40–50 %)</strong><br>Beschaffungsoptimierung wirkt hier — je nach Marktlage 5–20 %</div></div>
             <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.88)"><strong style="color:var(--cream)">Netzentgelte (35–45 %)</strong><br>Lastspitzenkappung und BESS senken diesen Block dauerhaft</div></div>
-            <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:rgba(201,150,58,.4);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.65)"><strong style="color:rgba(249,246,239,.8)">Steuern &amp; Abgaben (15–20 %)</strong><br>Staatlich festgelegt — kein Spielraum</div></div>
+            <div style="display:flex;gap:12px"><div style="width:10px;height:10px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px"></div><div style="font-size:16px;color:rgba(249,246,239,.88)"><strong style="color:var(--cream)">Steuern &amp; Abgaben (15–20 %)</strong><br>Staatlich festgelegt — kein Spielraum</div></div>
           </div>
           <p style="font-size:15px;color:rgba(249,246,239,.72);line-height:1.7">Erst mit Ihren realen Verbrauchsdaten können wir konkrete Zahlen nennen — transparent und belegbar.</p>
         </div>
@@ -321,38 +316,111 @@
     <h2 class="section-title">Ergebnisse aus der Praxis.</h2>
     <p class="section-intro">Alle Kennzahlen aus realen Projekten — anonymisiert, aber unverändert.</p>
     <div class="case-grid">
+      <!-- CASE 1: Klinik -->
       <div class="case-card reveal">
-        <div class="case-card-tag">Gesundheitswesen / Klinik</div>
+        <div class="case-card-tag">Gesundheitswesen · Klinik</div>
         <div class="case-card-title">Klinikbetrieb mit 24/7-Lastprofil</div>
-        <div class="case-metrics">
-          <div class="case-metric"><span class="case-metric-label">Jahresverbrauch</span><span class="case-metric-val">2.469 MWh/a</span></div>
-          <div class="case-metric"><span class="case-metric-label">Energiekosten vorher</span><span class="case-metric-val">647.007 €/a</span></div>
-          <div class="case-metric"><span class="case-metric-label">Maßnahme</span><span class="case-metric-val">BESS 3.423 kWh + PV 621 kWp</span></div>
+
+        <!-- Vorher / Nachher -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-bottom:20px">
+          <div style="background:var(--mist);padding:20px 18px">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(30,61,48,.5);margin-bottom:8px">Vorher</div>
+            <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:rgba(30,61,48,.55);line-height:1">647.007 €</div>
+            <div style="font-size:13px;color:rgba(30,61,48,.45);margin-top:4px">pro Jahr</div>
+          </div>
+          <div style="background:var(--cream);padding:20px 18px;position:relative">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--gold);opacity:.4"></div>
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Nachher</div>
+            <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--green);line-height:1">291.500 €</div>
+            <div style="font-size:13px;color:rgba(30,61,48,.55);margin-top:4px">pro Jahr</div>
+          </div>
         </div>
-        <div class="case-saving">
-          <div class="case-saving-label">Einsparung p.a.</div>
-          <div class="case-saving-val">355.507 €</div>
-          <div class="case-saving-sub">Kostenreduktion −55 % · Autarkie 24 %</div>
+
+        <!-- Einsparung Anker -->
+        <div style="background:var(--green);padding:20px 24px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Einsparung p.a.</div>
+            <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:var(--cream);line-height:1">355.507 €</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold);line-height:1">−55 %</div>
+            <div style="font-size:13px;color:rgba(249,246,239,.65);margin-top:4px">Kostenreduktion</div>
+          </div>
         </div>
+
+        <!-- Details -->
+        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:18px">
+          <div style="display:flex;justify-content:space-between;font-size:14.5px">
+            <span style="color:rgba(30,61,48,.55)">Jahresverbrauch</span>
+            <span style="color:rgba(30,61,48,.85);font-weight:500">2.469 MWh/a</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14.5px">
+            <span style="color:rgba(30,61,48,.55)">Maßnahme</span>
+            <span style="color:rgba(30,61,48,.85);font-weight:500">BESS 3.423 kWh + PV 621 kWp</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14.5px">
+            <span style="color:rgba(30,61,48,.55)">Autarkie</span>
+            <span style="color:rgba(30,61,48,.85);font-weight:500">24 %</span>
+          </div>
+        </div>
+
+        <!-- ROI -->
         <div class="case-roi-row">
           <div class="case-roi-item"><span class="case-roi-val">3,0 J.</span><span class="case-roi-label">Amortisation</span></div>
           <div class="case-roi-item"><span class="case-roi-val">39 %</span><span class="case-roi-label">Rendite p.a.</span></div>
           <div class="case-roi-item"><span class="case-roi-val">1,24 Mio.</span><span class="case-roi-label">Investition</span></div>
         </div>
       </div>
+
+      <!-- CASE 2: Großindustrie -->
       <div class="case-card reveal">
-        <div class="case-card-tag">Großindustrie &gt; 10 GWh</div>
+        <div class="case-card-tag">Großindustrie · über 10 GWh/a</div>
         <div class="case-card-title">Großindustriebetrieb, gestufter Ausbaupfad</div>
-        <div class="case-metrics">
-          <div class="case-metric"><span class="case-metric-label">Jahresverbrauch</span><span class="case-metric-val">10.858 MWh/a</span></div>
-          <div class="case-metric"><span class="case-metric-label">Energiekosten vorher</span><span class="case-metric-val">3.013.773 €/a</span></div>
-          <div class="case-metric"><span class="case-metric-label">Ersparnis Stufe 1</span><span class="case-metric-val">760.049 €/a (sofort)</span></div>
+
+        <!-- Vorher / Nachher -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-bottom:20px">
+          <div style="background:var(--mist);padding:20px 18px">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(30,61,48,.5);margin-bottom:8px">Vorher</div>
+            <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:rgba(30,61,48,.55);line-height:1">3,01 Mio. €</div>
+            <div style="font-size:13px;color:rgba(30,61,48,.45);margin-top:4px">pro Jahr</div>
+          </div>
+          <div style="background:var(--cream);padding:20px 18px;position:relative">
+            <div style="position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--gold);opacity:.4"></div>
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Nachher</div>
+            <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--green);line-height:1">1,22 Mio. €</div>
+            <div style="font-size:13px;color:rgba(30,61,48,.55);margin-top:4px">pro Jahr (Vollausbau)</div>
+          </div>
         </div>
-        <div class="case-saving">
-          <div class="case-saving-label">Einsparung p.a. (Vollausbau)</div>
-          <div class="case-saving-val">1.795.859 €</div>
-          <div class="case-saving-sub">Kostenreduktion −60 %</div>
+
+        <!-- Einsparung Anker -->
+        <div style="background:var(--green);padding:20px 24px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Einsparung p.a.</div>
+            <div style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:var(--cream);line-height:1">1,80 Mio. €</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold);line-height:1">−60 %</div>
+            <div style="font-size:13px;color:rgba(249,246,239,.65);margin-top:4px">Kostenreduktion</div>
+          </div>
         </div>
+
+        <!-- Details -->
+        <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:18px">
+          <div style="display:flex;justify-content:space-between;font-size:14.5px">
+            <span style="color:rgba(30,61,48,.55)">Jahresverbrauch</span>
+            <span style="color:rgba(30,61,48,.85);font-weight:500">10.858 MWh/a</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14.5px">
+            <span style="color:rgba(30,61,48,.55)">Ersparnis Stufe 1 (sofort)</span>
+            <span style="color:rgba(30,61,48,.85);font-weight:500">760.049 €/a</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:14.5px">
+            <span style="color:rgba(30,61,48,.55)">Ausbaupfad</span>
+            <span style="color:rgba(30,61,48,.85);font-weight:500">Gestuft, 2 Phasen</span>
+          </div>
+        </div>
+
+        <!-- ROI -->
         <div class="case-roi-row">
           <div class="case-roi-item"><span class="case-roi-val">1,9 J.</span><span class="case-roi-label">Amortisation</span></div>
           <div class="case-roi-item"><span class="case-roi-val">55 %</span><span class="case-roi-label">Rendite p.a.</span></div>
@@ -383,9 +451,9 @@
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
             +49 171 1245256
           </a>
-          <a href="mailto:kontakt@volt-trust.de" class="contact-person-tel" style="margin-top:8px">
+          <a href="/cdn-cgi/l/email-protection#96fdf9f8e2f7fde2d6e0f9fae2bbe2e4e3e5e2b8f2f3" class="contact-person-tel" style="margin-top:8px">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            kontakt@volt-trust.de
+            <span class="__cf_email__" data-cfemail="bbd0d4d5cfdad0cffbcdd4d7cf96cfc9cec8cf95dfde">[email&#160;protected]</span>
           </a>
         </div>
       </div>
@@ -453,7 +521,7 @@
       <div class="footer-col-title">Kontakt</div>
       <ul class="footer-links">
         <li><a href="tel:+491711245256">+49 171 1245256</a></li>
-        <li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#7f1410110b1e140b3f0910130b520b0d0a0c0b511b1a"><span class="__cf_email__" data-cfemail="ff9490918b9e948bbf8990938bd28b8d8a8c8bd19b9a">[email&#160;protected]</span></a></li>
         <li><a href="kontakt.html">Termin vereinbaren</a></li>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -466,7 +534,7 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
 <script>
 document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
 function calcPotenzial(){
@@ -484,11 +552,4 @@ function calcPotenzial(){
   if(pv==='ja'){min=Math.round(min*1.15);max=Math.round(max*1.2)}
   if(pv==='geplant'){min=Math.round(min*1.08);max=Math.round(max*1.12)}
   const fmt=n=>n>=1000000?(n/1000000).toFixed(1)+' Mio. €':(n>=1000?Math.round(n/1000)*1000:n).toLocaleString('de-DE')+' €';
-  const tips={prod:'Maschinenbetrieb erzeugt ausgeprägte Lastspitzen. Typisch: Beschaffungsoptimierung + BESS für maximalen Hebel.',food:'Kontinuierliche Prozesse und Kühllasten bieten gute Prognostizierbarkeit. Hohe PV-Synergie möglich.',health:'24/7-Grundlast ist ideal für BESS. Zusätzlich USV-Funktion möglich — Versorgungssicherheit als Doppelnutzen.',logistik:'Kühlaggregat-Hochlauf erzeugt extreme Spitzen. Peak Shaving oft mit sehr kurzer Amortisation.',gebaeude:'Morgenlicher Gleichzeitigkeitsbetrieb als Hauptlasttreiber. Hohe PV-Synergie auf Dachflächen.',filiale:'Gebündelte Beschaffung als erster großer Hebel. Rollout auf mehrere Standorte senkt Hardware-Kosten um 15–25 %.',andere:'Detaillierte Analyse Ihres spezifischen Lastprofils erforderlich — erste Potenziale sind in fast allen Fällen vorhanden.'};
-  document.getElementById('rRange').textContent=fmt(min)+' – '+fmt(max);
-  document.getElementById('rText').textContent=tips[b]||tips.andere;
-  document.getElementById('rechnerResult').classList.add('show');
-}
-</script>
-</body>
-</html>
+  const tips={prod:'Maschinenbetrieb erzeugt ausgeprägte Lastspitzen. Typisch: Beschaffungsoptimierung + BESS für maximalen Hebel.',food:'Kontinuierliche Prozesse und Kühllasten bieten gute Prognostizierbarkeit. Hohe PV-Synergie möglich.',health:'24/7-Grundlast ist ideal für BESS. Zusätzlich USV-Funktion möglich — Versorgungssicherheit als Doppelnutzen.',logistik:'Kühlaggregat-Hochlauf erzeugt extreme Spitzen. Peak Shaving oft mit sehr kurzer Amortisation.',gebaeude:'Morgenlicher Gleichzeitigkeitsbetrieb als Hauptlasttreiber. Hohe PV-Synergie auf Dachflächen.',filiale:'Gebündelte Beschaffung als erster großer Hebel. Rollout auf mehrere Standorte senkt Hardware-Kosten um
