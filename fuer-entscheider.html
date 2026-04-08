@@ -7,23 +7,31 @@
 <title>Für Entscheider – Volt Trust</title>
 <link rel="stylesheet" href="style.css">
 <script>
-function toggleWissen(id) {
+// Accordion wird nach vollständigem DOM-Load gebunden — unabhängig von main.js
+document.addEventListener('DOMContentLoaded', function() {
   var ids = ['01','02','03','04','05','06'];
-  var clickedContent = document.getElementById('content-' + id);
-  var isVisible = clickedContent.style.display === 'block';
-  // Alle schließen
-  ids.forEach(function(i) {
-    var c = document.getElementById('content-' + i);
-    var it = document.getElementById('item-' + i);
-    if (c) c.style.display = 'none';
-    if (it) it.classList.remove('open');
+  ids.forEach(function(id) {
+    var header = document.querySelector('#item-' + id + ' .wissen-header');
+    if (!header) return;
+    header.addEventListener('click', function() {
+      var content = document.getElementById('content-' + id);
+      var item = document.getElementById('item-' + id);
+      var isOpen = content.style.display === 'block';
+      // Alle schließen
+      ids.forEach(function(i) {
+        var c = document.getElementById('content-' + i);
+        var it = document.getElementById('item-' + i);
+        if (c) c.style.display = 'none';
+        if (it) it.classList.remove('open');
+      });
+      // Dieses öffnen
+      if (!isOpen) {
+        content.style.display = 'block';
+        item.classList.add('open');
+      }
+    });
   });
-  // Angeklicktes öffnen wenn es zu war
-  if (!isVisible) {
-    clickedContent.style.display = 'block';
-    document.getElementById('item-' + id).classList.add('open');
-  }
-}
+});
 </script>
 <style>
 /* ===== ACCORDION ===== */
@@ -215,7 +223,7 @@ function toggleWissen(id) {
 
       <!-- Kachel 01 -->
       <div class="wissen-item" id="item-01">
-        <button class="wissen-header" onclick="toggleWissen('01')" aria-expanded="false" aria-controls="content-01">
+        <button class="wissen-header" aria-expanded="false" aria-controls="content-01">
           <div class="wissen-header-left">
             <span class="wissen-num">01</span>
             <div class="wissen-icon-wrap">
@@ -246,7 +254,7 @@ function toggleWissen(id) {
 
       <!-- Kachel 02 -->
       <div class="wissen-item" id="item-02">
-        <button class="wissen-header" onclick="toggleWissen('02')" aria-expanded="false" aria-controls="content-02">
+        <button class="wissen-header" aria-expanded="false" aria-controls="content-02">
           <div class="wissen-header-left">
             <span class="wissen-num">02</span>
             <div class="wissen-icon-wrap">
@@ -278,7 +286,7 @@ function toggleWissen(id) {
 
       <!-- Kachel 03 -->
       <div class="wissen-item" id="item-03">
-        <button class="wissen-header" onclick="toggleWissen('03')" aria-expanded="false" aria-controls="content-03">
+        <button class="wissen-header" aria-expanded="false" aria-controls="content-03">
           <div class="wissen-header-left">
             <span class="wissen-num">03</span>
             <div class="wissen-icon-wrap">
@@ -311,7 +319,7 @@ function toggleWissen(id) {
 
       <!-- Kachel 04 -->
       <div class="wissen-item" id="item-04">
-        <button class="wissen-header" onclick="toggleWissen('04')" aria-expanded="false" aria-controls="content-04">
+        <button class="wissen-header" aria-expanded="false" aria-controls="content-04">
           <div class="wissen-header-left">
             <span class="wissen-num">04</span>
             <div class="wissen-icon-wrap">
@@ -343,7 +351,7 @@ function toggleWissen(id) {
 
       <!-- Kachel 05 -->
       <div class="wissen-item" id="item-05">
-        <button class="wissen-header" onclick="toggleWissen('05')" aria-expanded="false" aria-controls="content-05">
+        <button class="wissen-header" aria-expanded="false" aria-controls="content-05">
           <div class="wissen-header-left">
             <span class="wissen-num">05</span>
             <div class="wissen-icon-wrap">
@@ -375,7 +383,7 @@ function toggleWissen(id) {
 
       <!-- Kachel 06 -->
       <div class="wissen-item" id="item-06">
-        <button class="wissen-header" onclick="toggleWissen('06')" aria-expanded="false" aria-controls="content-06">
+        <button class="wissen-header" aria-expanded="false" aria-controls="content-06">
           <div class="wissen-header-left">
             <span class="wissen-num">06</span>
             <div class="wissen-icon-wrap">
