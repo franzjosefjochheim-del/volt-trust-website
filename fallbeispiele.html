@@ -6,38 +6,6 @@
 <meta name="description" content="Volt Trust Fallbeispiele — Reale Projekte, echte Zahlen, anonymisiert. 8 Praxisbeispiele aus Industrie, Gewerbe, Klinik und Logistik.">
 <title>Fallbeispiele – Volt Trust</title>
 <link rel="stylesheet" href="style.css">
-<style>
-/* ===== FALLBEISPIELE ===== */
-.section-label,.page-hero-eyebrow,.footer-col-title,.trust-item{font-size:13px!important;letter-spacing:.18em!important}
-
-.cases-intro-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(201,150,58,.12);border:1px solid rgba(201,150,58,.3);padding:9px 18px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
-
-.section-divider{display:flex;align-items:center;gap:24px;margin:72px 0 48px}
-.section-divider-line{flex:1;height:1px;background:var(--stone)}
-.section-divider-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);white-space:nowrap}
-.section-divider-sub{font-size:13px;color:var(--subtle);margin-top:4px;text-align:center}
-
-/* USE CASES */
-.usecase-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-top:0}
-.usecase-card{background:var(--mist);padding:44px 40px;position:relative;overflow:hidden;transition:background .2s}
-.usecase-card:hover{background:var(--cream)}
-.usecase-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold);opacity:0;transition:opacity .2s}
-.usecase-card:hover::before{opacity:1}
-.usecase-num{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px}
-.usecase-problem{font-family:'Playfair Display',serif;font-size:18px;color:var(--ink);margin-bottom:18px;line-height:1.45;font-style:italic}
-.usecase-problem::before{content:'"';color:var(--gold)}
-.usecase-solution{font-size:15px;line-height:1.76;color:var(--subtle);margin-bottom:22px}
-.usecase-result{background:var(--green);padding:18px 22px;display:flex;gap:16px;align-items:center}
-.usecase-result-val{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold);white-space:nowrap;flex-shrink:0}
-.usecase-result-label{font-size:12.5px;color:rgba(249,246,239,.65);line-height:1.5}
-
-@media(max-width:960px){.usecase-grid{grid-template-columns:1fr}}
-@media(max-width:768px){
-  .case-grid{grid-template-columns:1fr!important}
-  .section-divider{flex-direction:column;gap:12px}
-  .section-divider-line{width:100%}
-}
-</style>
 </head>
 <body>
 
@@ -48,17 +16,30 @@
       <span class="nav-logo-text">Volt<span>Trust</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="fuer-entscheider.html">Für Entscheider</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="fallbeispiele.html" class="active">Fallbeispiele</a></li>
+      <li><a href="fuer-entscheider.html">Für Entscheider</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
     <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
     <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="ueber-uns.html">Über uns</a><a href="fallbeispiele.html">Fallbeispiele</a><a href="fuer-entscheider.html">Für Entscheider</a><a href="faq.html">FAQ</a><a href="kontakt.html">Kontakt</a>
+  <a href="index.html">Home</a>
+  <a href="leistungen.html">Leistungen</a>
+  <a href="ueber-uns.html">Über uns</a>
+  <a href="fallbeispiele.html">Fallbeispiele</a>
+  <a href="fuer-entscheider.html">Für Entscheider</a>
+  <a href="faq.html">FAQ</a>
+  <a href="kontakt.html">Kontakt</a>
   <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
 </div>
 
+<!-- PAGE HERO -->
 <div class="page-hero">
   <div class="page-hero-grid"></div>
   <div class="container" style="position:relative;z-index:2">
@@ -68,6 +49,7 @@
   </div>
 </div>
 
+<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
     <div class="trust-item"><span class="trust-dot"></span>Alle Zahlen aus realen Projekten</div>
@@ -80,20 +62,20 @@
 <!-- ABSCHNITT 1: FALLBEISPIELE -->
 <section style="background:var(--cream)">
   <div class="container">
+
     <div class="cases-intro-badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#C9963A" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="10" stroke="#C9963A" stroke-width="1.5"/></svg>
       Reale Projekte · Echte Zahlen · Anonymisiert
     </div>
 
-    <div style="display:flex;align-items:center;gap:24px;margin-bottom:48px">
-      <div>
-        <div class="section-label">Abschnitt 01</div>
-        <h2 class="section-title" style="margin-bottom:8px">Fallbeispiele aus der Praxis.</h2>
-        <p style="font-size:16px;color:var(--subtle);max-width:600px">Acht abgeschlossene Projekte — von kleinen Industriebetrieben bis zur Großindustrie. Alle Kennzahlen stammen direkt aus den Projektrechnungen.</p>
-      </div>
+    <div style="margin-bottom:48px">
+      <div class="section-label">Abschnitt 01</div>
+      <h2 class="section-title" style="margin-bottom:8px">Fallbeispiele aus der Praxis.</h2>
+      <p class="section-intro">Acht abgeschlossene Projekte — von kleinen Industriebetrieben bis zur Großindustrie. Alle Kennzahlen stammen direkt aus den Projektrechnungen.</p>
     </div>
 
     <div class="case-grid">
+
       <div class="case-card reveal">
         <div class="case-card-tag">Gewerbe / Industrie</div>
         <div class="case-card-title">Kleiner Industriebetrieb mit Lastspitzen</div>
@@ -102,8 +84,16 @@
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">57.833 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">BESS</span><span class="case-metric-val">261 kWh / 131 kW</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung p.a.</div><div class="case-saving-val">18.544 €</div><div class="case-saving-sub">Kostenreduktion −32 %</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">4,8 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">20 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">89k €</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a.</div>
+          <div class="case-saving-val">18.544 €</div>
+          <div class="case-saving-sub">Kostenreduktion −32 %</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">4,8 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">20 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">89k €</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
 
       <div class="case-card reveal">
@@ -114,8 +104,16 @@
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">173.797 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">BESS + PV</span><span class="case-metric-val">522 kWh + 400 kWp</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung p.a.</div><div class="case-saving-val">86.275 €</div><div class="case-saving-sub">−50 % · Autarkie 38 %</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">4,2 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">25 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">438k €</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a.</div>
+          <div class="case-saving-val">86.275 €</div>
+          <div class="case-saving-sub">−50 % · Autarkie 38 %</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">4,2 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">25 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">438k €</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
 
       <div class="case-card reveal">
@@ -126,8 +124,16 @@
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">647.007 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">BESS + PV</span><span class="case-metric-val">3.423 kWh + 621 kWp</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung p.a.</div><div class="case-saving-val">355.507 €</div><div class="case-saving-sub">−55 % · Autarkie 24 %</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">3,0 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">39 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">1,24 M.</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a.</div>
+          <div class="case-saving-val">355.507 €</div>
+          <div class="case-saving-sub">−55 % · Autarkie 24 %</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">3,0 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">39 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">1,24 M.</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
 
       <div class="case-card reveal">
@@ -138,20 +144,36 @@
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">1.571.226 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">BESS</span><span class="case-metric-val">5.015 kWh</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung p.a.</div><div class="case-saving-val">444.692 €</div><div class="case-saving-sub">Kostenreduktion −28 %</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">2,1 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">48 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">930k €</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a.</div>
+          <div class="case-saving-val">444.692 €</div>
+          <div class="case-saving-sub">Kostenreduktion −28 %</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">2,1 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">48 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">930k €</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
 
       <div class="case-card reveal">
         <div class="case-card-tag">Metall / Oberflächentechnik</div>
-        <div class="case-card-title">Produktion mit Systemhebel &amp; Arbitrage</div>
+        <div class="case-card-title">Produktion mit Systemhebel und Arbitrage</div>
         <div class="case-metrics">
           <div class="case-metric"><span class="case-metric-label">Jahresverbrauch</span><span class="case-metric-val">1.253 MWh/a</span></div>
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">228.992 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">BESS + Arbitrage</span><span class="case-metric-val">5.015 kWh</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung / Ergebnis p.a.</div><div class="case-saving-val">353.376 €</div><div class="case-saving-sub">Kosteneffekt −154 % · Nettobetrieb</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">2,6 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">37 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">930k €</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung / Ergebnis p.a.</div>
+          <div class="case-saving-val">353.376 €</div>
+          <div class="case-saving-sub">Kosteneffekt −154 % · Nettobetrieb</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">2,6 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">37 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">930k €</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
 
       <div class="case-card reveal">
@@ -162,8 +184,16 @@
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">3.013.773 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">Ersparnis Stufe 1</span><span class="case-metric-val">760.049 €/a</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung p.a. (Vollausbau)</div><div class="case-saving-val">1.795.859 €</div><div class="case-saving-sub">Kostenreduktion −60 %</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">1,9 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">55 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">3,4 M.</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a. (Vollausbau)</div>
+          <div class="case-saving-val">1.795.859 €</div>
+          <div class="case-saving-sub">Kostenreduktion −60 %</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">1,9 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">55 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">3,4 M.</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
 
       <div class="case-card reveal">
@@ -174,8 +204,16 @@
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">413.200 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">BESS</span><span class="case-metric-val">522 kWh / 261 kW</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung p.a.</div><div class="case-saving-val">198.400 €</div><div class="case-saving-sub">Kostenreduktion −48 %</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">3,4 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">29 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">675k €</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a.</div>
+          <div class="case-saving-val">198.400 €</div>
+          <div class="case-saving-sub">Kostenreduktion −48 %</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">3,4 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">29 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">675k €</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
 
       <div class="case-card reveal">
@@ -186,16 +224,26 @@
           <div class="case-metric"><span class="case-metric-label">Kosten vorher</span><span class="case-metric-val">782.000 €/a</span></div>
           <div class="case-metric"><span class="case-metric-label">BESS + Tarif</span><span class="case-metric-val">1.045 kWh</span></div>
         </div>
-        <div class="case-saving"><div class="case-saving-label">Einsparung p.a.</div><div class="case-saving-val">312.800 €</div><div class="case-saving-sub">Kostenreduktion −40 %</div></div>
-        <div class="case-roi-row"><div class="case-roi-item"><span class="case-roi-val">2,8 J.</span><span class="case-roi-label">Amortisation</span></div><div class="case-roi-item"><span class="case-roi-val">36 %</span><span class="case-roi-label">Rendite p.a.</span></div><div class="case-roi-item"><span class="case-roi-val">875k €</span><span class="case-roi-label">Investition</span></div></div>
+        <div class="case-saving">
+          <div class="case-saving-label">Einsparung p.a.</div>
+          <div class="case-saving-val">312.800 €</div>
+          <div class="case-saving-sub">Kostenreduktion −40 %</div>
+        </div>
+        <div class="case-roi-row">
+          <div class="case-roi-item"><span class="case-roi-val">2,8 J.</span><span class="case-roi-label">Amortisation</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">36 %</span><span class="case-roi-label">Rendite p.a.</span></div>
+          <div class="case-roi-item"><span class="case-roi-val">875k €</span><span class="case-roi-label">Investition</span></div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- ABSCHNITT 2: USE CASES -->
-<section style="background:var(--mist)">
+<section style="background:var(--ink)">
   <div class="container">
+
     <div class="cases-intro-badge">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 9h8M8 13h5" stroke="#C9963A" stroke-width="2" stroke-linecap="round"/><rect x="3" y="3" width="18" height="18" rx="2" stroke="#C9963A" stroke-width="1.5"/></svg>
       Typische Problemszenarien aus der Praxis
@@ -203,80 +251,141 @@
 
     <div style="margin-bottom:48px">
       <div class="section-label">Abschnitt 02</div>
-      <h2 class="section-title" style="margin-bottom:8px">Use Cases — Ihr Problem. Unsere Lösung.</h2>
-      <p style="font-size:16px;color:var(--subtle);max-width:600px">Erkennen Sie Ihr Lastprofil? Jeder dieser Fälle hat eine klare wirtschaftliche Lösung — und einen nachweisbaren Ausgang.</p>
+      <h2 class="section-title light" style="margin-bottom:8px">Use Cases — Ihr Problem. Unsere Lösung.</h2>
+      <p class="section-intro light">Erkennen Sie Ihr Lastprofil? Jeder dieser Fälle hat eine klare wirtschaftliche Lösung — und einen nachweisbaren Ausgang.</p>
     </div>
 
     <div class="usecase-grid">
+
       <div class="usecase-card reveal">
         <span class="usecase-num">Use Case 01</span>
         <div class="usecase-problem">Wir zahlen hohe Leistungspreise für Lastspitzen die nur 15 Minuten pro Tag auftreten."</div>
         <div class="usecase-solution">Beim Anlaufen von Pressen, Druckkompressoren oder Produktionslinien entstehen extreme Kurzzeit-Spitzen die das ganze Jahr berechnet werden. Ein dimensionierter BESS kappt genau diese Spitzen — der Rest läuft unverändert.</div>
-        <div class="usecase-result"><div class="usecase-result-val">−40 bis −65 %</div><div class="usecase-result-label">Reduktion Netzentgelt-Leistungsanteil</div></div>
+        <div class="usecase-result">
+          <div class="usecase-result-val">−40 bis −65 %</div>
+          <div class="usecase-result-label">Reduktion Netzentgelt-Leistungsanteil</div>
+        </div>
       </div>
 
       <div class="usecase-card reveal">
         <span class="usecase-num">Use Case 02</span>
         <div class="usecase-problem">Unser Stromvertrag läuft noch 18 Monate — wir können nichts ändern."</div>
         <div class="usecase-solution">Stufe 2 (Lastoptimierung und BESS) wirkt völlig unabhängig vom laufenden Liefervertrag. Und für Stufe 1 bereiten wir jetzt die Beschaffungsstrategie für den nächsten Wechsel vor — Timing ist entscheidend.</div>
-        <div class="usecase-result"><div class="usecase-result-val">Sofort</div><div class="usecase-result-label">BESS wirkt — unabhängig vom Liefervertrag</div></div>
+        <div class="usecase-result">
+          <div class="usecase-result-val">Sofort</div>
+          <div class="usecase-result-label">BESS wirkt — unabhängig vom Liefervertrag</div>
+        </div>
       </div>
 
       <div class="usecase-card reveal">
         <span class="usecase-num">Use Case 03</span>
         <div class="usecase-problem">Wir haben PV, aber der Strom wird hauptsächlich eingespeist statt selbst genutzt."</div>
         <div class="usecase-solution">Ein BESS speichert den Mittagsüberschuss und stellt ihn abends oder morgens zur Verfügung. Eigenverbrauchsquote von 50 % auf 80 %+ steigerbar — mit direkter Wirkung auf die Energierechnung.</div>
-        <div class="usecase-result"><div class="usecase-result-val">+30 %pt</div><div class="usecase-result-label">Eigenverbrauchsquote typisch erreichbar</div></div>
+        <div class="usecase-result">
+          <div class="usecase-result-val">+30 %pt</div>
+          <div class="usecase-result-label">Eigenverbrauchsquote typisch erreichbar</div>
+        </div>
       </div>
 
       <div class="usecase-card reveal">
         <span class="usecase-num">Use Case 04</span>
         <div class="usecase-problem">Wir betreiben mehrere Standorte — jeder hat eigene Verträge, keiner weiß was der andere zahlt."</div>
         <div class="usecase-solution">Gebündelte Beschaffung ist der erste und größte Hebel. Gemeinsamer Einkauf über Einkaufsgemeinschaft oder Rahmenvertrag senkt den Preis pro kWh messbar. Dann folgt ein skalierter BESS-Rollout mit Hardware-Mengenvorteilen.</div>
-        <div class="usecase-result"><div class="usecase-result-val">−15 bis −25 %</div><div class="usecase-result-label">Hardware-Kostenersparnis durch Rollout-Skalierung</div></div>
+        <div class="usecase-result">
+          <div class="usecase-result-val">−15 bis −25 %</div>
+          <div class="usecase-result-label">Hardware-Kostenersparnis durch Rollout-Skalierung</div>
+        </div>
       </div>
 
       <div class="usecase-card reveal">
         <span class="usecase-num">Use Case 05</span>
         <div class="usecase-problem">Wir sind ein Krankenhaus — Versorgungssicherheit ist wichtiger als Kostenersparnis."</div>
         <div class="usecase-solution">BESS löst beides gleichzeitig. Die Batterie übernimmt USV-Funktion und eliminiert gleichzeitig Lastspitzen aus dem Netzentgelt. Kein Kompromiss — sondern Doppelnutzen.</div>
-        <div class="usecase-result"><div class="usecase-result-val">39 %</div><div class="usecase-result-label">Jahresrendite + USV-Funktion im Klinikprojekt</div></div>
+        <div class="usecase-result">
+          <div class="usecase-result-val">39 %</div>
+          <div class="usecase-result-label">Jahresrendite + USV-Funktion im Klinikprojekt</div>
+        </div>
       </div>
 
       <div class="usecase-card reveal">
         <span class="usecase-num">Use Case 06</span>
         <div class="usecase-problem">Unsere Energie kostet über 1 Mio. € im Jahr — und wir wissen nicht genau warum."</div>
         <div class="usecase-solution">Wir analysieren alle drei Kostenblöcke (Beschaffung, Netzentgelt, Abgaben), identifizieren die größten Treiber und zeigen konkrete, berechenbare Maßnahmen. Transparent, ohne Abschlussverpflichtung — in 5–10 Werktagen.</div>
-        <div class="usecase-result"><div class="usecase-result-val">Volle Transparenz</div><div class="usecase-result-label">Auf Basis Ihrer realen Daten · 5–10 Werktage</div></div>
+        <div class="usecase-result">
+          <div class="usecase-result-val">Volle Transparenz</div>
+          <div class="usecase-result-label">Auf Basis Ihrer realen Daten · 5–10 Werktage</div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section style="background:var(--green);padding:88px 0">
+<section class="cta-section" style="padding:88px 0">
   <div class="container">
-    <div style="text-align:center;max-width:600px;margin:0 auto">
-      <div class="section-label" style="justify-content:center">Kostenloses Erstgespräch</div>
-      <h2 class="section-title light">Erkennen Sie sich wieder?</h2>
-      <p class="section-intro light" style="margin:0 auto 36px">30 Minuten — wir zeigen Ihnen auf Basis Ihrer Verbrauchsdaten, welche dieser Szenarien auf Ihren Betrieb zutreffen.</p>
-      <a href="kontakt.html" class="btn-primary">Termin vereinbaren →</a>
+    <div class="cta-inner">
+      <div class="cta-eyebrow">Kostenloses Erstgespräch</div>
+      <h2 class="cta-title">Erkennen Sie sich wieder?</h2>
+      <p class="cta-text">30 Minuten — wir zeigen Ihnen auf Basis Ihrer Verbrauchsdaten, welche dieser Szenarien auf Ihren Betrieb zutreffen.</p>
+      <div class="cta-actions">
+        <a href="kontakt.html" class="btn-primary">Termin vereinbaren →</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- TRUST BAR BOTTOM -->
+<div class="trust-bar-bottom">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>Erfolgsbasierte Vergütung</div>
+    <div class="trust-item"><span class="trust-dot"></span>Keine Vorabkosten</div>
+    <div class="trust-item"><span class="trust-dot"></span>Unabhängige Beratung</div>
+    <div class="trust-item"><span class="trust-dot"></span>Ergebnisse in 5–10 Werktagen</div>
+  </div>
+</div>
+
 <footer>
   <div class="footer-top">
-    <div><div style="display:flex;align-items:center;gap:11px;margin-bottom:14px"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg><div class="footer-brand">Volt<span>Trust</span></div></div><p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p></div>
-    <div><div class="footer-col-title">Seiten</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="fuer-entscheider.html">Für Entscheider</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
-    <div><div class="footer-col-title">Kontakt</div><ul class="footer-links"><li><a href="tel:+491711245256">+49 171 1245256</a></li><li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li><li><a href="kontakt.html">Termin vereinbaren</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+    <div>
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg>
+        <div class="footer-brand">Volt<span>Trust</span></div>
+      </div>
+      <p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Seiten</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="fallbeispiele.html">Fallbeispiele</a></li>
+        <li><a href="fuer-entscheider.html">Für Entscheider</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Kontakt</div>
+      <ul class="footer-links">
+        <li><a href="tel:+491711245256">+49 171 1245256</a></li>
+        <li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li>
+        <li><a href="kontakt.html">Termin vereinbaren</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Volt Trust · Alle Rechte vorbehalten</span><span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Volt Trust · Alle Rechte vorbehalten</span>
+    <span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
 </footer>
 
 <script src="main.js"></script>
 <script>
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('navMobile').classList.toggle('open'));
 </script>
 </body>
 </html>
