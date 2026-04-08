@@ -85,10 +85,12 @@
 .wissen-item.open .wissen-chevron {
   transform: rotate(180deg);
 }
+/* ACCORDION FIX: visibility statt nur max-height */
 .wissen-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .45s ease;
+  display: none;
+}
+.wissen-item.open .wissen-content {
+  display: block;
 }
 .wissen-article {
   padding: 28px 32px 36px 120px;
@@ -118,9 +120,17 @@
   line-height: 1.7;
   color: var(--text);
 }
-/* Trust Bar Bottom */
+/* Trust Bar Bottom — erhöhter Kontrast */
 .trust-bar--bottom {
   background: var(--forest);
+}
+.trust-bar--bottom .trust-item {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.trust-bar--bottom .trust-dot {
+  background: var(--gold) !important;
+  opacity: 1 !important;
 }
 @media (max-width: 960px) {
   .wissen-article { padding: 20px 24px 28px 24px; }
@@ -207,7 +217,7 @@
             <h4>Die drei Blöcke im Überblick</h4>
             <p><strong>1. Energiekosten (40–50 % des Gesamtpreises)</strong><br>Der eigentliche Beschaffungspreis für die Kilowattstunde — dieser wird durch Marktpreise, Lieferantenverhandlungen und Tarifwahl beeinflusst. Hier wirkt klassische Beschaffungsoptimierung direkt.</p>
             <p><strong>2. Netzentgelte (35–45 % des Gesamtpreises)</strong><br>Diese Kosten zahlen Sie für die Nutzung des Stromnetzes — und sie hängen direkt von Ihrer gemessenen Leistungsspitze ab. Ein einzelner Hochlastmoment kann Ihre Netzentgelte für ein ganzes Jahr erhöhen. Dieser Block wird durch Lastoptimierung und Batteriespeicher beeinflusst.</p>
-            <p><strong>3. Steuern & Abgaben (15–20 % des Gesamtpreises)</strong><br>Staatlich festgelegt — kein Spielraum. EEG-Umlage, Stromsteuer, Konzessionsabgabe. Hier gibt es nichts zu verhandeln.</p>
+            <p><strong>3. Steuern &amp; Abgaben (15–20 % des Gesamtpreises)</strong><br>Staatlich festgelegt — kein Spielraum. EEG-Umlage, Stromsteuer, Konzessionsabgabe. Hier gibt es nichts zu verhandeln.</p>
             <div class="wissen-fazit">
               <strong>Fazit für Entscheider:</strong> Wer nur den Lieferanten wechselt, berührt maximal 40–50 % seiner Energiekosten. Die andere Hälfte — Netzentgelte — bleibt unverändert. Eine vollständige Optimierung muss beide Blöcke adressieren.
             </div>
@@ -398,15 +408,10 @@
           <!-- 2000 -->
           <div style="text-align:center">
             <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">2000</div>
-            <!-- Koordinaten exakt berechnet: r=55, cx=cy=75, Start oben (12-Uhr) -->
             <svg width="150" height="150" viewBox="0 0 150 150">
-              <!-- Erneuerbare 15%: 0°→54° -->
               <path d="M75 75 L75.0 20.0 A55 55 0 0 1 119.5 42.67 Z" fill="#3D8C6A"/>
-              <!-- Kernenergie 30%: 54°→162° -->
               <path d="M75 75 L119.5 42.67 A55 55 0 0 1 92.0 127.31 Z" fill="#8B8FA8"/>
-              <!-- Andere 55%: 162°→360° -->
               <path d="M75 75 L92.0 127.31 A55 55 0 1 1 75.0 20.0 Z" fill="#C9963A" opacity="0.8"/>
-              <!-- Donut -->
               <circle cx="75" cy="75" r="26" fill="#1E3D30"/>
               <text x="75" y="79" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#C9963A" font-weight="700">2000</text>
             </svg>
@@ -422,15 +427,10 @@
           <!-- 2025 -->
           <div style="text-align:center">
             <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">2025</div>
-            <!-- Koordinaten exakt berechnet: r=55, cx=cy=75 -->
             <svg width="150" height="150" viewBox="0 0 150 150">
-              <!-- Erneuerbare 62%: 0°→223.2° -->
               <path d="M75 75 L75.0 20.0 A55 55 0 1 1 37.35 115.09 Z" fill="#3D8C6A"/>
-              <!-- Gas/Kohle 28%: 223.2°→324° -->
               <path d="M75 75 L37.35 115.09 A55 55 0 0 1 42.67 30.5 Z" fill="#C9963A" opacity="0.8"/>
-              <!-- Sonstiges 10%: 324°→360° -->
               <path d="M75 75 L42.67 30.5 A55 55 0 0 1 75.0 20.0 Z" fill="#8B8FA8" opacity="0.8"/>
-              <!-- Donut -->
               <circle cx="75" cy="75" r="26" fill="#1E3D30"/>
               <text x="75" y="79" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#3D8C6A" font-weight="700">2025</text>
             </svg>
@@ -473,7 +473,6 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
         <div>
           <p style="font-size:16px;line-height:1.75;color:rgba(249,246,239,.75);margin-bottom:24px">Ihr Energiepreis besteht aus drei Blöcken. Nur zwei davon lassen sich optimieren — der dritte ist staatlich festgelegt.</p>
-          <!-- Balken -->
           <div style="height:36px;display:flex;border-radius:3px;overflow:hidden;margin:24px 0 12px">
             <div style="width:45%;background:#3D8C6A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:rgba(0,0,0,.7)">45 %</div>
             <div style="width:40%;background:#C9963A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:rgba(0,0,0,.7)">40 %</div>
@@ -589,9 +588,8 @@
     document.getElementById('navMobile').classList.toggle('open');
   });
 
-  // Accordion
+  // Accordion — robuste Implementierung mit display toggle
   function toggleWissen(id) {
-    const content = document.getElementById('content-' + id);
     const item = document.getElementById('item-' + id);
     const button = item.querySelector('.wissen-header');
     const isOpen = item.classList.contains('open');
@@ -600,19 +598,15 @@
     document.querySelectorAll('.wissen-item').forEach(el => {
       el.classList.remove('open');
       el.querySelector('.wissen-header').setAttribute('aria-expanded', 'false');
-      const c = el.querySelector('.wissen-content');
-      c.style.maxHeight = '0';
     });
 
     // Dieses öffnen (wenn es nicht schon offen war)
     if (!isOpen) {
       item.classList.add('open');
       button.setAttribute('aria-expanded', 'true');
-      content.style.maxHeight = content.scrollHeight + 'px';
     }
   }
 </script>
-
 
 </body>
 </html>
