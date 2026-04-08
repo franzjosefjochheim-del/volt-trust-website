@@ -6,57 +6,6 @@
 <meta name="description" content="Für Entscheider — Was CEOs, CFOs und Einkäufer über Energiekosten wissen sollten. Kompakt, ohne Fachchinesisch.">
 <title>Für Entscheider – Volt Trust</title>
 <link rel="stylesheet" href="style.css">
-<style>
-/* ===== FÜR ENTSCHEIDER ===== */
-.section-label,.page-hero-eyebrow,.footer-col-title,.trust-item{font-size:13px!important;letter-spacing:.18em!important}
-
-/* Wissenskacheln */
-.wissen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--stone);margin-top:48px}
-.wissen-card{background:var(--cream);padding:40px 32px;position:relative;overflow:hidden;transition:background .2s;cursor:pointer;display:block;text-decoration:none}
-.wissen-card:hover{background:var(--mist)}
-.wissen-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--gold);transition:width .4s}
-.wissen-card:hover::after{width:100%}
-.wissen-num{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--gold);margin-bottom:16px;display:block}
-.wissen-icon{width:48px;height:48px;background:var(--green);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.wissen-icon svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round}
-.wissen-title{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);margin-bottom:12px;line-height:1.3}
-.wissen-text{font-size:14px;line-height:1.78;color:var(--subtle)}
-.wissen-tag{display:inline-block;margin-top:16px;font-size:11px;color:var(--gold);letter-spacing:.08em;text-transform:uppercase}
-
-/* Energiemix Grafik */
-.energiemix-section{background:var(--ink);padding:80px 0}
-.energiemix-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:52px}
-.pie-container{display:flex;gap:40px;align-items:center;justify-content:center}
-.pie-wrap{text-align:center}
-.pie-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
-.pie-legend{display:flex;flex-direction:column;gap:10px;margin-top:16px;text-align:left}
-.pie-legend-item{display:flex;align-items:center;gap:10px;font-size:12px;color:rgba(249,246,239,.7)}
-.pie-legend-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0}
-
-/* Kapazitäten */
-.kapazitaet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.06);margin-top:32px}
-.kapazitaet-card{background:rgba(10,26,15,.5);padding:28px 24px;text-align:center}
-.kapazitaet-val{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:var(--gold);display:block;line-height:1}
-.kapazitaet-unit{font-size:16px;font-weight:400}
-.kapazitaet-label{font-size:12px;color:rgba(249,246,239,.5);margin-top:6px;display:block}
-
-/* Strompreis Grafik */
-.strompreis-bar{height:36px;display:flex;border-radius:3px;overflow:hidden;margin:24px 0 12px}
-.strompreis-segment{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:rgba(0,0,0,.7);transition:opacity .2s;position:relative}
-.strompreis-segment:hover{opacity:.9}
-.strompreis-legend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.strompreis-legend-item{display:flex;align-items:flex-start;gap:10px}
-.strompreis-legend-dot{width:14px;height:14px;border-radius:2px;flex-shrink:0;margin-top:2px}
-.strompreis-legend-text{font-size:12.5px;color:rgba(249,246,239,.7);line-height:1.5}
-.strompreis-legend-pct{font-size:16px;font-weight:700;color:var(--gold);display:block}
-
-/* CTA Box */
-.entscheider-cta{background:rgba(58,125,95,.2);border:1px solid rgba(201,150,58,.2);padding:40px;margin-top:48px;position:relative}
-.entscheider-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
-
-@media(max-width:960px){.wissen-grid,.energiemix-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.kapazitaet-grid,.pie-container{grid-template-columns:1fr;flex-direction:column}}
-</style>
 </head>
 <body>
 
@@ -67,17 +16,30 @@
       <span class="nav-logo-text">Volt<span>Trust</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="fuer-entscheider.html">Für Entscheider</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="fallbeispiele.html">Fallbeispiele</a></li>
+      <li><a href="fuer-entscheider.html" class="active">Für Entscheider</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
     <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
     <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="ueber-uns.html">Über uns</a><a href="fallbeispiele.html">Fallbeispiele</a><a href="fuer-entscheider.html">Für Entscheider</a><a href="faq.html">FAQ</a><a href="kontakt.html">Kontakt</a>
+  <a href="index.html">Home</a>
+  <a href="leistungen.html">Leistungen</a>
+  <a href="ueber-uns.html">Über uns</a>
+  <a href="fallbeispiele.html">Fallbeispiele</a>
+  <a href="fuer-entscheider.html">Für Entscheider</a>
+  <a href="faq.html">FAQ</a>
+  <a href="kontakt.html">Kontakt</a>
   <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
 </div>
 
+<!-- HERO -->
 <div class="page-hero">
   <div class="page-hero-grid"></div>
   <div class="container" style="position:relative;z-index:2">
@@ -87,145 +49,298 @@
   </div>
 </div>
 
-<div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><span class="trust-dot"></span>Für CEOs, CFOs und Einkauf</div>
-    <div class="trust-item"><span class="trust-dot"></span>Kein Fachchinesisch</div>
-    <div class="trust-item"><span class="trust-dot"></span>Keine Registrierung</div>
-    <div class="trust-item"><span class="trust-dot"></span>Kostenlos &amp; direkt nutzbar</div>
-  </div>
-</div>
-
-<!-- THEMEN-KACHELN -->
-<section style="background:var(--mist)">
+<!-- THEMEN-KACHELN MIT ACCORDION -->
+<section style="background:var(--mist);padding:88px 0">
   <div class="container">
     <div class="section-label">Themen</div>
     <h2 class="section-title">Klicken Sie ein Thema an.</h2>
     <p class="section-intro">Sechs Artikel — jeder in unter 5 Minuten lesbar, direkt anwendbar.</p>
-    <div class="wissen-grid">
-      <div class="wissen-card reveal">
-        <span class="wissen-num">01</span>
-        <div class="wissen-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div class="wissen-title">Was Ihr Strompreis wirklich kostet</div>
-        <p class="wissen-text">Energiekosten bestehen aus drei Blöcken — und nur einer davon lässt sich durch Lieferantenwechsel senken. Was steckt wirklich hinter Ihrer Energierechnung?</p>
-        <span class="wissen-tag">Grundlagen → 4 Min.</span>
+
+    <div class="wissen-accordion" style="margin-top:48px">
+
+      <!-- Kachel 01 -->
+      <div class="wissen-item" id="item-01">
+        <button class="wissen-header" onclick="toggleWissen('01')" aria-expanded="false" aria-controls="content-01">
+          <div class="wissen-header-left">
+            <span class="wissen-num">01</span>
+            <div class="wissen-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <div class="wissen-kachel-title">Was Ihr Strompreis wirklich kostet</div>
+              <div class="wissen-kachel-tag">Grundlagen · 4 Min.</div>
+            </div>
+          </div>
+          <div class="wissen-chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="wissen-content" id="content-01" role="region">
+          <div class="wissen-article">
+            <p>Energiekosten bestehen aus drei klar voneinander abgrenzbaren Blöcken — und nur einer davon lässt sich durch einen Lieferantenwechsel beeinflussen. Wer das nicht weiß, optimiert maximal die Hälfte seiner Kosten.</p>
+            <h4>Die drei Blöcke im Überblick</h4>
+            <p><strong>1. Energiekosten (40–50 % des Gesamtpreises)</strong><br>Der eigentliche Beschaffungspreis für die Kilowattstunde — dieser wird durch Marktpreise, Lieferantenverhandlungen und Tarifwahl beeinflusst. Hier wirkt klassische Beschaffungsoptimierung direkt.</p>
+            <p><strong>2. Netzentgelte (35–45 % des Gesamtpreises)</strong><br>Diese Kosten zahlen Sie für die Nutzung des Stromnetzes — und sie hängen direkt von Ihrer gemessenen Leistungsspitze ab. Ein einzelner Hochlastmoment kann Ihre Netzentgelte für ein ganzes Jahr erhöhen. Dieser Block wird durch Lastoptimierung und Batteriespeicher beeinflusst.</p>
+            <p><strong>3. Steuern & Abgaben (15–20 % des Gesamtpreises)</strong><br>Staatlich festgelegt — kein Spielraum. EEG-Umlage, Stromsteuer, Konzessionsabgabe. Hier gibt es nichts zu verhandeln.</p>
+            <div class="wissen-fazit">
+              <strong>Fazit für Entscheider:</strong> Wer nur den Lieferanten wechselt, berührt maximal 40–50 % seiner Energiekosten. Die andere Hälfte — Netzentgelte — bleibt unverändert. Eine vollständige Optimierung muss beide Blöcke adressieren.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="wissen-card reveal">
-        <span class="wissen-num">02</span>
-        <div class="wissen-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <div class="wissen-title">Was Lastspitzen kosten — und wie man sie kappt</div>
-        <p class="wissen-text">Ein Kompressor läuft 15 Minuten pro Tag auf Hochtouren. Dafür zahlen Sie das ganze Jahr. Wie funktioniert Lastspitzenkappung — und was bringt sie wirklich?</p>
-        <span class="wissen-tag">Netzentgelte → 5 Min.</span>
+
+      <!-- Kachel 02 -->
+      <div class="wissen-item" id="item-02">
+        <button class="wissen-header" onclick="toggleWissen('02')" aria-expanded="false" aria-controls="content-02">
+          <div class="wissen-header-left">
+            <span class="wissen-num">02</span>
+            <div class="wissen-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <div class="wissen-kachel-title">Was Lastspitzen kosten — und wie man sie kappt</div>
+              <div class="wissen-kachel-tag">Netzentgelte · 5 Min.</div>
+            </div>
+          </div>
+          <div class="wissen-chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="wissen-content" id="content-02" role="region">
+          <div class="wissen-article">
+            <p>Ein Kompressor läuft 15 Minuten pro Tag auf Hochtouren. Dafür zahlen Sie das ganze Jahr. Das klingt ungerecht — ist aber die Realität der deutschen Netzentgeltsystematik.</p>
+            <h4>Wie Netzentgelte berechnet werden</h4>
+            <p>Netzentgelte für Industrieabnehmer werden in Deutschland nach dem <strong>Leistungspreissystem</strong> berechnet. Das bedeutet: Ihr Netzbetreiber misst Ihre höchste gemessene Leistung im Jahr (in kW) — und diese eine Spitze bestimmt maßgeblich Ihren Leistungspreis für die nächsten 12 Monate.</p>
+            <p>Selbst wenn diese Spitze nur einmal kurz auftritt — sie zählt. Ein kurzer Hochlastmoment beim Anfahren einer Maschine, beim gleichzeitigen Betrieb mehrerer Aggregate oder durch schlechtes Lastmanagement kann Ihre Netzentgelte dauerhaft erhöhen.</p>
+            <h4>Was Lastspitzenkappung konkret bringt</h4>
+            <p>Durch den gezielten Einsatz von Batteriespeichern lassen sich Lastspitzen kappen — der Speicher liefert in Hochlastmomenten Energie, der Netzbezug bleibt unter dem kritischen Schwellenwert. In unseren Projekten reduzieren wir die gemessene Netzleistung regelmäßig um 20–60 %.</p>
+            <div class="wissen-fazit">
+              <strong>Fazit für Entscheider:</strong> Lastspitzenkappung ist oft der wirkungsvollste Einzelhebel bei der Energiekostenoptimierung — weil er dauerhaft und unabhängig vom Energiepreisniveau wirkt.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="wissen-card reveal">
-        <span class="wissen-num">03</span>
-        <div class="wissen-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/></svg></div>
-        <div class="wissen-title">Batteriespeicher (BESS) — was sie können und was nicht</div>
-        <p class="wissen-text">BESS ist kein Allheilmittel — aber in den richtigen Lastprofilen einer der wirkungsvollsten Kostenhebel. Was passt zu Ihrem Betrieb?</p>
-        <span class="wissen-tag">Technologie → 6 Min.</span>
+
+      <!-- Kachel 03 -->
+      <div class="wissen-item" id="item-03">
+        <button class="wissen-header" onclick="toggleWissen('03')" aria-expanded="false" aria-controls="content-03">
+          <div class="wissen-header-left">
+            <span class="wissen-num">03</span>
+            <div class="wissen-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/></svg>
+            </div>
+            <div>
+              <div class="wissen-kachel-title">Batteriespeicher (BESS) — was sie können und was nicht</div>
+              <div class="wissen-kachel-tag">Technologie · 6 Min.</div>
+            </div>
+          </div>
+          <div class="wissen-chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="wissen-content" id="content-03" role="region">
+          <div class="wissen-article">
+            <p>BESS — Battery Energy Storage System — ist kein Allheilmittel, aber in den richtigen Lastprofilen einer der wirkungsvollsten Kostenhebel im industriellen Energiemanagement.</p>
+            <h4>Was BESS kann</h4>
+            <p><strong>Lastspitzenkappung:</strong> Der Speicher entlädt sich in Hochlastmomenten und reduziert dadurch den gemessenen Netzanschluss. Ergebnis: dauerhaft niedrigere Netzentgelte.</p>
+            <p><strong>Dynamisches Laden:</strong> Bei dynamischen Stromtarifen lädt der Speicher gezielt in günstigen Stunden (z.B. bei hoher Wind- und Solareinspeisung) und entlädt in teuren Stunden. Das senkt direkt die Energiebeschaffungskosten.</p>
+            <p><strong>Arbitrage:</strong> In fortgeschrittenen Projekten kann der Speicher aktiv am Strommarkt teilnehmen — Energie günstig kaufen, teuer verkaufen oder als Regelenergie bereitstellen.</p>
+            <h4>Was BESS nicht kann</h4>
+            <p>BESS kann keine schlechte Tarifstruktur ersetzen. Ein Speicher ohne optimierten Beschaffungsvertrag schöpft nur einen Teil seines Potenzials aus. Die besten Ergebnisse entstehen immer in Kombination: Tarif optimieren, dann Speicher dimensionieren.</p>
+            <div class="wissen-fazit">
+              <strong>Fazit für Entscheider:</strong> BESS lohnt sich in fast allen Betrieben mit Lastspitzen über 100 kW und Jahresverbräuchen ab ca. 500 MWh. Die Amortisation liegt in unseren Projekten zwischen 1,9 und 4,8 Jahren.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="wissen-card reveal">
-        <span class="wissen-num">04</span>
-        <div class="wissen-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-        <div class="wissen-title">Unabhängige Beratung vs. gebundene Vertrieb</div>
-        <p class="wissen-text">Warum empfiehlt Ihnen ein Energieversorger selten das Günstigste? Wie erkennen Sie echte Unabhängigkeit — und warum ist sie entscheidend?</p>
-        <span class="wissen-tag">Strategie → 4 Min.</span>
+
+      <!-- Kachel 04 -->
+      <div class="wissen-item" id="item-04">
+        <button class="wissen-header" onclick="toggleWissen('04')" aria-expanded="false" aria-controls="content-04">
+          <div class="wissen-header-left">
+            <span class="wissen-num">04</span>
+            <div class="wissen-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </div>
+            <div>
+              <div class="wissen-kachel-title">Unabhängige Beratung vs. gebundener Vertrieb</div>
+              <div class="wissen-kachel-tag">Strategie · 4 Min.</div>
+            </div>
+          </div>
+          <div class="wissen-chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="wissen-content" id="content-04" role="region">
+          <div class="wissen-article">
+            <p>Warum empfiehlt Ihnen ein Energieversorger selten das Günstigste? Die Antwort ist einfach: Weil sein Geschäftsmodell auf Ihrem Energieverbrauch basiert — nicht auf Ihrer Einsparung.</p>
+            <h4>Das Interessenkonflikt-Problem</h4>
+            <p>Ein Lieferant hat ein strukturelles Interesse daran, Ihnen möglichst viel Energie zu möglichst attraktiven Konditionen zu verkaufen. Echte Verbrauchsreduktion — durch Lastoptimierung, Speicher oder Eigenerzeugung — widerspricht seinem Geschäftsmodell.</p>
+            <p>Auch Berater, die über Provisionen von Lieferanten vergütet werden, haben einen Interessenkonflikt: Empfohlen wird, was die höchste Provision bringt — nicht zwingend das, was für Sie optimal ist.</p>
+            <h4>Echte Unabhängigkeit erkennen</h4>
+            <p>Echte Unabhängigkeit zeigt sich an drei Merkmalen: erstens an der Vergütungsstruktur (Erfolgsbasiert auf Ihrer Einsparung, nicht auf dem Volumen), zweitens an der Technologieoffenheit (keine eigenen Produkte im Portfolio) und drittens an der Transparenz der Analyse (nachvollziehbare Berechnungen, die Sie selbst prüfen können).</p>
+            <div class="wissen-fazit">
+              <strong>Fazit für Entscheider:</strong> Fragen Sie jeden Berater direkt: Wie werden Sie vergütet? Ein Berater der auf Ihrer Einsparung verdient, hat das gleiche Ziel wie Sie.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="wissen-card reveal">
-        <span class="wissen-num">05</span>
-        <div class="wissen-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <div class="wissen-title">Wie erfolgsbasierte Vergütung funktioniert</div>
-        <p class="wissen-text">Kein Aufwand, kein Risiko, keine Vorabkosten. Was steckt hinter dem Modell — und wann ist es für Sie wirklich vorteilhaft?</p>
-        <span class="wissen-tag">Vergütungsmodell → 3 Min.</span>
+
+      <!-- Kachel 05 -->
+      <div class="wissen-item" id="item-05">
+        <button class="wissen-header" onclick="toggleWissen('05')" aria-expanded="false" aria-controls="content-05">
+          <div class="wissen-header-left">
+            <span class="wissen-num">05</span>
+            <div class="wissen-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <div class="wissen-kachel-title">Wie erfolgsbasierte Vergütung funktioniert</div>
+              <div class="wissen-kachel-tag">Vergütungsmodell · 3 Min.</div>
+            </div>
+          </div>
+          <div class="wissen-chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="wissen-content" id="content-05" role="region">
+          <div class="wissen-article">
+            <p>Kein Aufwand, kein Risiko, keine Vorabkosten. Das klingt zu gut — aber erfolgsbasierte Vergütung ist ein bewährtes Modell, das für beide Seiten funktioniert, wenn es richtig strukturiert ist.</p>
+            <h4>Das Grundprinzip</h4>
+            <p>Bei erfolgsbasierter Vergütung zahlen Sie als Kunde nur dann, wenn tatsächlich eine Einsparung erzielt wurde. Die Vergütung des Beraters ist eine Beteiligung an der realisierten Einsparung — typischerweise über einen definierten Zeitraum.</p>
+            <p>Das bedeutet: Entsteht keine Einsparung, entsteht auch keine Vergütungspflicht. Das Risiko trägt der Berater — nicht Sie.</p>
+            <h4>Wann ist es für Sie vorteilhaft?</h4>
+            <p>Dieses Modell ist immer dann vorteilhaft, wenn Sie sich über das tatsächliche Einsparpotenzial unsicher sind oder keine internen Ressourcen für ein aufwändiges Ausschreibungs- und Analyseprojekt haben. Sie erhalten eine vollständige Analyse und Umsetzung — ohne Vorabinvestition und ohne Eigenaufwand.</p>
+            <div class="wissen-fazit">
+              <strong>Fazit für Entscheider:</strong> Erfolgsbasierte Vergütung ist kein Marketingversprechen — sondern ein Qualitätsmerkmal. Nur wer von seiner eigenen Analyse überzeugt ist, bietet dieses Modell an.
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="wissen-card reveal">
-        <span class="wissen-num">06</span>
-        <div class="wissen-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-        <div class="wissen-title">Der deutsche Energiemarkt im Wandel</div>
-        <p class="wissen-text">Der Energiemix hat sich von 2000 bis 2025 grundlegend verändert. Was bedeutet das für Industriebetriebe — und warum ist Weitermachen wie bisher keine Option mehr?</p>
-        <span class="wissen-tag">Energiewende → 5 Min.</span>
+
+      <!-- Kachel 06 -->
+      <div class="wissen-item" id="item-06">
+        <button class="wissen-header" onclick="toggleWissen('06')" aria-expanded="false" aria-controls="content-06">
+          <div class="wissen-header-left">
+            <span class="wissen-num">06</span>
+            <div class="wissen-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <div class="wissen-kachel-title">Der deutsche Energiemarkt im Wandel</div>
+              <div class="wissen-kachel-tag">Energiewende · 5 Min.</div>
+            </div>
+          </div>
+          <div class="wissen-chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+        </button>
+        <div class="wissen-content" id="content-06" role="region">
+          <div class="wissen-article">
+            <p>Der Energiemix hat sich von 2000 bis 2025 grundlegend verändert. Was bedeutet das für Industriebetriebe — und warum ist Weitermachen wie bisher keine Option mehr?</p>
+            <h4>Von 15 % auf über 60 % Erneuerbare</h4>
+            <p>Im Jahr 2000 stammten rund 15 % des deutschen Stroms aus erneuerbaren Quellen. 2025 sind es über 60 %. Windkraft (79 GW installierte Leistung) und Solar (120 GW) dominieren die Erzeugung — aber beide sind volatil.</p>
+            <p>Das hat eine direkte Konsequenz für Industriebetriebe: Die Strompreise schwanken heute stärker als je zuvor. An sonnigen, windreichen Tagen sind die Börsenpreise zeitweise negativ. An windstillen, bewölkten Wintertagen steigen sie stark an.</p>
+            <h4>Was das für Ihren Betrieb bedeutet</h4>
+            <p>Wer mit einem festen Jahrestarif einkauft, zahlt immer den Durchschnitt — unabhängig davon, wann der Strom tatsächlich erzeugt wird. Wer auf dynamische Tarife wechselt und sein Lastprofil flexibilisiert, kann diese Preisfenster gezielt nutzen.</p>
+            <p>In einigen unserer Projekte senkt allein die Tarifoptimierung auf dynamische Beschaffung die Energiekosten um 24–38 % — ohne jede technische Investition.</p>
+            <div class="wissen-fazit">
+              <strong>Fazit für Entscheider:</strong> Der Energiemarkt belohnt heute aktives Management. Wer das ignoriert, subventioniert mit seinem Durchschnittspreis die Flexibilität anderer.
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+    </div><!-- end accordion -->
   </div>
 </section>
 
-<!-- ENERGIEMIX BLOCK (NEU) -->
-<section class="energiemix-section">
+<!-- ENERGIEMIX BLOCK -->
+<section style="background:var(--ink);padding:88px 0">
   <div class="container">
     <div class="section-label" style="color:var(--gold)">Marktüberblick</div>
     <h2 class="section-title light">Der deutsche Energiemarkt im Wandel.</h2>
     <p class="section-intro light">Der Energiemix 2000 vs. 2025 — und was das für Ihren Betrieb konkret bedeutet.</p>
 
-    <div class="energiemix-grid">
-      <!-- Tortendiagramme 2000 vs 2025 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:52px">
+
+      <!-- Tortendiagramme -->
       <div>
-        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:24px">Energiemix Deutschland — Vergleich</div>
-        <div class="pie-container">
-          <div class="pie-wrap">
-            <span class="pie-label">2000</span>
-            <svg width="140" height="140" viewBox="0 0 140 140">
-              <!-- Kernenergie: 30% -->
-              <path d="M70 70 L70 10 A60 60 0 0 1 127.9 40 Z" fill="#8B8FA8"/>
-              <!-- Kohle/Andere: 55% -->
-              <path d="M70 70 L127.9 40 A60 60 0 1 1 12.1 40 Z" fill="#C9963A" opacity=".6"/>
-              <!-- Erneuerbare: 15% -->
-              <path d="M70 70 L12.1 40 A60 60 0 0 1 70 10 Z" fill="#3A7D5F"/>
-              <circle cx="70" cy="70" r="28" fill="#0A1A0F"/>
-              <text x="70" y="75" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#C9963A" font-weight="700">2000</text>
+        <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:32px">Energiemix Deutschland — Vergleich</div>
+        <div style="display:flex;gap:48px;align-items:flex-start;justify-content:center">
+
+          <!-- 2000 -->
+          <div style="text-align:center">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">2000</div>
+            <!-- Erneuerbare 15% = 54°, Kernenergie 30% = 108°, Andere 55% = 198° -->
+            <svg width="150" height="150" viewBox="0 0 150 150">
+              <!-- Erneuerbare: 15% → 0° bis 54° -->
+              <path d="M75 75 L75 15 A60 60 0 0 1 126.96 45 Z" fill="#3D8C6A"/>
+              <!-- Kernenergie: 30% → 54° bis 162° -->
+              <path d="M75 75 L126.96 45 A60 60 0 0 1 21.10 111.55 Z" fill="#8B8FA8"/>
+              <!-- Andere: 55% → 162° bis 360° -->
+              <path d="M75 75 L21.10 111.55 A60 60 0 1 1 75 15 Z" fill="#C9963A" opacity="0.65"/>
+              <!-- Donut-Loch -->
+              <circle cx="75" cy="75" r="26" fill="#1E3D30"/>
+              <text x="75" y="79" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#C9963A" font-weight="700">2000</text>
             </svg>
-            <div class="pie-legend">
-              <div class="pie-legend-item"><div class="pie-legend-dot" style="background:#3A7D5F"></div>Erneuerbare: ~15 %</div>
-              <div class="pie-legend-item"><div class="pie-legend-dot" style="background:#8B8FA8"></div>Kernenergie: ~30 %</div>
-              <div class="pie-legend-item"><div class="pie-legend-dot" style="background:#C9963A;opacity:.6"></div>Andere: ~55 %</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;text-align:left">
+              <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(249,246,239,.7)"><div style="width:12px;height:12px;border-radius:2px;background:#3D8C6A;flex-shrink:0"></div>Erneuerbare: 15 %</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(249,246,239,.7)"><div style="width:12px;height:12px;border-radius:2px;background:#8B8FA8;flex-shrink:0"></div>Kernenergie: 30 %</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(249,246,239,.7)"><div style="width:12px;height:12px;border-radius:2px;background:#C9963A;opacity:.65;flex-shrink:0"></div>Andere: 55 %</div>
             </div>
           </div>
 
-          <div style="font-size:28px;color:var(--gold);align-self:flex-start;margin-top:50px">→</div>
+          <div style="font-size:24px;color:var(--gold);align-self:center;margin-top:-20px">→</div>
 
-          <div class="pie-wrap">
-            <span class="pie-label">2025</span>
-            <svg width="140" height="140" viewBox="0 0 140 140">
-              <!-- Erneuerbare: 62% -->
-              <path d="M70 70 L70 10 A60 60 0 1 1 22.1 85 Z" fill="#3A7D5F"/>
-              <!-- Kernenergie: 0% -->
-              <!-- Gas/Kohle: 28% -->
-              <path d="M70 70 L22.1 85 A60 60 0 0 1 116.6 25 Z" fill="#C9963A" opacity=".5"/>
-              <!-- Sonstiges: 10% -->
-              <path d="M70 70 L116.6 25 A60 60 0 0 1 70 10 Z" fill="#8B8FA8" opacity=".6"/>
-              <circle cx="70" cy="70" r="28" fill="#0A1A0F"/>
-              <text x="70" y="75" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#3A7D5F" font-weight="700">2025</text>
+          <!-- 2025 -->
+          <div style="text-align:center">
+            <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">2025</div>
+            <!-- Erneuerbare: 62% → 0° bis 223.2° -->
+            <!-- Gas/Kohle: 28% → 223.2° bis 324° -->
+            <!-- Sonstiges: 10% → 324° bis 360° -->
+            <svg width="150" height="150" viewBox="0 0 150 150">
+              <!-- Erneuerbare: 62% → -90° bis 133.2° (Start oben = -90° = 270° mathematisch) -->
+              <!-- Segment 1: Erneuerbare 62% = 223.2° Bogen -->
+              <path d="M75 75 L75 15 A60 60 0 1 1 27.14 120.37 Z" fill="#3D8C6A"/>
+              <!-- Segment 2: Gas/Kohle 28% = 100.8° Bogen -->
+              <path d="M75 75 L27.14 120.37 A60 60 0 0 1 122.86 120.37 Z" fill="#C9963A" opacity="0.55"/>
+              <!-- Segment 3: Sonstiges 10% = 36° Bogen -->
+              <path d="M75 75 L122.86 120.37 A60 60 0 0 1 75 15 Z" fill="#8B8FA8" opacity="0.55"/>
+              <!-- Donut-Loch -->
+              <circle cx="75" cy="75" r="26" fill="#1E3D30"/>
+              <text x="75" y="79" text-anchor="middle" font-family="Playfair Display,serif" font-size="13" fill="#3D8C6A" font-weight="700">2025</text>
             </svg>
-            <div class="pie-legend">
-              <div class="pie-legend-item"><div class="pie-legend-dot" style="background:#3A7D5F"></div>Erneuerbare: ~62 %</div>
-              <div class="pie-legend-item"><div class="pie-legend-dot" style="background:#C9963A;opacity:.6"></div>Gas/Kohle: ~28 %</div>
-              <div class="pie-legend-item"><div class="pie-legend-dot" style="background:#8B8FA8;opacity:.6"></div>Sonstiges: ~10 %</div>
+            <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px;text-align:left">
+              <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(249,246,239,.7)"><div style="width:12px;height:12px;border-radius:2px;background:#3D8C6A;flex-shrink:0"></div>Erneuerbare: 62 %</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(249,246,239,.7)"><div style="width:12px;height:12px;border-radius:2px;background:#C9963A;opacity:.55;flex-shrink:0"></div>Gas/Kohle: 28 %</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(249,246,239,.7)"><div style="width:12px;height:12px;border-radius:2px;background:#8B8FA8;opacity:.55;flex-shrink:0"></div>Sonstiges: 10 %</div>
             </div>
           </div>
+
         </div>
       </div>
 
-      <!-- Kapazitäten & Erklärung -->
+      <!-- Kapazitäten & Text -->
       <div>
         <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:24px">Installierte Kapazitäten 2025</div>
-        <div class="kapazitaet-grid">
-          <div class="kapazitaet-card">
-            <span class="kapazitaet-val">120<span class="kapazitaet-unit"> GW</span></span>
-            <span class="kapazitaet-label">Solarenergie</span>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.06);margin-bottom:32px">
+          <div style="background:rgba(10,26,15,.5);padding:24px 16px;text-align:center">
+            <span style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold);display:block;line-height:1">120<span style="font-size:15px;font-weight:400"> GW</span></span>
+            <span style="font-size:11px;color:rgba(249,246,239,.5);margin-top:6px;display:block">Solarenergie</span>
           </div>
-          <div class="kapazitaet-card">
-            <span class="kapazitaet-val">79<span class="kapazitaet-unit"> GW</span></span>
-            <span class="kapazitaet-label">Windenergie</span>
+          <div style="background:rgba(10,26,15,.5);padding:24px 16px;text-align:center">
+            <span style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold);display:block;line-height:1">79<span style="font-size:15px;font-weight:400"> GW</span></span>
+            <span style="font-size:11px;color:rgba(249,246,239,.5);margin-top:6px;display:block">Windenergie</span>
           </div>
-          <div class="kapazitaet-card">
-            <span class="kapazitaet-val">9<span class="kapazitaet-unit"> GW</span></span>
-            <span class="kapazitaet-label">Stromspeicher</span>
+          <div style="background:rgba(10,26,15,.5);padding:24px 16px;text-align:center">
+            <span style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold);display:block;line-height:1">9<span style="font-size:15px;font-weight:400"> GW</span></span>
+            <span style="font-size:11px;color:rgba(249,246,239,.5);margin-top:6px;display:block">Stromspeicher</span>
           </div>
         </div>
 
-        <div style="margin-top:32px">
-          <p style="font-size:15.5px;line-height:1.78;color:rgba(249,246,239,.72);margin-bottom:16px">Der Anteil erneuerbarer Energien hat sich von 2000 bis 2025 von rund 15 % auf über 60 % vervierfacht. Das verändert nicht nur den Energiemix — sondern auch die Preisstruktur fundamental.</p>
-          <p style="font-size:15.5px;line-height:1.78;color:rgba(249,246,239,.72)">Volatile Einspeisung schafft neue Preisfenster. Wer Energie zu den richtigen Zeiten bezieht oder Lastspitzen klugt steuert, profitiert direkt — wer es nicht tut, zahlt weiter den Durchschnittspreis.</p>
-        </div>
+        <p style="font-size:15.5px;line-height:1.78;color:rgba(249,246,239,.72);margin-bottom:16px">Der Anteil erneuerbarer Energien hat sich von 2000 bis 2025 von rund 15 % auf über 60 % vervierfacht. Das verändert nicht nur den Energiemix — sondern auch die Preisstruktur fundamental.</p>
+        <p style="font-size:15.5px;line-height:1.78;color:rgba(249,246,239,.72)">Volatile Einspeisung schafft neue Preisfenster. Wer Energie zu den richtigen Zeiten bezieht oder Lastspitzen klug steuert, profitiert direkt — wer es nicht tut, zahlt weiter den Durchschnittspreis.</p>
       </div>
     </div>
 
@@ -235,42 +350,45 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
         <div>
           <p style="font-size:16px;line-height:1.75;color:rgba(249,246,239,.75);margin-bottom:24px">Ihr Energiepreis besteht aus drei Blöcken. Nur zwei davon lassen sich optimieren — der dritte ist staatlich festgelegt.</p>
-          <div class="strompreis-bar">
-            <div class="strompreis-segment" style="width:45%;background:#3A7D5F">45 %</div>
-            <div class="strompreis-segment" style="width:40%;background:#C9963A">40 %</div>
-            <div class="strompreis-segment" style="width:15%;background:#5a6070">15 %</div>
+          <!-- Balken -->
+          <div style="height:36px;display:flex;border-radius:3px;overflow:hidden;margin:24px 0 12px">
+            <div style="width:45%;background:#3D8C6A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:rgba(0,0,0,.7)">45 %</div>
+            <div style="width:40%;background:#C9963A;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:rgba(0,0,0,.7)">40 %</div>
+            <div style="width:15%;background:#5a6070;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:rgba(0,0,0,.7)">15 %</div>
           </div>
-          <div class="strompreis-legend">
-            <div class="strompreis-legend-item">
-              <div class="strompreis-legend-dot" style="background:#3A7D5F"></div>
-              <div class="strompreis-legend-text"><span class="strompreis-legend-pct">40–50 %</span>Energiekosten<br><em style="color:rgba(249,246,239,.5);font-style:normal;font-size:11px">Beschaffungsoptimierung wirkt hier direkt</em></div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px">
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="width:14px;height:14px;border-radius:2px;background:#3D8C6A;flex-shrink:0;margin-top:2px"></div>
+              <div style="font-size:12.5px;color:rgba(249,246,239,.7);line-height:1.5"><span style="font-size:16px;font-weight:700;color:var(--gold);display:block">40–50 %</span>Energiekosten<br><em style="color:rgba(249,246,239,.5);font-style:normal;font-size:11px">Beschaffungsoptimierung wirkt hier direkt</em></div>
             </div>
-            <div class="strompreis-legend-item">
-              <div class="strompreis-legend-dot" style="background:#C9963A"></div>
-              <div class="strompreis-legend-text"><span class="strompreis-legend-pct">35–45 %</span>Netzentgelte<br><em style="color:rgba(249,246,239,.5);font-style:normal;font-size:11px">Lastspitzenkappung &amp; BESS senken dauerhaft</em></div>
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="width:14px;height:14px;border-radius:2px;background:#C9963A;flex-shrink:0;margin-top:2px"></div>
+              <div style="font-size:12.5px;color:rgba(249,246,239,.7);line-height:1.5"><span style="font-size:16px;font-weight:700;color:var(--gold);display:block">35–45 %</span>Netzentgelte<br><em style="color:rgba(249,246,239,.5);font-style:normal;font-size:11px">Lastspitzenkappung &amp; BESS senken dauerhaft</em></div>
             </div>
-            <div class="strompreis-legend-item">
-              <div class="strompreis-legend-dot" style="background:#5a6070"></div>
-              <div class="strompreis-legend-text"><span class="strompreis-legend-pct">15–20 %</span>Steuern &amp; Abgaben<br><em style="color:rgba(249,246,239,.5);font-style:normal;font-size:11px">Staatlich festgelegt — kein Spielraum</em></div>
+            <div style="display:flex;align-items:flex-start;gap:10px">
+              <div style="width:14px;height:14px;border-radius:2px;background:#5a6070;flex-shrink:0;margin-top:2px"></div>
+              <div style="font-size:12.5px;color:rgba(249,246,239,.7);line-height:1.5"><span style="font-size:16px;font-weight:700;color:var(--gold);display:block"><span style="white-space:nowrap">15–20 %</span></span>Steuern &amp; Abgaben<br><em style="color:rgba(249,246,239,.5);font-style:normal;font-size:11px">Staatlich festgelegt — kein Spielraum</em></div>
             </div>
           </div>
         </div>
 
         <div>
-          <div style="background:rgba(201,150,58,.1);border:1px solid rgba(201,150,58,.2);padding:32px">
+          <div style="background:rgba(201,150,58,.1);border:1px solid rgba(201,150,58,.2);padding:32px;position:relative">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
             <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">Was das bedeutet</div>
-            <p style="font-size:15px;line-height:1.72;color:rgba(249,246,239,.72);margin-bottom:20px">Wer nur den Lieferantenpreis verhandelt, optimiert maximal 40–50 % seiner Energiekosten. Die andere Hälfte — Netzentgelte — bleibt unberührt.</p>
+            <p style="font-size:15px;line-height:1.72;color:rgba(249,246,239,.72);margin-bottom:20px">Wer nur den Lieferantenpreis verhandelt, optimiert maximal <span style="white-space:nowrap">40–50 %</span> seiner Energiekosten. Die andere Hälfte — Netzentgelte — bleibt unberührt.</p>
             <p style="font-size:15px;line-height:1.72;color:rgba(249,246,239,.72);margin-bottom:20px">Unsere stärksten Projekte kombinieren beide Hebel: Beschaffungsoptimierung sofort, Lastoptimierung und BESS danach. Das Ergebnis: Einsparungen von −28 % bis −60 % der Gesamtenergiekosten.</p>
-            <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--gold)">Nur wer beide Blöcke angeht,<br>schöpft das volle Potenzial.</div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--gold);line-height:1.4">Nur wer beide Blöcke angeht,<br>schöpft das volle Potenzial.</div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Fazit-Box -->
-    <div class="entscheider-cta">
+    <div style="background:rgba(58,125,95,.2);border:1px solid rgba(201,150,58,.2);padding:40px;margin-top:48px;position:relative">
+      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
       <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">Sind Sie vorbereitet?</div>
-      <div style="display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;flex-wrap:wrap">
+      <div style="display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center">
         <div>
           <p style="font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:12px;line-height:1.4">Die Energieerzeugung verändert sich — verändert sich auch Ihre Beschaffung? Weitermachen wie bisher ist keine Option mehr.</p>
           <p style="font-size:14.5px;color:rgba(249,246,239,.6);line-height:1.65">Strukturen sollten hinterfragt, Entscheidungen überlegt und Energie gezielt gesteuert werden. Nur wer vorbereitet ist, kann Kosten gezielt senken und Einsparpotenziale realisieren.</p>
@@ -293,18 +411,232 @@
   </div>
 </section>
 
+<!-- TRUST BAR (vor Footer) -->
+<div class="trust-bar trust-bar--bottom">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-dot"></span>Für CEOs, CFOs und Einkauf</div>
+    <div class="trust-item"><span class="trust-dot"></span>Kein Fachchinesisch</div>
+    <div class="trust-item"><span class="trust-dot"></span>Keine Registrierung</div>
+    <div class="trust-item"><span class="trust-dot"></span>Kostenlos &amp; direkt nutzbar</div>
+  </div>
+</div>
+
 <footer>
   <div class="footer-top">
-    <div><div style="display:flex;align-items:center;gap:11px;margin-bottom:14px"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg><div class="footer-brand">Volt<span>Trust</span></div></div><p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p></div>
-    <div><div class="footer-col-title">Seiten</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="fallbeispiele.html">Fallbeispiele</a></li><li><a href="fuer-entscheider.html">Für Entscheider</a></li><li><a href="faq.html">FAQ</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
-    <div><div class="footer-col-title">Kontakt</div><ul class="footer-links"><li><a href="tel:+491711245256">+49 171 1245256</a></li><li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li><li><a href="kontakt.html">Termin vereinbaren</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+    <div>
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg>
+        <div class="footer-brand">Volt<span>Trust</span></div>
+      </div>
+      <p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Seiten</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="fallbeispiele.html">Fallbeispiele</a></li>
+        <li><a href="fuer-entscheider.html">Für Entscheider</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Kontakt</div>
+      <ul class="footer-links">
+        <li><a href="tel:+491711245256">+49 171 1245256</a></li>
+        <li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li>
+        <li><a href="kontakt.html">Termin vereinbaren</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Volt Trust · Alle Rechte vorbehalten</span><span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Volt Trust · Alle Rechte vorbehalten</span>
+    <span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+  </div>
 </footer>
 
 <script src="main.js"></script>
 <script>
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
+  // Hamburger
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+
+  // Accordion
+  function toggleWissen(id) {
+    const content = document.getElementById('content-' + id);
+    const item = document.getElementById('item-' + id);
+    const button = item.querySelector('.wissen-header');
+    const isOpen = item.classList.contains('open');
+
+    // Alle schließen
+    document.querySelectorAll('.wissen-item').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.wissen-header').setAttribute('aria-expanded', 'false');
+      const c = el.querySelector('.wissen-content');
+      c.style.maxHeight = '0';
+    });
+
+    // Dieses öffnen (wenn es nicht schon offen war)
+    if (!isOpen) {
+      item.classList.add('open');
+      button.setAttribute('aria-expanded', 'true');
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  }
 </script>
+
+<style>
+/* ===== ACCORDION ===== */
+.wissen-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--stone);
+}
+
+.wissen-item {
+  background: var(--cream);
+}
+
+.wissen-item.open {
+  background: var(--mist);
+}
+
+.wissen-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background .2s;
+  gap: 16px;
+}
+
+.wissen-header:hover {
+  background: rgba(201,150,58,.06);
+}
+
+.wissen-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wissen-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: var(--gold);
+  flex-shrink: 0;
+  min-width: 24px;
+}
+
+.wissen-icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wissen-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.wissen-kachel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.wissen-kachel-tag {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.wissen-chevron {
+  width: 24px;
+  height: 24px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform .3s ease;
+}
+
+.wissen-item.open .wissen-chevron {
+  transform: rotate(180deg);
+}
+
+.wissen-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+
+.wissen-article {
+  padding: 0 32px 36px 120px;
+  border-top: 1px solid var(--stone);
+}
+
+.wissen-article p {
+  font-size: 15.5px;
+  line-height: 1.78;
+  color: var(--subtle);
+  margin-bottom: 16px;
+}
+
+.wissen-article h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: var(--ink);
+  margin: 24px 0 12px;
+}
+
+.wissen-article strong {
+  color: var(--text);
+}
+
+.wissen-fazit {
+  background: var(--stone);
+  border-left: 3px solid var(--gold);
+  padding: 16px 20px;
+  margin-top: 24px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* Trust Bar Bottom */
+.trust-bar--bottom {
+  background: var(--forest);
+}
+
+@media (max-width: 960px) {
+  .wissen-article { padding: 0 24px 28px 24px; }
+  .wissen-header { padding: 22px 24px; }
+  .wissen-header-left { gap: 14px; }
+}
+
+@media (max-width: 600px) {
+  .wissen-kachel-title { font-size: 16px; }
+  .wissen-icon-wrap { width: 36px; height: 36px; }
+}
+</style>
+
 </body>
 </html>
