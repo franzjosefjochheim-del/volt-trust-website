@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Accordion Test</title>
+<script>
+function toggleWissen(id) {
+  alert('Funktion aufgerufen: ' + id);
+  var content = document.getElementById('content-' + id);
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+  }
+}
+</script>
+<style>
+.wissen-content { display: none; }
+button { padding: 20px; width: 100%; text-align: left; font-size: 18px; cursor: pointer; }
+.wissen-article { padding: 20px; background: #eee; }
+</style>
+</head>
+<body>
+
+<div id="item-01">
+  <button onclick="toggleWissen('01')">Artikel 1 — klick mich</button>
+  <div class="wissen-content" id="content-01">
+    <div class="wissen-article">Hier steht der Inhalt von Artikel 1.</div>
+  </div>
+</div>
+
+<div id="item-02">
+  <button onclick="toggleWissen('02')">Artikel 2 — klick mich</button>
+  <div class="wissen-content" id="content-02">
+    <div class="wissen-article">Hier steht der Inhalt von Artikel 2.</div>
+  </div>
+</div>
+
+</body>
+</html>
