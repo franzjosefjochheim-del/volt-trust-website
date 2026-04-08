@@ -6,6 +6,25 @@
 <meta name="description" content="Für Entscheider — Was CEOs, CFOs und Einkäufer über Energiekosten wissen sollten. Kompakt, ohne Fachchinesisch.">
 <title>Für Entscheider – Volt Trust</title>
 <link rel="stylesheet" href="style.css">
+<script>
+function toggleWissen(id) {
+  var ids = ['01','02','03','04','05','06'];
+  var clickedContent = document.getElementById('content-' + id);
+  var isVisible = clickedContent.style.display === 'block';
+  // Alle schließen
+  ids.forEach(function(i) {
+    var c = document.getElementById('content-' + i);
+    var it = document.getElementById('item-' + i);
+    if (c) c.style.display = 'none';
+    if (it) it.classList.remove('open');
+  });
+  // Angeklicktes öffnen wenn es zu war
+  if (!isVisible) {
+    clickedContent.style.display = 'block';
+    document.getElementById('item-' + id).classList.add('open');
+  }
+}
+</script>
 <style>
 /* ===== ACCORDION ===== */
 .wissen-accordion {
@@ -581,34 +600,8 @@
   </div>
 </footer>
 
-<script>
-  // Accordion — global definiert, BEVOR main.js geladen wird
-  // Verwendet display:none/block via .open-Klasse (kein scrollHeight-Problem)
-  function toggleWissen(id) {
-    try {
-      var item = document.getElementById('item-' + id);
-      var button = item.querySelector('.wissen-header');
-      var isOpen = item.classList.contains('open');
-
-      // Alle schließen
-      document.querySelectorAll('.wissen-item').forEach(function(el) {
-        el.classList.remove('open');
-        el.querySelector('.wissen-header').setAttribute('aria-expanded', 'false');
-      });
-
-      // Dieses öffnen (wenn es nicht schon offen war)
-      if (!isOpen) {
-        item.classList.add('open');
-        button.setAttribute('aria-expanded', 'true');
-      }
-    } catch(e) {
-      console.error('Accordion error:', e);
-    }
-  }
-</script>
 <script src="main.js"></script>
 <script>
-  // Hamburger
   try {
     document.getElementById('hamburger').addEventListener('click', function() {
       document.getElementById('navMobile').classList.toggle('open');
