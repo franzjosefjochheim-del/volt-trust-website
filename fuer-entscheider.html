@@ -581,31 +581,39 @@
   </div>
 </footer>
 
+<script>
+  // Accordion — global definiert, BEVOR main.js geladen wird
+  // Verwendet display:none/block via .open-Klasse (kein scrollHeight-Problem)
+  function toggleWissen(id) {
+    try {
+      var item = document.getElementById('item-' + id);
+      var button = item.querySelector('.wissen-header');
+      var isOpen = item.classList.contains('open');
+
+      // Alle schließen
+      document.querySelectorAll('.wissen-item').forEach(function(el) {
+        el.classList.remove('open');
+        el.querySelector('.wissen-header').setAttribute('aria-expanded', 'false');
+      });
+
+      // Dieses öffnen (wenn es nicht schon offen war)
+      if (!isOpen) {
+        item.classList.add('open');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    } catch(e) {
+      console.error('Accordion error:', e);
+    }
+  }
+</script>
 <script src="main.js"></script>
 <script>
   // Hamburger
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('navMobile').classList.toggle('open');
-  });
-
-  // Accordion — robuste Implementierung mit display toggle
-  function toggleWissen(id) {
-    const item = document.getElementById('item-' + id);
-    const button = item.querySelector('.wissen-header');
-    const isOpen = item.classList.contains('open');
-
-    // Alle schließen
-    document.querySelectorAll('.wissen-item').forEach(el => {
-      el.classList.remove('open');
-      el.querySelector('.wissen-header').setAttribute('aria-expanded', 'false');
+  try {
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('navMobile').classList.toggle('open');
     });
-
-    // Dieses öffnen (wenn es nicht schon offen war)
-    if (!isOpen) {
-      item.classList.add('open');
-      button.setAttribute('aria-expanded', 'true');
-    }
-  }
+  } catch(e) {}
 </script>
 
 </body>
