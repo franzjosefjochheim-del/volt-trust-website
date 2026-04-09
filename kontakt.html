@@ -6,6 +6,13 @@
 <meta name="description" content="Kontakt zu Volt Trust — Kostenloses Erstgespräch vereinbaren. Termin buchen oder direkt schreiben.">
 <title>Kontakt – Volt Trust</title>
 <link rel="stylesheet" href="style.css">
+<style>
+@media(max-width:768px){
+  html,body{overflow-x:hidden!important;max-width:100vw}
+  .container{overflow-x:hidden}
+  .kontakt-grid{grid-template-columns:1fr!important}
+}
+</style>
 </head>
 <body>
 
@@ -227,27 +234,28 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('kontaktForm');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('.btn-submit');
-        btn.textContent = 'Wird gesendet…';
-        btn.disabled = true;
-        try {
-          const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-          if (res.ok) {
-            form.style.display = 'none';
-            document.getElementById('successMsg').classList.add('show');
-          } else {
-            btn.textContent = 'Fehler — bitte erneut versuchen';
-            btn.disabled = false;
-          }
-        } catch {
-          btn.textContent = 'Fehler — bitte erneut versuchen';
-          btn.disabled = false;
+    if (!form) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-submit');
+      if (btn) { btn.textContent = 'Wird gesendet…'; btn.disabled = true; }
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          const msg = document.getElementById('formSuccess');
+          if (msg) msg.style.display = 'block';
+        } else {
+          if (btn) { btn.textContent = 'Fehler — bitte erneut versuchen'; btn.disabled = false; }
         }
-      });
-    }
+      } catch(err) {
+        if (btn) { btn.textContent = 'Fehler — bitte erneut versuchen'; btn.disabled = false; }
+      }
+    });
   });
 </script>
 </body>
