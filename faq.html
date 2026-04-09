@@ -498,37 +498,25 @@
 <script src="main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-
-  // Hamburger Menu
-  var hamburger = document.getElementById('hamburger');
-  var navMobile = document.getElementById('navMobile');
-  if (hamburger && navMobile) {
-    hamburger.addEventListener('click', function() {
-      navMobile.classList.toggle('open');
-    });
-  }
-
   // FAQ Accordion
   var questions = document.querySelectorAll('.faq-question');
   questions.forEach(function(question) {
     question.addEventListener('click', function() {
       var answer = this.nextElementSibling;
       var wasOpen = this.classList.contains('open');
-
-      // Alle schließen
+      // Alle schliessen
       questions.forEach(function(q) {
         q.classList.remove('open');
-        q.nextElementSibling.classList.remove('open');
+        var a = q.nextElementSibling;
+        if (a) { a.style.maxHeight = null; a.style.opacity = '0'; }
       });
-
-      // Dieses öffnen falls es zu war
+      // Angeklicktes öffnen wenn es vorher geschlossen war
       if (!wasOpen) {
         question.classList.add('open');
-        answer.classList.add('open');
+        if (answer) { answer.style.maxHeight = answer.scrollHeight + 'px'; answer.style.opacity = '1'; }
       }
     });
   });
-
 });
 </script>
 </body>
