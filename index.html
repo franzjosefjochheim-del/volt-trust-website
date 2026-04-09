@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 <style>
 /* ===== HERO ===== */
-.hero{min-height:100vh;background:#3A6B52;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
+.hero{min-height:100vh;background:var(--ink);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,150,58,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(201,150,58,.06) 1px,transparent 1px);background-size:68px 68px;mask-image:radial-gradient(ellipse 80% 70% at 65% 50%,black 10%,transparent 68%)}
 .hero-glow{position:absolute;top:-200px;right:-140px;width:720px;height:720px;border-radius:50%;background:radial-gradient(ellipse,rgba(30,61,48,.45) 0%,transparent 70%);pointer-events:none}
 .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 420px;gap:76px;align-items:center}
@@ -18,7 +18,7 @@
 .hero h1 em{color:var(--gold);font-style:normal}
 .hero-lead{font-size:20px;font-weight:300;line-height:1.78;color:rgba(249,246,239,.82);max-width:540px;margin-bottom:44px;animation:fadeUp .55s .2s ease both}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .55s .3s ease both}
-.hero-card{background:rgba(30,61,48,.45);border:1px solid rgba(201,150,58,.25);padding:40px;position:relative;animation:fadeUp .65s .15s ease both}
+.hero-card{background:rgba(46,92,71,.45);border:1px solid rgba(201,150,58,.25);padding:40px;position:relative;animation:fadeUp .65s .15s ease both}
 .hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
@@ -322,8 +322,6 @@
       <div class="case-card reveal">
         <div class="case-card-tag">Gesundheitswesen · Klinik</div>
         <div class="case-card-title">Klinikbetrieb mit 24/7-Lastprofil</div>
-
-        <!-- Vorher / Nachher -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-bottom:20px">
           <div style="background:var(--mist);padding:20px 18px">
             <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(30,61,48,.5);margin-bottom:8px">Vorher</div>
@@ -337,8 +335,6 @@
             <div style="font-size:13px;color:rgba(30,61,48,.55);margin-top:4px">pro Jahr</div>
           </div>
         </div>
-
-        <!-- Einsparung Anker -->
         <div style="background:var(--ink);padding:20px 24px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between">
           <div>
             <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:4px">Einsparung p.a.</div>
@@ -349,8 +345,6 @@
             <div style="font-size:13px;color:rgba(255,255,255,.72);margin-top:4px">Kostenreduktion</div>
           </div>
         </div>
-
-        <!-- Details -->
         <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:18px">
           <div style="display:flex;justify-content:space-between;font-size:14.5px">
             <span style="color:rgba(30,61,48,.55)">Jahresverbrauch</span>
@@ -365,8 +359,6 @@
             <span style="color:rgba(30,61,48,.85);font-weight:500">24 %</span>
           </div>
         </div>
-
-        <!-- ROI -->
         <div class="case-roi-row">
           <div class="case-roi-item"><span class="case-roi-val">3,0 J.</span><span class="case-roi-label">Amortisation</span></div>
           <div class="case-roi-item"><span class="case-roi-val">39 %</span><span class="case-roi-label">Rendite p.a.</span></div>
@@ -378,8 +370,6 @@
       <div class="case-card reveal">
         <div class="case-card-tag">Großindustrie · über 10 GWh/a</div>
         <div class="case-card-title">Großindustriebetrieb, gestufter Ausbaupfad</div>
-
-        <!-- Vorher / Nachher -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--stone);margin-bottom:20px">
           <div style="background:var(--mist);padding:20px 18px">
             <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(30,61,48,.5);margin-bottom:8px">Vorher</div>
@@ -393,8 +383,6 @@
             <div style="font-size:13px;color:rgba(30,61,48,.55);margin-top:4px">pro Jahr (Vollausbau)</div>
           </div>
         </div>
-
-        <!-- Einsparung Anker -->
         <div style="background:var(--ink);padding:20px 24px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between">
           <div>
             <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:4px">Einsparung p.a.</div>
@@ -405,8 +393,6 @@
             <div style="font-size:13px;color:rgba(255,255,255,.72);margin-top:4px">Kostenreduktion</div>
           </div>
         </div>
-
-        <!-- Details -->
         <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:18px">
           <div style="display:flex;justify-content:space-between;font-size:14.5px">
             <span style="color:rgba(30,61,48,.55)">Jahresverbrauch</span>
@@ -421,8 +407,6 @@
             <span style="color:rgba(30,61,48,.85);font-weight:500">Gestuft, 2 Phasen</span>
           </div>
         </div>
-
-        <!-- ROI -->
         <div class="case-roi-row">
           <div class="case-roi-item"><span class="case-roi-val">1,9 J.</span><span class="case-roi-label">Amortisation</span></div>
           <div class="case-roi-item"><span class="case-roi-val">55 %</span><span class="case-roi-label">Rendite p.a.</span></div>
@@ -537,9 +521,14 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
+<script src="main.js"></script>
 <script>
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navMobile').classList.toggle('open');
+  });
+});
+
 function calcPotenzial(){
   const v=document.getElementById('rVerbrauch').value;
   const b=document.getElementById('rBranche').value;
@@ -554,5 +543,21 @@ function calcPotenzial(){
   let [min,max]=base[v][b]||base[v]['andere'];
   if(pv==='ja'){min=Math.round(min*1.15);max=Math.round(max*1.2)}
   if(pv==='geplant'){min=Math.round(min*1.08);max=Math.round(max*1.12)}
-  const fmt=n=>n>=1000000?(n/1000000).toFixed(1)+' Mio. €':(n>=1000?Math.round(n/1000)*1000:n).toLocaleString('de-DE')+' €';
-  const tips={prod:'Maschinenbetrieb erzeugt ausgeprägte Lastspitzen. Typisch: Beschaffungsoptimierung + BESS für maximalen Hebel.',food:'Kontinuierliche Prozesse und Kühllasten bieten gute Prognostizierbarkeit. Hohe PV-Synergie möglich.',health:'24/7-Grundlast ist ideal für BESS. Zusätzlich USV-Funktion möglich — Versorgungssicherheit als Doppelnutzen.',logistik:'Kühlaggregat-Hochlauf erzeugt extreme Spitzen. Peak Shaving oft mit
+  const fmt=n=>n>=1000000?(n/1000000).toFixed(1)+' Mio. €':(Math.round(n/1000)*1000).toLocaleString('de-DE')+' €';
+  const tips={
+    prod:'Maschinenbetrieb erzeugt ausgeprägte Lastspitzen. Typisch: Beschaffungsoptimierung + BESS für maximalen Hebel.',
+    food:'Kontinuierliche Prozesse und Kühllasten bieten gute Prognostizierbarkeit. Hohe PV-Synergie möglich.',
+    health:'24/7-Grundlast ist ideal für BESS. Zusätzlich USV-Funktion möglich — Versorgungssicherheit als Doppelnutzen.',
+    logistik:'Kühlaggregat-Hochlauf erzeugt extreme Spitzen. Peak Shaving oft mit sehr kurzer Amortisation.',
+    gebaeude:'Klimatisierung und Beleuchtung dominieren. Dynamische Tarife und BESS wirken sehr gut zusammen.',
+    filiale:'Mehrstandorte ermöglichen gebündelte Beschaffung. Hohes Volumen, gute Verhandlungsposition.',
+    andere:'Auf Basis Ihrer Verbrauchsdaten ermitteln wir individuelle Potenziale — eine erste Einschätzung per Gespräch möglich.'
+  };
+  document.getElementById('rRange').textContent=fmt(min)+' – '+fmt(max);
+  document.getElementById('rText').textContent=tips[b]||tips['andere'];
+  const result=document.getElementById('rechnerResult');
+  result.classList.add('show');
+}
+</script>
+</body>
+</html>
