@@ -6,6 +6,31 @@
 <meta name="description" content="Für Entscheider — Was CEOs, CFOs und Einkäufer über Energiekosten wissen sollten. Kompakt, ohne Fachchinesisch.">
 <title>Für Entscheider – Volt Trust</title>
 <link rel="stylesheet" href="style.css">
+<style>
+@media(max-width:768px){
+  html,body{overflow-x:hidden!important;max-width:100vw}
+  .container{overflow-x:hidden}
+
+  /* Energiemix-Sektion: 2 Spalten → 1 Spalte */
+  [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+
+  /* Kapazitäten-Grid (repeat 3) → 3 Spalten bleiben aber kleiner */
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:repeat(3,1fr)!important;gap:2px!important}
+  [style*="grid-template-columns:repeat(3,1fr)"] > div{padding:16px 8px!important}
+  [style*="grid-template-columns:repeat(3,1fr)"] span[style*="font-size:36px"]{font-size:24px!important}
+
+  /* Pie Charts: nebeneinander bleiben, aber kleiner */
+  [style*="display:flex;gap:48px"]{gap:12px!important;justify-content:center}
+  [style*="display:flex;gap:48px"] svg{width:110px!important;height:110px!important}
+
+  /* "1fr auto" CTA-Box → einspaltig */
+  [style*="grid-template-columns:1fr auto"]{grid-template-columns:1fr!important}
+  [style*="grid-template-columns:1fr auto"] [style*="flex-shrink:0"]{margin-top:8px}
+
+  /* Legende rechts der Balkendiagramm → einspaltig */
+  [style*="grid-template-columns:repeat(3,1fr)"][style*="gap:12px"]{grid-template-columns:1fr!important}
+}
+</style>
 <script>
 // Accordion wird nach vollständigem DOM-Load gebunden — unabhängig von main.js
 document.addEventListener('DOMContentLoaded', function() {
@@ -609,13 +634,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 <script src="main.js"></script>
-<script>
-  try {
-    document.getElementById('hamburger').addEventListener('click', function() {
-      document.getElementById('navMobile').classList.toggle('open');
-    });
-  } catch(e) {}
-</script>
-
 </body>
 </html>
