@@ -36,14 +36,27 @@
       <span class="nav-logo-text">Volt<span>Trust</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="fallbeispiele.html">Fallbeispiele</a></li>
+      <li><a href="fuer-entscheider.html">Für Entscheider</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
     <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
     <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="ueber-uns.html">Über uns</a><a href="kontakt.html">Kontakt</a>
+  <a href="index.html">Home</a>
+  <a href="leistungen.html">Leistungen</a>
+  <a href="ueber-uns.html">Über uns</a>
+  <a href="fallbeispiele.html">Fallbeispiele</a>
+  <a href="fuer-entscheider.html">Für Entscheider</a>
+  <a href="faq.html">FAQ</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
 </div>
 
 <div class="benefit-hero">
@@ -60,7 +73,7 @@
   </div>
 </div>
 
-<div class="trust-bar">
+<div class="trust-bar-bottom">
   <div class="trust-inner">
     <div class="trust-item"><span class="trust-dot"></span>Nur für Volt Trust Firmenkunden</div>
     <div class="trust-item"><span class="trust-dot"></span>0 € Aufwand für den Arbeitgeber</div>
@@ -149,7 +162,7 @@
 </section>
 
 <!-- CTA -->
-<section style="background:var(--green);padding:100px 0">
+<section style="background:var(--ink);padding:100px 0">
   <div class="container">
     <div style="text-align:center;max-width:620px;margin:0 auto">
       <div class="section-label" style="justify-content:center">Interesse?</div>
@@ -164,16 +177,43 @@
 </section>
 
 <footer>
-  <div class="footer-bottom" style="border-top:1px solid var(--line);padding-top:28px">
-    <span class="footer-copy">© 2025 Volt Trust · Alle Rechte vorbehalten</span>
-    <span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="index.html">Zurück zur Startseite</a></span>
+  <div class="footer-top">
+    <div>
+      <div style="display:flex;align-items:center;gap:11px;margin-bottom:14px">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="17" fill="#3A7D5F" stroke="#C9963A" stroke-width="1.5"/><text x="18" y="14" text-anchor="middle" font-family="Playfair Display,serif" font-size="7" font-weight="700" fill="#C9963A" letter-spacing="1">VT</text><path d="M10 22 L14.5 15 L18 21 L21.5 15 L26 22" stroke="#C9963A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="10" y1="25" x2="26" y2="25" stroke="#C9963A" stroke-width=".75" opacity=".5"/></svg>
+        <div class="footer-brand">Volt<span>Trust</span></div>
+      </div>
+      <p class="footer-tagline">Industrieenergie mit Planungssicherheit.<br>Unabhängig. Erfahren. Direkt.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Seiten</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="fallbeispiele.html">Fallbeispiele</a></li>
+        <li><a href="fuer-entscheider.html">Für Entscheider</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Kontakt</div>
+      <ul class="footer-links">
+        <li><a href="tel:+491711245256">+49 171 1245256</a></li>
+        <li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li>
+        <li><a href="kontakt.html">Termin vereinbaren</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Volt Trust · Alle Rechte vorbehalten</span>
+    <span class="footer-copy"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
   </div>
 </footer>
 
 <script src="main.js"></script>
-<script>
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));
-function toggleFaq(el){const ans=el.nextElementSibling;const wasOpen=el.classList.contains('open');document.querySelectorAll('.faq-question.open').forEach(q=>{q.classList.remove('open');q.nextElementSibling.classList.remove('open')});if(!wasOpen){el.classList.add('open');ans.classList.add('open')}}
-</script>
 </body>
 </html>
