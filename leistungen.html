@@ -115,6 +115,18 @@
 }
 @media(max-width:768px){
   .card-icon svg{width:28px!important;height:28px!important}
+  /* Segment-Panels einspaltig */
+  .seg-info,.seg-case{padding:32px 24px}
+  /* Mockup-Tabelle scrollbar statt overflow */
+  .mockup-wrap{overflow-x:auto}
+  .mockup-table{min-width:420px}
+  /* Benefit-Teaser: Grid einspaltig, Button unter Text */
+  .benefit-teaser-inner{grid-template-columns:1fr!important;gap:24px!important}
+  .benefit-teaser-inner .btn-primary{align-self:flex-start}
+  /* Allgemein: nichts über den Rand */
+  .container{overflow-x:hidden}
+  /* Body kein horizontales Scrollen */
+  body{overflow-x:hidden}
 }
 </style>
 </head>
@@ -330,7 +342,7 @@
 <!-- MITARBEITERBENEFIT TEASER -->
 <section style="background:var(--ink);padding:72px 0">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;background:rgba(201,150,58,.08);border:1px solid rgba(201,150,58,.22);padding:48px;position:relative">
+    <div class="benefit-teaser-inner" style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;background:rgba(201,150,58,.08);border:1px solid rgba(201,150,58,.22);padding:48px;position:relative">
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
       <div style="position:absolute;top:0;left:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),transparent)"></div>
       <div>
@@ -410,7 +422,7 @@
     <div>
       <div class="footer-col-title">Rechtliches</div>
       <ul class="footer-links">
-        <li><a href="/cdn-cgi/l/email-protection#6a0105041e0b011e2a1c05061e471e181f191e440e0f"><span class="__cf_email__" data-cfemail="f69d999882979d82b680999a82db8284838582d89293">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
@@ -422,6 +434,6 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
-<script>
-document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'
+<script src="main.js"></script>
+</body>
+</html>
