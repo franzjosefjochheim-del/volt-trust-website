@@ -27,6 +27,15 @@
   .ansatz-grid{grid-template-columns:1fr!important}
   .ref-inner{grid-template-columns:1fr!important}
 }
+@media(max-width:768px){
+  /* Partner-Grid einspaltig */
+  .partner-grid-3{grid-template-columns:1fr!important}
+  .partner-logo-card{padding:28px 20px}
+  /* Alle Inline-Grids mit repeat(3,1fr) einspaltig */
+  body{overflow-x:hidden!important;max-width:100vw}
+  html{overflow-x:hidden!important}
+  .container{overflow-x:hidden}
+}
 </style>
 </head>
 <body>
@@ -230,7 +239,7 @@
     <div class="section-label">Technologiepartner und Kooperationen</div>
     <h2 class="section-title">Die Partner im Prozess.</h2>
     <p class="section-intro">Volt Trust arbeitet mit führenden Technologiepartnern — für technische Projektierung, Speicherlösungen und Systemintegration.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;background:var(--stone)">
+    <div class="partner-grid-3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px;background:var(--stone)">
       <div class="partner-logo-card">
         <img src="stricker-logo.svg" alt="STRICKER Dienstleistungs-GmbH">
         <p class="partner-logo-label">Technische Projektierung und Umsetzung von PV- und Batteriespeicherprojekten</p>
@@ -295,7 +304,7 @@
     <div>
       <div class="footer-col-title">Rechtliches</div>
       <ul class="footer-links">
-        <li><a href="/cdn-cgi/l/email-protection#42292d2c3623293602342d2e366f36303731366c2627"><span class="__cf_email__" data-cfemail="80ebefeef4e1ebf4c0f6efecf4adf4f2f5f3f4aee4e5">[email&#160;protected]</span></a></li>
+        <li><a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></li>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
       </ul>
@@ -307,4 +316,6 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd
+<script src="main.js"></script>
+</body>
+</html>
