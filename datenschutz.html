@@ -15,7 +15,6 @@
 .legal-body ul { padding-left: 20px; margin-bottom: 12px; }
 .legal-body a { color: var(--green); text-decoration: none; }
 .legal-body a:hover { color: var(--gold); }
-.legal-body .highlight { background: var(--stone); padding: 20px 24px; border-left: 3px solid var(--gold); margin: 24px 0; }
 </style>
 </head>
 <body>
@@ -27,14 +26,27 @@
       <span class="nav-logo-text">Volt<span>Trust</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="leistungen.html">Leistungen</a></li><li><a href="ueber-uns.html">Über uns</a></li><li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="leistungen.html">Leistungen</a></li>
+      <li><a href="fallbeispiele.html">Fallbeispiele</a></li>
+      <li><a href="fuer-entscheider.html">Für Entscheider</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
     <a href="kontakt.html" class="nav-cta">Termin vereinbaren</a>
     <div class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="nav-mobile" id="navMobile">
-  <a href="index.html">Home</a><a href="leistungen.html">Leistungen</a><a href="ueber-uns.html">Über uns</a><a href="kontakt.html">Kontakt</a>
+  <a href="index.html">Home</a>
+  <a href="leistungen.html">Leistungen</a>
+  <a href="fallbeispiele.html">Fallbeispiele</a>
+  <a href="fuer-entscheider.html">Für Entscheider</a>
+  <a href="ueber-uns.html">Über uns</a>
+  <a href="faq.html">FAQ</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="kontakt.html" class="nav-cta" style="margin-top:12px">Termin vereinbaren</a>
 </div>
 
 <div class="page-hero" style="min-height:auto;padding:120px 0 56px">
@@ -61,8 +73,8 @@
       Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen — zum Beispiel durch Eingabe in ein Kontaktformular. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
 
       <h2>2. Hosting</h2>
-      <p>Diese Website wird bei Netlify (Netlify, Inc., 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA) gehostet. Beim Besuch unserer Website erfasst Netlify automatisch Zugriffsdaten (Server-Log-Files).</p>
-      <p>Die Nutzung von Netlify erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website.</p>
+      <p>Diese Website wird über GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Beim Besuch unserer Website erfasst GitHub automatisch Zugriffsdaten (Server-Log-Files), darunter IP-Adresse, Browsertyp, aufgerufene Seiten und Zeitpunkt des Zugriffs.</p>
+      <p>Die Nutzung von GitHub Pages erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer zuverlässigen und sicheren Darstellung unserer Website. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">docs.github.com</a>.</p>
 
       <h2>3. Kontaktformular (Formspree)</h2>
       <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
@@ -89,11 +101,13 @@
 
       <h2>6. Verantwortliche Stelle</h2>
       <p>Verantwortliche Stelle im Sinne der Datenschutzgesetze ist:<br>
-      [Firmenname]<br>
-      [Adresse]<br>
+      <strong>Systema Onlineshop AG</strong><br>
+      Schochmühlestrasse 4<br>
+      CH-6340 Baar<br>
+      Schweiz<br>
       E-Mail: <a href="mailto:kontakt@volt-trust.de">kontakt@volt-trust.de</a></p>
 
-      <p style="margin-top:16px;font-size:13px;color:var(--subtle)">Stand: [Datum eintragen]</p>
+      <p style="margin-top:16px;font-size:13px;color:var(--subtle)">Stand: April 2026</p>
       <p style="margin-top:32px"><a href="index.html" style="color:var(--green)">← Zurück zur Startseite</a></p>
     </div>
   </div>
@@ -107,6 +121,5 @@
 </footer>
 
 <script src="main.js"></script>
-<script>document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('navMobile').classList.toggle('open'));</script>
 </body>
 </html>
