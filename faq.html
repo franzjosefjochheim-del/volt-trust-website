@@ -439,7 +439,7 @@
     <!-- CTA BOX -->
     <div class="faq-cta-box">
       <div class="faq-cta-eyebrow">Noch Fragen offen?</div>
-      <p class="faq-cta-title">Sprechen Sie direkt mit uns — 30 Minuten, kostenlos, auf Basis Ihrer Daten. Analyse 499 € — bei Abschluss vollständig verrechenbar.</p>
+      <p class="faq-cta-title">Sprechen Sie direkt mit uns — 30 Minuten, auf Basis Ihrer Daten, ohne Abschlussverpflichtung.</p>
       <a href="kontakt.html" class="btn-primary">Termin vereinbaren →</a>
     </div>
 
@@ -495,19 +495,26 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
+<script src="main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // FAQ Accordion
   var questions = document.querySelectorAll('.faq-question');
   questions.forEach(function(question) {
     question.addEventListener('click', function() {
       var answer = this.nextElementSibling;
       var wasOpen = this.classList.contains('open');
-      // Alle schliessen
       questions.forEach(function(q) {
         q.classList.remove('open');
         var a = q.nextElementSibling;
-        if (a) { a.style.maxHeight = null; a.style.opacity = '0'; }
+        if (a) { a.style.maxHeight = null; }
       });
-      // Angeklicktes öffnen we
+      if (!wasOpen) {
+        this.classList.add('open');
+        if (answer) { answer.style.maxHeight = answer.scrollHeight + 'px'; }
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
