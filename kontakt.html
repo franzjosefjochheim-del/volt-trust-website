@@ -193,7 +193,7 @@
         </div>
         <div style="margin-top:24px;background:rgba(201,150,58,.12);border:1px solid rgba(201,150,58,.25);padding:20px">
           <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Wichtiger Hinweis</div>
-          <p style="font-size:13px;line-height:1.7;color:rgba(245,240,232,.65)">Vergütung nur im Erfolgsfall. Alle Ergebnisse dienen ausschließlich als Entscheidungsgrundlage — ohne Abschlussverpflichtung.</p>
+          <p style="font-size:13px;line-height:1.7;color:rgba(245,240,232,.65)">Die Potenzialanalyse kostet einmalig 499 € — bei Beauftragung vollständig verrechenbar. Alle Ergebnisse dienen ausschließlich als Entscheidungsgrundlage — ohne Abschlussverpflichtung.</p>
         </div>
       </div>
     </div>
@@ -204,7 +204,7 @@
 <div class="trust-bar-bottom">
   <div class="trust-inner">
     <div class="trust-item"><span class="trust-dot"></span>Kostenlos <span style="font-family:'DM Sans',sans-serif;font-weight:600">&</span> unverbindlich</div>
-    <div class="trust-item"><span class="trust-dot"></span>Vergütung nur im Erfolgsfall</div>
+    <div class="trust-item"><span class="trust-dot"></span>Analyse 499 € — bei Abschluss verrechenbar</div>
     <div class="trust-item"><span class="trust-dot"></span>Persönlicher Ansprechpartner</div>
     <div class="trust-item"><span class="trust-dot"></span>Antwort innerhalb von 24 Stunden</div>
   </div>
@@ -230,7 +230,7 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('kontaktForm');
@@ -247,16 +247,4 @@
         });
         if (res.ok) {
           form.style.display = 'none';
-          const msg = document.getElementById('formSuccess');
-          if (msg) msg.style.display = 'block';
-        } else {
-          if (btn) { btn.textContent = 'Fehler — bitte erneut versuchen'; btn.disabled = false; }
-        }
-      } catch(err) {
-        if (btn) { btn.textContent = 'Fehler — bitte erneut versuchen'; btn.disabled = false; }
-      }
-    });
-  });
-</script>
-</body>
-</html>
+          const m
