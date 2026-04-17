@@ -303,7 +303,7 @@
           <div class="rechner-result-range" id="rRange">–</div>
           <div class="rechner-result-text" id="rText">–</div>
           <a href="kontakt.html" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:20px">Jetzt genaue Berechnung anfragen →</a>
-          <div class="rechner-disclaimer">⚠ Diese Schätzung basiert auf vergleichbaren realen Projekten und dient ausschließlich zur ersten Orientierung. Tatsächliche Einsparungen hängen von Ihren spezifischen Verbrauchsprofilen, aktuellen Tarifen und technischen Gegebenheiten ab.</div>
+          <div class="rechner-disclaimer">Diese Schätzung basiert auf Richtwerten aus realen, abgeschlossenen Projekten und dient ausschließlich zur ersten Orientierung. Tatsächliche Einsparpotenziale hängen von Ihrem individuellen Verbrauchsprofil, bestehenden Verträgen und technischen Gegebenheiten ab — und werden in der Potenzialanalyse belastbar berechnet.</div>
         </div>
       </div>
       <div>
@@ -526,4 +526,75 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Volt Trust ·
+    <span class="footer-copy">© 2026 Volt Trust ·    <span class="footer-sep"> · </span>
+    <a href="impressum.html">Impressum</a>
+    <span class="footer-sep"> · </span>
+    <a href="datenschutz.html">Datenschutz</a>
+  </div>
+</footer>
+
+<script>
+function calcPotenzial() {
+  var verbrauch = document.getElementById('rVerbrauch').value;
+  var branche   = document.getElementById('rBranche').value;
+  var pv        = document.getElementById('rPV').value;
+  var result    = document.getElementById('rechnerResult');
+  var rRange    = document.getElementById('rRange');
+  var rText     = document.getElementById('rText');
+
+  if (!verbrauch || !branche) {
+    result.classList.remove('show');
+    return;
+  }
+
+  // Basiswerte aus realen Projekten (€ p.a.)
+  var basis = {
+    klein:  { min: 8000,   max: 25000  },
+    mittel: { min: 25000,  max: 120000 },
+    gross:  { min: 80000,  max: 500000 },
+    xl:     { min: 300000, max: 1800000 }
+  };
+
+  // Branchen-Faktor
+  var faktor = {
+    prod:     1.25,
+    food:     1.10,
+    health:   1.20,
+    logistik: 1.15,
+    gebaeude: 1.05,
+    filiale:  1.10,
+    andere:   1.00
+  };
+
+  // PV-Bonus (Arbitrage-Potenzial)
+  var pvBonus = (pv === 'ja') ? 1.12 : (pv === 'geplant') ? 1.06 : 1.00;
+
+  var b   = basis[verbrauch];
+  var f   = faktor[branche] || 1.0;
+  var min = Math.round(b.min * f * pvBonus / 1000) * 1000;
+  var max = Math.round(b.max * f * pvBonus / 1000) * 1000;
+
+  function fmt(n) {
+    return n >= 1000000
+      ? (n / 1000000).toFixed(1).replace('.', ',') + ' Mio. €'
+      : n.toLocaleString('de-DE') + ' €';
+  }
+
+  // Branchen-Kontexttext
+  var texte = {
+    prod:     'Produktionsbetriebe mit messbaren Lastspitzen erzielen durch Beschaffungsoptimierung und Lastmanagement typischerweise die höchsten Einsparungen.',
+    food:     'In der Lebensmittel- und Chemieindustrie liegen die größten Hebel bei Netzentgelten und dynamischer Beschaffung.',
+    health:   'Kliniken und Pflegeeinrichtungen profitieren besonders von stabiler 24/7-Versorgung kombiniert mit Lastoptimierung.',
+    logistik: 'Kühl- und Lagerbetriebe haben durch steuerbare Lasten ein überdurchschnittliches Optimierungspotenzial.',
+    gebaeude: 'Großgebäude mit hoher Grundlast profitieren vor allem von Tarifoptimierung und Lastspitzenkappung.',
+    filiale:  'Mehrstandortstrukturen ermöglichen gebündelte Beschaffung mit deutlichen Mengenvorteilen.',
+    andere:   'Auch in Ihrer Branche lassen sich durch Tarifoptimierung und Lastanalyse relevante Einsparungen erzielen.'
+  };
+
+  rRange.textContent = fmt(min) + ' – ' + fmt(max);
+  rText.textContent  = texte[branche] || '';
+  result.classList.add('show');
+}
+</script>
+</body>
+</html>
