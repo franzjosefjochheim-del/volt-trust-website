@@ -88,12 +88,12 @@
     <p class="section-intro">Nachricht hinterlassen — wir melden uns innerhalb von 24 Stunden.</p>
     <div class="kontakt-grid">
       <div class="kontakt-form-wrap reveal">
-        <!-- FORMSPREE FORMULAR -->
-        <!-- ANLEITUNG: Konto auf formspree.io erstellen, neue Form anlegen, -->
-        <!-- die Form-ID kopieren und unten bei action="..." eintragen -->
-        <form action="https://formspree.io/f/EURE-FORM-ID" method="POST" id="kontaktForm">
-          <input type="hidden" name="_subject" value="Neue Anfrage über Volt Trust Website">
-          <input type="hidden" name="_language" value="de">
+        <form action="https://api.web3forms.com/submit" method="POST" id="kontaktForm">
+          <input type="hidden" name="access_key" value="9f0015c7-8bbf-46c8-adc8-fd1b202e29a4">
+          <input type="hidden" name="subject" value="Neue Anfrage über Volt Trust Website">
+          <input type="hidden" name="from_name" value="Volt Trust Kontaktformular">
+          <input type="hidden" name="redirect" value="https://volttrust.de/kontakt.html?success=1">
+          <input type="checkbox" name="botcheck" style="display:none">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="vorname">Vorname *</label>
@@ -147,9 +147,15 @@
           <button type="submit" class="btn-submit">Anfrage absenden →</button>
           <p class="form-note">* Pflichtfelder · Keine Weitergabe Ihrer Daten · Antwort innerhalb von 24 Stunden</p>
         </form>
-        <div class="success-msg" id="successMsg">
+        <div class="success-msg" id="successMsg" style="display:none">
           <p>✓ Ihre Anfrage wurde gesendet. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
         </div>
+        <script>
+          if (window.location.search.includes('success=1')) {
+            document.getElementById('kontaktForm').style.display = 'none';
+            document.getElementById('successMsg').style.display = 'block';
+          }
+        </script>
       </div>
       <div class="kontakt-info-wrap reveal">
         <div style="font-family:'Playfair Display',serif;font-size:22px;color:#ffffff;margin-bottom:32px">Direktkontakt</div>
