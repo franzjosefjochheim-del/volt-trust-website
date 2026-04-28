@@ -596,6 +596,7 @@ footer{background:var(--forest);border-top:1px solid var(--line);padding:60px 0 
 }
 
 /* ===== 2026-04 Landing Enhancements ===== */
+/* Merge resolution: keep enhancement classes; omit deprecated testimonial/strommarkt blocks. */
 .entscheider-hero-image,
 .ueber-hero-image{
   background-size: cover;
