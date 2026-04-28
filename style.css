@@ -594,3 +594,96 @@ footer{background:var(--forest);border-top:1px solid var(--line);padding:60px 0 
   .ansp-inner .contact-person{flex-direction:column;align-items:flex-start}
   .contact-person-name{white-space:normal}
 }
+
+/* ===== 2026-04 Landing Enhancements ===== */
+.hero{
+  background-image:
+    linear-gradient(rgba(30,61,48,.72), rgba(30,61,48,.72)),
+    url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.trust-bar-top{background:var(--forest);border-top:1px solid rgba(201,150,58,.15);border-bottom:1px solid rgba(201,150,58,.15);padding:14px 0}
+.trust-bar-top-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;gap:26px;align-items:center;justify-content:space-between}
+.trust-top-item{color:rgba(249,246,239,.86);font-size:14px;line-height:1.5;display:flex;align-items:center;gap:8px;flex:1}
+
+.testimonial-section{background:var(--mist);padding:72px 0}
+.testimonial-card{background:var(--ink);padding:44px;position:relative}
+.testimonial-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.testimonial-quote-mark{font-family:'Playfair Display',serif;font-size:78px;line-height:1;color:var(--gold);margin-bottom:8px}
+.testimonial-quote{font-family:'Playfair Display',serif;font-size:31px;line-height:1.32;color:var(--cream);margin:0 0 18px}
+.testimonial-source{font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(249,246,239,.78);margin:0 0 14px}
+.testimonial-second{font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.7;color:rgba(249,246,239,.86);margin:0}
+
+.strommarkt-section{background:var(--mist);padding:88px 0}
+.strommarkt-card{background:var(--ink);padding:36px;position:relative}
+.strommarkt-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
+.strommarkt-head{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.strommarkt-kicker{font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(249,246,239,.62);margin-bottom:10px}
+.strommarkt-current{font-family:'Playfair Display',serif;font-size:48px;line-height:1;color:var(--cream)}
+.strommarkt-range{display:flex;gap:24px}
+.strommarkt-range-label{font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(249,246,239,.58);margin-bottom:6px}
+.strommarkt-range-val{font-family:'Playfair Display',serif;font-size:28px;color:var(--gold-lt)}
+.strommarkt-chart-wrap{background:rgba(255,255,255,.03);border:1px solid rgba(201,150,58,.18);padding:10px}
+#stromChart{width:100%;height:auto;display:block}
+.strommarkt-note{font-family:'DM Sans',sans-serif;color:rgba(249,246,239,.86);line-height:1.75;margin:18px 0 8px}
+.strommarkt-source{font-family:'DM Sans',sans-serif;color:rgba(249,246,239,.5);font-size:12px;line-height:1.6;margin:0}
+
+.case-card-image{display:block;width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;margin:18px 0 22px}
+
+.kontakt-timeline-section{background:var(--mist);padding:70px 0 12px}
+.kontakt-timeline{margin-top:34px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;position:relative}
+.kontakt-timeline::before{content:'';position:absolute;left:8%;right:8%;top:16px;height:2px;background:linear-gradient(90deg,var(--gold),rgba(201,150,58,.35))}
+.timeline-step{position:relative;padding-top:0}
+.timeline-dot{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;margin:0 auto 14px;position:relative;z-index:2}
+.timeline-content{background:var(--cream);border:1px solid var(--stone);padding:16px;min-height:112px}
+.timeline-title{font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;color:var(--text)}
+
+@media(max-width:960px){
+  .trust-bar-top-inner{flex-direction:column;align-items:flex-start;gap:10px}
+  .trust-top-item{width:100%}
+  .testimonial-quote{font-size:25px}
+  .strommarkt-current{font-size:40px}
+  .kontakt-timeline{grid-template-columns:1fr;gap:16px}
+  .kontakt-timeline::before{left:16px;right:auto;top:20px;bottom:20px;width:2px;height:auto;background:linear-gradient(180deg,var(--gold),rgba(201,150,58,.35))}
+  .timeline-step{padding-left:48px}
+  .timeline-dot{position:absolute;left:0;top:0;margin:0}
+  .timeline-content{min-height:auto}
+}
+
+/* ===== Visual refresh v2 ===== */
+.stufe{isolation:isolate}
+.stufe::before{content:'';position:absolute;inset:0;z-index:-1;background-size:cover;background-position:center;opacity:.28}
+.stufe.stufe-01::before{background-image:linear-gradient(rgba(30,61,48,.75),rgba(30,61,48,.75)),url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1400&q=80')}
+.stufe.stufe-02::before{background-image:linear-gradient(rgba(30,61,48,.75),rgba(30,61,48,.75)),url('https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=1400&q=80')}
+
+.cases-with-bg{position:relative;overflow:hidden}
+.cases-with-bg::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(30,61,48,.88),rgba(30,61,48,.88)),url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;z-index:0}
+.cases-with-bg .container{position:relative;z-index:1}
+.cases-with-bg .section-title,.cases-with-bg .section-label,.cases-with-bg .section-intro{color:var(--cream)}
+.cases-hero-image{height:220px;margin:34px 0 26px;background:linear-gradient(rgba(30,61,48,.88),rgba(30,61,48,.88)),url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;border:1px solid rgba(201,150,58,.2)}
+
+.card[class*='service-bg-'], .tech-card[class*='tech-bg-']{position:relative;isolation:isolate}
+.card[class*='service-bg-']::before{content:'';position:absolute;inset:0;background-size:cover;background-position:center;z-index:-1}
+.card[class*='service-bg-']::before{opacity:.92}
+.card.service-bg-01::before{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=80')}
+.card.service-bg-02::before{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1565514020179-026b92b2d14f?auto=format&fit=crop&w=1400&q=80')}
+.card.service-bg-03::before{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80')}
+.card.service-bg-04::before{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80')}
+.card[class*='service-bg-'] .card-title,.card[class*='service-bg-'] .card-text,.card[class*='service-bg-'] .card-num{color:var(--cream)}
+.card[class*='service-bg-'] .tag{background:rgba(249,246,239,.1);color:var(--cream);border-color:rgba(249,246,239,.24)}
+.tech-card.tech-bg-01{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center}
+.tech-card.tech-bg-02{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center}
+
+.ueber-hero-image{background-image:linear-gradient(rgba(30,61,48,.7),rgba(30,61,48,.7)),url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center}
+.ueber-inline-image{display:block;width:100%;height:220px;object-fit:cover;margin-top:22px;border:1px solid var(--stone)}
+.werte-bg-image{position:relative;overflow:hidden}
+.werte-bg-image::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(30,61,48,.82),rgba(30,61,48,.82)),url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;z-index:0}
+.werte-bg-image .container{position:relative;z-index:1}
+.werte-bg-image .section-title,.werte-bg-image .section-label{color:var(--cream)}
+
+.entscheider-hero-image{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center}
+.wissen-topic-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(201,150,58,.55)}
+
+.case-card-image{height:200px}
