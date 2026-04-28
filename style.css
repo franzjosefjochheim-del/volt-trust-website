@@ -686,6 +686,3 @@ footer{background:var(--forest);border-top:1px solid var(--line);padding:60px 0 
 .entscheider-hero-image{background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center}
 .wissen-topic-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(201,150,58,.55)}
 
-
-/* Merge-Resolution: keep dedicated case image rule override at end for compatibility */
-.case-card-image{height:200px}
