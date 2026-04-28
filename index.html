@@ -331,6 +331,36 @@
   </div>
 </section>
 
+<section class="strommarkt-section" id="strommarkt">
+  <div class="container">
+    <div class="section-label">Live-Strommarkt</div>
+    <h2 class="section-title">Day-Ahead-Preise in Deutschland</h2>
+    <div class="strommarkt-card">
+      <div class="strommarkt-head">
+        <div>
+          <div class="strommarkt-kicker">Aktueller Stundenpreis</div>
+          <div class="strommarkt-current" id="stromCurrent">--</div>
+        </div>
+        <div class="strommarkt-range">
+          <div>
+            <div class="strommarkt-range-label">Tagestief</div>
+            <div class="strommarkt-range-val" id="stromLow">--</div>
+          </div>
+          <div>
+            <div class="strommarkt-range-label">Tageshoch</div>
+            <div class="strommarkt-range-val" id="stromHigh">--</div>
+          </div>
+        </div>
+      </div>
+      <div class="strommarkt-chart-wrap">
+        <canvas id="stromChart" width="900" height="260" aria-label="Liniendiagramm der letzten 24 Stunden"></canvas>
+      </div>
+      <p class="strommarkt-note">Warum das für Ihre Energiekosten relevant ist: Wer zum richtigen Zeitpunkt einkauft und Batteriespeicher strategisch einsetzt, zahlt deutlich weniger.</p>
+      <p class="strommarkt-source">Datenquelle: SMARD / Bundesnetzagentur (Day-Ahead Viertelstundenwerte)</p>
+    </div>
+  </div>
+</section>
+
 <!-- 5 · FALLBEISPIELE -->
 <section class="cases cases-with-bg">
   <div class="container">
@@ -439,6 +469,19 @@
   </div>
 </section>
 
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-card">
+      <div class="testimonial-quote-mark">“</div>
+      <blockquote class="testimonial-quote">
+        „Innerhalb von 18 Monaten haben wir unsere Energiekosten von 1,9 auf 1,0 Millionen Euro gesenkt — ohne Eingriff in unsere Produktion."
+      </blockquote>
+      <p class="testimonial-source">— Geschäftsführer, Aluminium-Gießerei, Nordrhein-Westfalen</p>
+      <p class="testimonial-second">„Das Modell hat uns überzeugt: Wir zahlen nur, wenn wirklich gespart wird." — Energiemanager, Klinikverbund.</p>
+    </div>
+  </div>
+</section>
+
 <!-- 6 · ANSPRECHPARTNER + CTA -->
 <section class="ansp-section">
   <div class="container">
@@ -543,6 +586,7 @@
 </footer>
 
 <script src="main.js"></script>
+<script src="strommarkt.js"></script>
 <script>
 function calcPotenzial() {
   var verbrauch = document.getElementById('rVerbrauch').value;

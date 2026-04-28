@@ -237,6 +237,36 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
+<!-- LIVE-STROMMARKT -->
+<section class="strommarkt-section" id="strommarkt">
+  <div class="container">
+    <div class="section-label">Live-Strompreis</div>
+    <h2 class="section-title">Day-Ahead-Markt in Echtzeit</h2>
+    <div class="strommarkt-card">
+      <div class="strommarkt-head">
+        <div>
+          <div class="strommarkt-kicker">Aktueller Day-Ahead-Preis</div>
+          <div class="strommarkt-current" id="stromCurrent">--</div>
+        </div>
+        <div class="strommarkt-range">
+          <div>
+            <div class="strommarkt-range-label">Tagestief</div>
+            <div class="strommarkt-range-val" id="stromLow">--</div>
+          </div>
+          <div>
+            <div class="strommarkt-range-label">Tageshoch</div>
+            <div class="strommarkt-range-val" id="stromHigh">--</div>
+          </div>
+        </div>
+      </div>
+      <div class="strommarkt-chart-wrap">
+        <canvas id="stromChart" width="900" height="260" aria-label="Liniendiagramm letzte 24 Stunden"></canvas>
+      </div>
+      <p class="strommarkt-note">Wer Energie zum richtigen Zeitpunkt einkauft und Batteriespeicher strategisch einsetzt, zahlt im Jahresdurchschnitt deutlich weniger — das ist der Kern unseres Ansatzes.</p>
+    </div>
+  </div>
+</section>
+
 <!-- THEMEN-KACHELN MIT ACCORDION -->
 <section style="background:var(--mist);padding:88px 0">
   <div class="container">
@@ -640,5 +670,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 <script src="main.js"></script>
+<script src="strommarkt.js"></script>
 </body>
 </html>
