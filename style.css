@@ -33,7 +33,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:300;color:var(--text);backgrou
 .gold{color:var(--gold)}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(30,61,48,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(20,46,37,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;display:flex;align-items:center;height:72px}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:28px;flex-shrink:0}
 .nav-logo-text{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--cream);letter-spacing:.03em}
@@ -540,7 +540,7 @@ textarea.form-input{resize:vertical;min-height:120px}
 .entscheider-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
 
 /* ── FOOTER ── */
-footer{background:var(--forest);border-top:1px solid var(--line);padding:60px 0 32px}
+footer{background:#142e25;border-top:1px solid var(--line);padding:60px 0 32px}
 .footer-top{max-width:1200px;margin:0 auto;padding:0 40px 52px;border-bottom:1px solid rgba(201,150,58,.2);display:grid;grid-template-columns:240px 1fr 1fr 1fr;gap:48px}
 .footer-brand{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--cream);margin-bottom:14px}
 .footer-brand span{color:var(--gold)}
