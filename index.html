@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style.css">
 <style>
 /* ===== HERO ===== */
-.hero{min-height:100vh;background-image:linear-gradient(rgba(30,61,48,.72),rgba(30,61,48,.72)),url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
+.hero{min-height:100vh;background:var(--ink);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,150,58,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(201,150,58,.06) 1px,transparent 1px);background-size:68px 68px;mask-image:radial-gradient(ellipse 80% 70% at 65% 50%,black 10%,transparent 68%)}
 .hero-glow{position:absolute;top:-200px;right:-140px;width:720px;height:720px;border-radius:50%;background:radial-gradient(ellipse,rgba(30,61,48,.45) 0%,transparent 70%);pointer-events:none}
 .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 420px;gap:76px;align-items:center}
@@ -196,14 +196,6 @@
   </div>
 </section>
 
-<div class="trust-bar-top">
-  <div class="trust-bar-top-inner">
-    <div class="trust-top-item">🛡️ Kein Erfolg = Keine Rechnung. Vergütung ausschließlich erfolgsbasiert.</div>
-    <div class="trust-top-item">🔒 Keine Interessenkonflikte. Keine Lieferantenbindung, keine Provisionen.</div>
-    <div class="trust-top-item">⚡ Ergebnis in 30 Tagen. Erste belastbare Zahlen nach Potenzialanalyse.</div>
-  </div>
-</div>
-
 <!-- 2 · WER WIR SIND -->
 <section class="wer-wir">
   <div class="container">
@@ -242,7 +234,7 @@
     <h2 class="section-title">Zwei Stufen. Ein Ziel.</h2>
     <p class="section-intro">Kurzfristig spürbare Einsparungen — und strukturelle Kostensenkung, die dauerhaft wirkt.</p>
     <div class="stufen-grid">
-      <div class="stufe stufe-01">
+      <div class="stufe">
         <div class="stufe-num">01</div>
         <div class="stufe-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
         <div class="stufe-title">Kurzfristige Kostenoptimierung</div>
@@ -255,7 +247,7 @@
         </div>
         <div class="tags" style="margin-top:26px"><span class="tag">Sofort wirksam</span><span class="tag">Keine Investition</span><span class="tag">Kein Risiko</span></div>
       </div>
-      <div class="stufe stufe-02">
+      <div class="stufe">
         <div class="stufe-num">02</div>
         <div class="stufe-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/></svg></div>
         <div class="stufe-title">Strukturelle Lastoptimierung</div>
@@ -331,43 +323,12 @@
   </div>
 </section>
 
-<section class="strommarkt-section" id="strommarkt">
-  <div class="container">
-    <div class="section-label">Live-Strommarkt</div>
-    <h2 class="section-title">Day-Ahead-Preise in Deutschland</h2>
-    <div class="strommarkt-card">
-      <div class="strommarkt-head">
-        <div>
-          <div class="strommarkt-kicker">Aktueller Stundenpreis</div>
-          <div class="strommarkt-current" id="stromCurrent">--</div>
-        </div>
-        <div class="strommarkt-range">
-          <div>
-            <div class="strommarkt-range-label">Tagestief</div>
-            <div class="strommarkt-range-val" id="stromLow">--</div>
-          </div>
-          <div>
-            <div class="strommarkt-range-label">Tageshoch</div>
-            <div class="strommarkt-range-val" id="stromHigh">--</div>
-          </div>
-        </div>
-      </div>
-      <div class="strommarkt-chart-wrap">
-        <canvas id="stromChart" width="900" height="260" aria-label="Liniendiagramm der letzten 24 Stunden"></canvas>
-      </div>
-      <p class="strommarkt-note">Warum das für Ihre Energiekosten relevant ist: Wer zum richtigen Zeitpunkt einkauft und Batteriespeicher strategisch einsetzt, zahlt deutlich weniger.</p>
-      <p class="strommarkt-source">Datenquelle: SMARD / Bundesnetzagentur (Day-Ahead Viertelstundenwerte)</p>
-    </div>
-  </div>
-</section>
-
 <!-- 5 · FALLBEISPIELE -->
-<section class="cases cases-with-bg">
+<section class="cases">
   <div class="container">
     <div class="section-label">Reale Projekte</div>
     <h2 class="section-title">Ergebnisse aus der Praxis.</h2>
     <p class="section-intro">Alle Kennzahlen aus realen Projekten — anonymisiert, aber unverändert.</p>
-    <div class="cases-hero-image" aria-hidden="true"></div>
     <div class="case-grid">
       <div class="case-card">
         <div class="case-card-tag">Gesundheitswesen · Klinik</div>
@@ -465,19 +426,6 @@
     </div>
     <div style="text-align:center;margin-top:40px">
       <a href="fallbeispiele.html" class="btn-outline dark">Alle 8 Fallbeispiele ansehen →</a>
-    </div>
-  </div>
-</section>
-
-<section class="testimonial-section">
-  <div class="container">
-    <div class="testimonial-card">
-      <div class="testimonial-quote-mark">“</div>
-      <blockquote class="testimonial-quote">
-        „Innerhalb von 18 Monaten haben wir unsere Energiekosten von 1,9 auf 1,0 Millionen Euro gesenkt — ohne Eingriff in unsere Produktion."
-      </blockquote>
-      <p class="testimonial-source">— Geschäftsführer, Aluminium-Gießerei, Nordrhein-Westfalen</p>
-      <p class="testimonial-second">„Das Modell hat uns überzeugt: Wir zahlen nur, wenn wirklich gespart wird." — Energiemanager, Klinikverbund.</p>
     </div>
   </div>
 </section>
@@ -586,7 +534,6 @@
 </footer>
 
 <script src="main.js"></script>
-<script src="strommarkt.js"></script>
 <script>
 function calcPotenzial() {
   var verbrauch = document.getElementById('rVerbrauch').value;
