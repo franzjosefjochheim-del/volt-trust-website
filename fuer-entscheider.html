@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <!-- HERO -->
-<div class="page-hero entscheider-hero-image">
+<div class="page-hero">
   <div class="page-hero-grid"></div>
   <div class="container" style="position:relative;z-index:2">
     <div class="page-hero-eyebrow">Für Entscheider</div>
@@ -236,36 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <p class="page-hero-lead">Sechs Themen die über Ihre Energiekosten entscheiden — kompakt erklärt für CEOs, CFOs und Einkauf. Kein Fachchinesisch, keine Registrierung.</p>
   </div>
 </div>
-
-<!-- LIVE-STROMMARKT -->
-<section class="strommarkt-section" id="strommarkt">
-  <div class="container">
-    <div class="section-label">Live-Strompreis</div>
-    <h2 class="section-title">Day-Ahead-Markt in Echtzeit</h2>
-    <div class="strommarkt-card">
-      <div class="strommarkt-head">
-        <div>
-          <div class="strommarkt-kicker">Aktueller Day-Ahead-Preis</div>
-          <div class="strommarkt-current" id="stromCurrent">--</div>
-        </div>
-        <div class="strommarkt-range">
-          <div>
-            <div class="strommarkt-range-label">Tagestief</div>
-            <div class="strommarkt-range-val" id="stromLow">--</div>
-          </div>
-          <div>
-            <div class="strommarkt-range-label">Tageshoch</div>
-            <div class="strommarkt-range-val" id="stromHigh">--</div>
-          </div>
-        </div>
-      </div>
-      <div class="strommarkt-chart-wrap">
-        <canvas id="stromChart" width="900" height="260" aria-label="Liniendiagramm letzte 24 Stunden"></canvas>
-      </div>
-      <p class="strommarkt-note">Wer Energie zum richtigen Zeitpunkt einkauft und Batteriespeicher strategisch einsetzt, zahlt im Jahresdurchschnitt deutlich weniger — das ist der Kern unseres Ansatzes.</p>
-    </div>
-  </div>
-</section>
 
 <!-- THEMEN-KACHELN MIT ACCORDION -->
 <section style="background:var(--mist);padding:88px 0">
@@ -280,7 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wissen-item" id="item-01">
         <button class="wissen-header" aria-expanded="false" aria-controls="content-01">
           <div class="wissen-header-left">
-            <img class="wissen-topic-avatar" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=200&q=80" alt="Strompreis-Artikel Bild">
             <span class="wissen-num">01</span>
             <div class="wissen-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
@@ -312,7 +281,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wissen-item" id="item-02">
         <button class="wissen-header" aria-expanded="false" aria-controls="content-02">
           <div class="wissen-header-left">
-            <img class="wissen-topic-avatar" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=200&q=80" alt="Lastspitzen-Artikel Bild">
             <span class="wissen-num">02</span>
             <div class="wissen-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
@@ -345,7 +313,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wissen-item" id="item-03">
         <button class="wissen-header" aria-expanded="false" aria-controls="content-03">
           <div class="wissen-header-left">
-            <img class="wissen-topic-avatar" src="https://images.unsplash.com/photo-1624015064956-6b540fe11725?auto=format&fit=crop&w=200&q=80" alt="BESS-Artikel Bild">
             <span class="wissen-num">03</span>
             <div class="wissen-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8"/></svg>
@@ -379,7 +346,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wissen-item" id="item-04">
         <button class="wissen-header" aria-expanded="false" aria-controls="content-04">
           <div class="wissen-header-left">
-            <img class="wissen-topic-avatar" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=200&q=80" alt="Unabhängige Beratung Bild">
             <span class="wissen-num">04</span>
             <div class="wissen-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
@@ -412,7 +378,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wissen-item" id="item-05">
         <button class="wissen-header" aria-expanded="false" aria-controls="content-05">
           <div class="wissen-header-left">
-            <img class="wissen-topic-avatar" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=200&q=80" alt="Erfolgsbasiert Bild">
             <span class="wissen-num">05</span>
             <div class="wissen-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
@@ -445,7 +410,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="wissen-item" id="item-06">
         <button class="wissen-header" aria-expanded="false" aria-controls="content-06">
           <div class="wissen-header-left">
-            <img class="wissen-topic-avatar" src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=200&q=80" alt="Energiewende Bild">
             <span class="wissen-num">06</span>
             <div class="wissen-icon-wrap">
               <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
@@ -670,6 +634,5 @@ document.addEventListener('DOMContentLoaded', function() {
 </footer>
 
 <script src="main.js"></script>
-<script src="strommarkt.js"></script>
 </body>
 </html>
