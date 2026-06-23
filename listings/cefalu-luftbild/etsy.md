@@ -1,13 +1,14 @@
 # Etsy Listing – cefalu-luftbild
 
 ## Nische
-Sicily / Italy Travel Art – UNESCO World Heritage Architecture
+Sicily / Italy Travel – Cefalù Aerial (File-Upload für bestehendes Listing)
 
-## Titel (137 Zeichen)
+## Titel (134 Zeichen)
 Cefalù Sicily Aerial Photography Print, Norman Cathedral Wall Art, Italy Travel Decor, Mediterranean Rooftops, Digital Download Poster
 
 ## Preis
-**€8,99** (Digital Download) – Premium-Tier wegen Einzigartigkeit und Motivstärke
+**€8.99** (Digital Download)
+Ausgabedatei: 8064 × 6048 px
 
 ## 13 Tags (je ≤ 20 Zeichen)
 1. cefalù wall art
@@ -25,26 +26,17 @@ Cefalù Sicily Aerial Photography Print, Norman Cathedral Wall Art, Italy Travel
 13. sicily gift print
 
 ## Beschreibung
-
 **Cefalù from Above – Sicily's Most Iconic View**
 
 Standing on La Rocca and looking down: the 12th-century Norman Cathedral, a maze of terracotta rooftops, the crystal-blue Mediterranean stretching to the horizon. A single photograph that captures everything that makes Sicily unforgettable. Original photography.
 
 ✔ Instant digital download
-✔ High-resolution JPG (4316 × 5400 px, 300 DPI) – prints up to 36 × 45 cm at full quality
+✔ High-resolution JPG (8064 × 6048 px, 300 DPI) – prints at A0 and beyond
 ✔ Original photography – not AI, not stock, not a postcard scan
 
-**Perfect for:**
-– Sicily and Italy lovers
-– Mediterranean travel memories
-– European city art collectors
-– Living room, dining room, or hallway statement print
-– Gift for anyone who has been to – or dreams of visiting – Sicily
+**Perfect for:** Sicily and Italy lovers · Mediterranean travel memories · Living room, dining room, or hallway statement print · Gift for anyone who has been to – or dreams of visiting – Sicily
 
-**How to print:** Order at your local print shop, CEWE, Pixum, or WhiteWall. Looks stunning in a natural wood or white frame.
-
----
-*UNESCO-listed architecture, photographed from a public viewpoint. Libertà di panorama (IT) applies. No third-party rights.*
+*UNESCO-listed architecture, public viewpoint. Libertà di panorama (IT) applies. No third-party rights.*
 
 ## Materialien
 Digital file, JPEG, travel photography
