@@ -1,0 +1,48 @@
+# Etsy Listing – cefalu-luftbild
+
+## Nische
+Sicily / Italy Travel – Cefalù Aerial (File-Upload für bestehendes Listing)
+
+## Titel (134 Zeichen)
+Cefalù Sicily Aerial Photography Print, Norman Cathedral Wall Art, Italy Travel Decor, Mediterranean Rooftops, Digital Download Poster
+
+## Preis
+**€8.99** (Digital Download)
+Ausgabedatei: 8064 × 6048 px
+
+## 13 Tags (je ≤ 20 Zeichen)
+1. cefalù wall art
+2. sicily travel print
+3. italy photography
+4. norman cathedral
+5. mediterranean art
+6. rooftops print
+7. sicily aerial art
+8. italy travel decor
+9. printable poster
+10. digital download
+11. europe travel art
+12. historic city art
+13. sicily gift print
+
+## Beschreibung
+**Cefalù from Above – Sicily's Most Iconic View**
+
+Standing on La Rocca and looking down: the 12th-century Norman Cathedral, a maze of terracotta rooftops, the crystal-blue Mediterranean stretching to the horizon. A single photograph that captures everything that makes Sicily unforgettable. Original photography.
+
+✔ Instant digital download
+✔ High-resolution JPG (8064 × 6048 px, 300 DPI) – prints at A0 and beyond
+✔ Original photography – not AI, not stock, not a postcard scan
+
+**Perfect for:** Sicily and Italy lovers · Mediterranean travel memories · Living room, dining room, or hallway statement print · Gift for anyone who has been to – or dreams of visiting – Sicily
+
+*UNESCO-listed architecture, public viewpoint. Libertà di panorama (IT) applies. No third-party rights.*
+
+## Materialien
+Digital file, JPEG, travel photography
+
+## Kategorie
+Art & Collectibles → Photography → Color Photography
+
+## Lieferdetails
+Instant Download
